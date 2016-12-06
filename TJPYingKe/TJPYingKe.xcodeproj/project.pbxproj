@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35EF59EB67C08DD9B9436809 /* Pods_TJPYingKe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */; };
 		BCE35BF21DF6C28C00D9338E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35BF11DF6C28C00D9338E /* main.m */; };
-		BCE35BF51DF6C28C00D9338E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35BF41DF6C28C00D9338E /* AppDelegate.m */; };
-		BCE35BF81DF6C28C00D9338E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35BF71DF6C28C00D9338E /* ViewController.m */; };
-		BCE35BFB1DF6C28C00D9338E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BF91DF6C28C00D9338E /* Main.storyboard */; };
 		BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */; };
 		BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */; };
 		BCE35C0B1DF6C28C00D9338E /* TJPYingKeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */; };
 		BCE35C161DF6C28C00D9338E /* TJPYingKeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C151DF6C28C00D9338E /* TJPYingKeUITests.m */; };
+		BCE35C361DF6C79600D9338E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C331DF6C79600D9338E /* AppDelegate.m */; };
+		BCE35C371DF6C79600D9338E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE35C341DF6C79600D9338E /* Info.plist */; };
+		BCE35C381DF6C79600D9338E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C351DF6C79600D9338E /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +36,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BEB8D0A6793600FBD65281F /* Pods-TJPYingKe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJPYingKe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe.release.xcconfig"; sourceTree = "<group>"; };
+		7870306BA7C0C7D7E3735CF9 /* Pods-TJPYingKe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJPYingKe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe.debug.xcconfig"; sourceTree = "<group>"; };
+		B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJPYingKe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35BED1DF6C28C00D9338E /* TJPYingKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJPYingKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35BF11DF6C28C00D9338E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BCE35BF31DF6C28C00D9338E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BCE35BF41DF6C28C00D9338E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BCE35BF61DF6C28C00D9338E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BCE35BF71DF6C28C00D9338E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BCE35BFA1DF6C28C00D9338E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE35BFF1DF6C28C00D9338E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BCE35C011DF6C28C00D9338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE35C061DF6C28C00D9338E /* TJPYingKeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TJPYingKeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJPYingKeTests.m; sourceTree = "<group>"; };
 		BCE35C0C1DF6C28C00D9338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE35C111DF6C28C00D9338E /* TJPYingKeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TJPYingKeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35C151DF6C28C00D9338E /* TJPYingKeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJPYingKeUITests.m; sourceTree = "<group>"; };
 		BCE35C171DF6C28C00D9338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE35C321DF6C79600D9338E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCE35C331DF6C79600D9338E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCE35C341DF6C79600D9338E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE35C351DF6C79600D9338E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EF59EB67C08DD9B9436809 /* Pods_TJPYingKe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3301655D2126D92536A925EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7870306BA7C0C7D7E3735CF9 /* Pods-TJPYingKe.debug.xcconfig */,
+				1BEB8D0A6793600FBD65281F /* Pods-TJPYingKe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8334713A250D8425CEF28F79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCE35BE41DF6C28C00D9338E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,8 @@
 				BCE35C091DF6C28C00D9338E /* TJPYingKeTests */,
 				BCE35C141DF6C28C00D9338E /* TJPYingKeUITests */,
 				BCE35BEE1DF6C28C00D9338E /* Products */,
+				3301655D2126D92536A925EA /* Pods */,
+				8334713A250D8425CEF28F79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +123,8 @@
 		BCE35BEF1DF6C28C00D9338E /* TJPYingKe */ = {
 			isa = PBXGroup;
 			children = (
-				BCE35BF31DF6C28C00D9338E /* AppDelegate.h */,
-				BCE35BF41DF6C28C00D9338E /* AppDelegate.m */,
-				BCE35BF61DF6C28C00D9338E /* ViewController.h */,
-				BCE35BF71DF6C28C00D9338E /* ViewController.m */,
-				BCE35BF91DF6C28C00D9338E /* Main.storyboard */,
-				BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */,
-				BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */,
-				BCE35C011DF6C28C00D9338E /* Info.plist */,
+				BCE35C231DF6C79600D9338E /* Classes */,
+				BCE35C391DF6C81B00D9338E /* Resource */,
 				BCE35BF01DF6C28C00D9338E /* Supporting Files */,
 			);
 			path = TJPYingKe;
@@ -140,6 +156,138 @@
 			path = TJPYingKeUITests;
 			sourceTree = "<group>";
 		};
+		BCE35C231DF6C79600D9338E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35C241DF6C79600D9338E /* Living */,
+				BCE35C281DF6C79600D9338E /* Main */,
+				BCE35C2C1DF6C79600D9338E /* Mine */,
+				BCE35C301DF6C79600D9338E /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BCE35C241DF6C79600D9338E /* Living */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35C251DF6C79600D9338E /* Controller */,
+				BCE35C261DF6C79600D9338E /* Model */,
+				BCE35C271DF6C79600D9338E /* VIew */,
+			);
+			path = Living;
+			sourceTree = "<group>";
+		};
+		BCE35C251DF6C79600D9338E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCE35C261DF6C79600D9338E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCE35C271DF6C79600D9338E /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		BCE35C281DF6C79600D9338E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35C291DF6C79600D9338E /* Controller */,
+				BCE35C2A1DF6C79600D9338E /* Model */,
+				BCE35C2B1DF6C79600D9338E /* VIew */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BCE35C291DF6C79600D9338E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCE35C2A1DF6C79600D9338E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCE35C2B1DF6C79600D9338E /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		BCE35C2C1DF6C79600D9338E /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35C2D1DF6C79600D9338E /* Controller */,
+				BCE35C2E1DF6C79600D9338E /* Model */,
+				BCE35C2F1DF6C79600D9338E /* VIew */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		BCE35C2D1DF6C79600D9338E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCE35C2E1DF6C79600D9338E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCE35C2F1DF6C79600D9338E /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		BCE35C301DF6C79600D9338E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35C311DF6C79600D9338E /* System */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BCE35C311DF6C79600D9338E /* System */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35C321DF6C79600D9338E /* AppDelegate.h */,
+				BCE35C331DF6C79600D9338E /* AppDelegate.m */,
+				BCE35C341DF6C79600D9338E /* Info.plist */,
+				BCE35C351DF6C79600D9338E /* main.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		BCE35C391DF6C81B00D9338E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */,
+				BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCE35C1A1DF6C28C00D9338E /* Build configuration list for PBXNativeTarget "TJPYingKe" */;
 			buildPhases = (
+				71A81931B279E34EA247BC01 /* [CP] Check Pods Manifest.lock */,
 				BCE35BE91DF6C28C00D9338E /* Sources */,
 				BCE35BEA1DF6C28C00D9338E /* Frameworks */,
 				BCE35BEB1DF6C28C00D9338E /* Resources */,
+				254E1B82F8E08FA0B6045E03 /* [CP] Embed Pods Frameworks */,
+				5433CF4911CA35C582491581 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +353,7 @@
 		BCE35BE51DF6C28C00D9338E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TJP;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = AaronTang;
 				TargetAttributes = {
@@ -248,7 +400,7 @@
 			files = (
 				BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */,
 				BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */,
-				BCE35BFB1DF6C28C00D9338E /* Main.storyboard in Resources */,
+				BCE35C371DF6C79600D9338E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,13 +420,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		254E1B82F8E08FA0B6045E03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5433CF4911CA35C582491581 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71A81931B279E34EA247BC01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCE35BE91DF6C28C00D9338E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE35BF81DF6C28C00D9338E /* ViewController.m in Sources */,
-				BCE35BF51DF6C28C00D9338E /* AppDelegate.m in Sources */,
+				BCE35C361DF6C79600D9338E /* AppDelegate.m in Sources */,
+				BCE35C381DF6C79600D9338E /* main.m in Sources */,
 				BCE35BF21DF6C28C00D9338E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,14 +511,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BCE35BF91DF6C28C00D9338E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCE35BFA1DF6C28C00D9338E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -411,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -420,6 +612,7 @@
 		};
 		BCE35C1B1DF6C28C00D9338E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7870306BA7C0C7D7E3735CF9 /* Pods-TJPYingKe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TJPYingKe/Info.plist;
@@ -431,6 +624,7 @@
 		};
 		BCE35C1C1DF6C28C00D9338E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEB8D0A6793600FBD65281F /* Pods-TJPYingKe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TJPYingKe/Info.plist;
