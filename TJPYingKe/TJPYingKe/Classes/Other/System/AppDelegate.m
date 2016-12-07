@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TJPTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    TJPTabBarController *rootVC = [TJPTabBarController tabBarControllerWitnAddChildVCBlock:^(TJPTabBarController *tabBarVC) {
+        [tabBarVC addChildVC:[UIViewController new] normalImageName:@"tab_live" selectedImageName:@"tab_live_p" isRequiredNavController:YES];
+        UIViewController *vc1 = tabBarVC.childViewControllers[0];
+        vc1.view.backgroundColor = [UIColor brownColor];
+        [tabBarVC addChildVC:[UIViewController new] normalImageName:@"tab_me" selectedImageName:@"tab_me_p" isRequiredNavController:YES];
+        UIViewController *vc2 = tabBarVC.childViewControllers[1];
+        vc2.view.backgroundColor = [UIColor lightGrayColor];
+
+    }];
+    
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

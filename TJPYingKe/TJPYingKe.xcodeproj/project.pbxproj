@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		35EF59EB67C08DD9B9436809 /* Pods_TJPYingKe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */; };
-		BCE35BF21DF6C28C00D9338E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35BF11DF6C28C00D9338E /* main.m */; };
+		BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */; };
+		BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */; };
+		BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */; };
+		BC758FBF1DF7C03B0053D188 /* UITabBarItem+XHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB91DF7C03B0053D188 /* UITabBarItem+XHExtension.m */; };
+		BC758FC01DF7C03B0053D188 /* UIView+TJPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FBB1DF7C03B0053D188 /* UIView+TJPExtension.m */; };
+		BC758FC31DF7C0680053D188 /* TJPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FC21DF7C0680053D188 /* TJPNavigationController.m */; };
+		BC758FC61DF7C8570053D188 /* TJPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FC51DF7C8570053D188 /* TJPTabBar.m */; };
+		BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FCB1DF7EF490053D188 /* TJPNavBar.m */; };
 		BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */; };
 		BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */; };
 		BCE35C0B1DF6C28C00D9338E /* TJPYingKeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */; };
@@ -39,6 +46,24 @@
 		1BEB8D0A6793600FBD65281F /* Pods-TJPYingKe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJPYingKe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe.release.xcconfig"; sourceTree = "<group>"; };
 		7870306BA7C0C7D7E3735CF9 /* Pods-TJPYingKe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJPYingKe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe.debug.xcconfig"; sourceTree = "<group>"; };
 		B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJPYingKe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC758FA61DF7B7E20053D188 /* TJPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTabBarController.h; sourceTree = "<group>"; };
+		BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTabBarController.m; sourceTree = "<group>"; };
+		BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+PauseAimate.h"; sourceTree = "<group>"; };
+		BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+PauseAimate.m"; sourceTree = "<group>"; };
+		BC758FB41DF7C03B0053D188 /* UIImage+XMGImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XMGImage.h"; sourceTree = "<group>"; };
+		BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMGImage.m"; sourceTree = "<group>"; };
+		BC758FB81DF7C03B0053D188 /* UITabBarItem+XHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+XHExtension.h"; sourceTree = "<group>"; };
+		BC758FB91DF7C03B0053D188 /* UITabBarItem+XHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+XHExtension.m"; sourceTree = "<group>"; };
+		BC758FBA1DF7C03B0053D188 /* UIView+TJPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TJPExtension.h"; sourceTree = "<group>"; };
+		BC758FBB1DF7C03B0053D188 /* UIView+TJPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TJPExtension.m"; sourceTree = "<group>"; };
+		BC758FC11DF7C0680053D188 /* TJPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPNavigationController.h; sourceTree = "<group>"; };
+		BC758FC21DF7C0680053D188 /* TJPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPNavigationController.m; sourceTree = "<group>"; };
+		BC758FC41DF7C8570053D188 /* TJPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTabBar.h; sourceTree = "<group>"; };
+		BC758FC51DF7C8570053D188 /* TJPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTabBar.m; sourceTree = "<group>"; };
+		BC758FC81DF7D1B20053D188 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BC758FC91DF7E9D50053D188 /* PublicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
+		BC758FCA1DF7EF490053D188 /* TJPNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPNavBar.h; sourceTree = "<group>"; };
+		BC758FCB1DF7EF490053D188 /* TJPNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPNavBar.m; sourceTree = "<group>"; };
 		BCE35BED1DF6C28C00D9338E /* TJPYingKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJPYingKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35BF11DF6C28C00D9338E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +121,21 @@
 				B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC758FB11DF7C03B0053D188 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */,
+				BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */,
+				BC758FB41DF7C03B0053D188 /* UIImage+XMGImage.h */,
+				BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */,
+				BC758FB81DF7C03B0053D188 /* UITabBarItem+XHExtension.h */,
+				BC758FB91DF7C03B0053D188 /* UITabBarItem+XHExtension.m */,
+				BC758FBA1DF7C03B0053D188 /* UIView+TJPExtension.h */,
+				BC758FBB1DF7C03B0053D188 /* UIView+TJPExtension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		BCE35BE41DF6C28C00D9338E = {
@@ -159,8 +199,8 @@
 		BCE35C231DF6C79600D9338E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BCE35C241DF6C79600D9338E /* Living */,
 				BCE35C281DF6C79600D9338E /* Main */,
+				BCE35C241DF6C79600D9338E /* Living */,
 				BCE35C2C1DF6C79600D9338E /* Mine */,
 				BCE35C301DF6C79600D9338E /* Other */,
 			);
@@ -211,6 +251,10 @@
 		BCE35C291DF6C79600D9338E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC758FA61DF7B7E20053D188 /* TJPTabBarController.h */,
+				BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */,
+				BC758FC11DF7C0680053D188 /* TJPNavigationController.h */,
+				BC758FC21DF7C0680053D188 /* TJPNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +269,10 @@
 		BCE35C2B1DF6C79600D9338E /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				BC758FC41DF7C8570053D188 /* TJPTabBar.h */,
+				BC758FC51DF7C8570053D188 /* TJPTabBar.m */,
+				BC758FCA1DF7EF490053D188 /* TJPNavBar.h */,
+				BC758FCB1DF7EF490053D188 /* TJPNavBar.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -263,6 +311,7 @@
 		BCE35C301DF6C79600D9338E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BC758FB11DF7C03B0053D188 /* Category */,
 				BCE35C311DF6C79600D9338E /* System */,
 			);
 			path = Other;
@@ -271,10 +320,12 @@
 		BCE35C311DF6C79600D9338E /* System */ = {
 			isa = PBXGroup;
 			children = (
+				BC758FC91DF7E9D50053D188 /* PublicHeader.h */,
 				BCE35C321DF6C79600D9338E /* AppDelegate.h */,
 				BCE35C331DF6C79600D9338E /* AppDelegate.m */,
 				BCE35C341DF6C79600D9338E /* Info.plist */,
 				BCE35C351DF6C79600D9338E /* main.m */,
+				BC758FC81DF7D1B20053D188 /* PrefixHeader.pch */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -473,9 +524,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC758FC61DF7C8570053D188 /* TJPTabBar.m in Sources */,
+				BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */,
 				BCE35C361DF6C79600D9338E /* AppDelegate.m in Sources */,
+				BC758FC31DF7C0680053D188 /* TJPNavigationController.m in Sources */,
 				BCE35C381DF6C79600D9338E /* main.m in Sources */,
-				BCE35BF21DF6C28C00D9338E /* main.m in Sources */,
+				BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */,
+				BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */,
+				BC758FBF1DF7C03B0053D188 /* UITabBarItem+XHExtension.m in Sources */,
+				BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */,
+				BC758FC01DF7C03B0053D188 /* UIView+TJPExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +673,9 @@
 			baseConfigurationReference = 7870306BA7C0C7D7E3735CF9 /* Pods-TJPYingKe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TJPYingKe/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/PrefixHeader.pch";
+				INFOPLIST_FILE = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.www.TJPYingKe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -627,7 +687,9 @@
 			baseConfigurationReference = 1BEB8D0A6793600FBD65281F /* Pods-TJPYingKe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TJPYingKe/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/PrefixHeader.pch";
+				INFOPLIST_FILE = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.www.TJPYingKe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -699,6 +761,7 @@
 				BCE35C1C1DF6C28C00D9338E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCE35C1D1DF6C28C00D9338E /* Build configuration list for PBXNativeTarget "TJPYingKeTests" */ = {
 			isa = XCConfigurationList;
@@ -707,6 +770,7 @@
 				BCE35C1F1DF6C28C00D9338E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCE35C201DF6C28C00D9338E /* Build configuration list for PBXNativeTarget "TJPYingKeUITests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +779,7 @@
 				BCE35C221DF6C28C00D9338E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
