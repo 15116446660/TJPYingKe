@@ -1,0 +1,6 @@
+framework module TJPSengment {
+  umbrella header "TJPSengment-umbrella.h"
+
+  export *
+  module * { export * }
+}

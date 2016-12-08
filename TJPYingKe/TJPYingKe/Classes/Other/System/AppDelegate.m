@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TJPTabBarController.h"
+#import "TJPHomePageViewController.h"
+#import "TJPMineViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,13 +23,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     TJPTabBarController *rootVC = [TJPTabBarController tabBarControllerWitnAddChildVCBlock:^(TJPTabBarController *tabBarVC) {
-        [tabBarVC addChildVC:[UIViewController new] normalImageName:@"tab_live" selectedImageName:@"tab_live_p" isRequiredNavController:YES];
-        UIViewController *vc1 = tabBarVC.childViewControllers[0];
-        vc1.view.backgroundColor = [UIColor brownColor];
-        [tabBarVC addChildVC:[UIViewController new] normalImageName:@"tab_me" selectedImageName:@"tab_me_p" isRequiredNavController:YES];
-        UIViewController *vc2 = tabBarVC.childViewControllers[1];
-        vc2.view.backgroundColor = [UIColor lightGrayColor];
-
+        [tabBarVC addChildVC:[[TJPHomePageViewController alloc] init] normalImageName:@"tab_live" selectedImageName:@"tab_live_p" isRequiredNavController:YES];
+        [tabBarVC addChildVC:[[TJPMineViewController alloc] init] normalImageName:@"tab_me" selectedImageName:@"tab_me_p" isRequiredNavController:YES];
     }];
     
     self.window.rootViewController = rootVC;

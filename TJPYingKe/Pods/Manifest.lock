@@ -1,12 +1,12 @@
 PODS:
-  - MJExtension (3.0.10)
+  - TJPSengment (0.1.0)
 
 DEPENDENCIES:
-  - MJExtension
+  - TJPSengment
 
 SPEC CHECKSUMS:
-  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  TJPSengment: edf40f407f658f915715d80d02f3dda635277840
 
-PODFILE CHECKSUM: e58924cbf7b687a8facbef5412ec7f4711b0eb8d
+PODFILE CHECKSUM: dabeece7b2303167a5db420bee5e2496c1728ff6
 
 COCOAPODS: 1.1.1

@@ -16,6 +16,7 @@
 		BC758FC31DF7C0680053D188 /* TJPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FC21DF7C0680053D188 /* TJPNavigationController.m */; };
 		BC758FC61DF7C8570053D188 /* TJPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FC51DF7C8570053D188 /* TJPTabBar.m */; };
 		BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FCB1DF7EF490053D188 /* TJPNavBar.m */; };
+		BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FD11DF7F9480053D188 /* TJPMineViewController.m */; };
 		BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */; };
 		BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */; };
 		BCE35C0B1DF6C28C00D9338E /* TJPYingKeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */; };
@@ -23,6 +24,7 @@
 		BCE35C361DF6C79600D9338E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C331DF6C79600D9338E /* AppDelegate.m */; };
 		BCE35C371DF6C79600D9338E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE35C341DF6C79600D9338E /* Info.plist */; };
 		BCE35C381DF6C79600D9338E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C351DF6C79600D9338E /* main.m */; };
+		BCEFA1981DF91D2700BA93C0 /* TJPHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA1951DF91D2700BA93C0 /* TJPHomePageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BC758FC91DF7E9D50053D188 /* PublicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
 		BC758FCA1DF7EF490053D188 /* TJPNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPNavBar.h; sourceTree = "<group>"; };
 		BC758FCB1DF7EF490053D188 /* TJPNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPNavBar.m; sourceTree = "<group>"; };
+		BC758FD01DF7F9480053D188 /* TJPMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPMineViewController.h; sourceTree = "<group>"; };
+		BC758FD11DF7F9480053D188 /* TJPMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPMineViewController.m; sourceTree = "<group>"; };
 		BCE35BED1DF6C28C00D9338E /* TJPYingKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJPYingKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35BF11DF6C28C00D9338E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		BCE35C331DF6C79600D9338E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BCE35C341DF6C79600D9338E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE35C351DF6C79600D9338E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCEFA1941DF91D2700BA93C0 /* TJPHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHomePageViewController.h; sourceTree = "<group>"; };
+		BCEFA1951DF91D2700BA93C0 /* TJPHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPHomePageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE35C281DF6C79600D9338E /* Main */,
+				BCEFA1921DF91D2700BA93C0 /* HomePage */,
 				BCE35C241DF6C79600D9338E /* Living */,
 				BCE35C2C1DF6C79600D9338E /* Mine */,
 				BCE35C301DF6C79600D9338E /* Other */,
@@ -290,6 +297,8 @@
 		BCE35C2D1DF6C79600D9338E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC758FD01DF7F9480053D188 /* TJPMineViewController.h */,
+				BC758FD11DF7F9480053D188 /* TJPMineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,9 +329,9 @@
 		BCE35C311DF6C79600D9338E /* System */ = {
 			isa = PBXGroup;
 			children = (
-				BC758FC91DF7E9D50053D188 /* PublicHeader.h */,
 				BCE35C321DF6C79600D9338E /* AppDelegate.h */,
 				BCE35C331DF6C79600D9338E /* AppDelegate.m */,
+				BC758FC91DF7E9D50053D188 /* PublicHeader.h */,
 				BCE35C341DF6C79600D9338E /* Info.plist */,
 				BCE35C351DF6C79600D9338E /* main.m */,
 				BC758FC81DF7D1B20053D188 /* PrefixHeader.pch */,
@@ -337,6 +346,39 @@
 				BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		BCEFA1921DF91D2700BA93C0 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				BCEFA1931DF91D2700BA93C0 /* Controller */,
+				BCEFA1961DF91D2700BA93C0 /* Model */,
+				BCEFA1971DF91D2700BA93C0 /* VIew */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		BCEFA1931DF91D2700BA93C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCEFA1941DF91D2700BA93C0 /* TJPHomePageViewController.h */,
+				BCEFA1951DF91D2700BA93C0 /* TJPHomePageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCEFA1961DF91D2700BA93C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCEFA1971DF91D2700BA93C0 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,7 +573,9 @@
 				BCE35C381DF6C79600D9338E /* main.m in Sources */,
 				BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */,
 				BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */,
+				BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */,
 				BC758FBF1DF7C03B0053D188 /* UITabBarItem+XHExtension.m in Sources */,
+				BCEFA1981DF91D2700BA93C0 /* TJPHomePageViewController.m in Sources */,
 				BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */,
 				BC758FC01DF7C03B0053D188 /* UIView+TJPExtension.m in Sources */,
 			);

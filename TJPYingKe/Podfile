@@ -1,10 +1,16 @@
+
+source "https://github.com/CocoaPods/Specs.git"
+source "https://git.coding.net/AaronTang/TJPSegementSpecs.git"
+
 platform :ios, '8.0'
 
 target 'TJPYingKe' do
   use_frameworks!
 
-#pod 'AFNetworking'
+pod 'AFNetworking'
 #pod 'SDWebImage'
-pod 'MJExtension'
+#pod 'MJExtension'
+
+pod 'TJPSengment'
 
 end

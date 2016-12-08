@@ -32,7 +32,6 @@
                                NSForegroundColorAttributeName: globalTextColor,
                                NSFontAttributeName: [UIFont systemFontOfSize:fontSize]
                                };
-    navBar.translucent = NO;
     [navBar setTitleTextAttributes:titleDic];
 }
 

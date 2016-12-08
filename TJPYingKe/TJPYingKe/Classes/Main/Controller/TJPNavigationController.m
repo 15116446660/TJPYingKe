@@ -31,8 +31,8 @@
     
     [self setupBackPanGesture];
     
+    self.navigationBar.translucent = NO;
     [TJPNavBar setGlobalBackGroundImage:[UIImage imageNamed:@"global_background"]];
-    
     [TJPNavBar setGlobalTextColor:[UIColor whiteColor] andFontSize:17.0f];
     
     
