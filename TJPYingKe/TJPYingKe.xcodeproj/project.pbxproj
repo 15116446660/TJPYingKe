@@ -17,6 +17,12 @@
 		BC758FC61DF7C8570053D188 /* TJPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FC51DF7C8570053D188 /* TJPTabBar.m */; };
 		BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FCB1DF7EF490053D188 /* TJPNavBar.m */; };
 		BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FD11DF7F9480053D188 /* TJPMineViewController.m */; };
+		BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */; };
+		BCBC42A41DFAB7120028489C /* TJPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A31DFAB7120028489C /* TJPSessionManager.m */; };
+		BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A61DFABCB60028489C /* TJPHotLiveItem.m */; };
+		BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A91DFABD900028489C /* TJPCreatorItem.m */; };
+		BCBC42B11DFAC1150028489C /* TJPHotLiveItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42AF1DFAC1150028489C /* TJPHotLiveItemCell.m */; };
+		BCBC42B21DFAC1150028489C /* TJPHotLiveItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBC42B01DFAC1150028489C /* TJPHotLiveItemCell.xib */; };
 		BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */; };
 		BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */; };
 		BCE35C0B1DF6C28C00D9338E /* TJPYingKeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */; };
@@ -25,6 +31,11 @@
 		BCE35C371DF6C79600D9338E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE35C341DF6C79600D9338E /* Info.plist */; };
 		BCE35C381DF6C79600D9338E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C351DF6C79600D9338E /* main.m */; };
 		BCEFA1981DF91D2700BA93C0 /* TJPHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA1951DF91D2700BA93C0 /* TJPHomePageViewController.m */; };
+		BCEFA19B1DF93A7C00BA93C0 /* TJPAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA19A1DF93A7C00BA93C0 /* TJPAttentionViewController.m */; };
+		BCEFA19E1DF93A8900BA93C0 /* TJPHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA19D1DF93A8900BA93C0 /* TJPHotViewController.m */; };
+		BCEFA1A11DF93A9A00BA93C0 /* TJPNearByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA1A01DF93A9A00BA93C0 /* TJPNearByViewController.m */; };
+		BCEFA1A41DF93ABA00BA93C0 /* TJPTalentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA1A31DF93ABA00BA93C0 /* TJPTalentViewController.m */; };
+		BCEFA1AA1DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEFA1A91DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +79,17 @@
 		BC758FCB1DF7EF490053D188 /* TJPNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPNavBar.m; sourceTree = "<group>"; };
 		BC758FD01DF7F9480053D188 /* TJPMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPMineViewController.h; sourceTree = "<group>"; };
 		BC758FD11DF7F9480053D188 /* TJPMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPMineViewController.m; sourceTree = "<group>"; };
+		BC7CC04E1DFE574400B3D201 /* UIImageView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XMGExtension.h"; sourceTree = "<group>"; };
+		BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGExtension.m"; sourceTree = "<group>"; };
+		BCBC42A21DFAB7120028489C /* TJPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPSessionManager.h; sourceTree = "<group>"; };
+		BCBC42A31DFAB7120028489C /* TJPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPSessionManager.m; sourceTree = "<group>"; };
+		BCBC42A51DFABCB60028489C /* TJPHotLiveItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHotLiveItem.h; sourceTree = "<group>"; };
+		BCBC42A61DFABCB60028489C /* TJPHotLiveItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPHotLiveItem.m; sourceTree = "<group>"; };
+		BCBC42A81DFABD900028489C /* TJPCreatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPCreatorItem.h; sourceTree = "<group>"; };
+		BCBC42A91DFABD900028489C /* TJPCreatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPCreatorItem.m; sourceTree = "<group>"; };
+		BCBC42AE1DFAC1150028489C /* TJPHotLiveItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHotLiveItemCell.h; sourceTree = "<group>"; };
+		BCBC42AF1DFAC1150028489C /* TJPHotLiveItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPHotLiveItemCell.m; sourceTree = "<group>"; };
+		BCBC42B01DFAC1150028489C /* TJPHotLiveItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPHotLiveItemCell.xib; sourceTree = "<group>"; };
 		BCE35BED1DF6C28C00D9338E /* TJPYingKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJPYingKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35BF11DF6C28C00D9338E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +106,16 @@
 		BCE35C351DF6C79600D9338E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCEFA1941DF91D2700BA93C0 /* TJPHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHomePageViewController.h; sourceTree = "<group>"; };
 		BCEFA1951DF91D2700BA93C0 /* TJPHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPHomePageViewController.m; sourceTree = "<group>"; };
+		BCEFA1991DF93A7C00BA93C0 /* TJPAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPAttentionViewController.h; sourceTree = "<group>"; };
+		BCEFA19A1DF93A7C00BA93C0 /* TJPAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPAttentionViewController.m; sourceTree = "<group>"; };
+		BCEFA19C1DF93A8900BA93C0 /* TJPHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHotViewController.h; sourceTree = "<group>"; };
+		BCEFA19D1DF93A8900BA93C0 /* TJPHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPHotViewController.m; sourceTree = "<group>"; };
+		BCEFA19F1DF93A9A00BA93C0 /* TJPNearByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPNearByViewController.h; sourceTree = "<group>"; };
+		BCEFA1A01DF93A9A00BA93C0 /* TJPNearByViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPNearByViewController.m; sourceTree = "<group>"; };
+		BCEFA1A21DF93ABA00BA93C0 /* TJPTalentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTalentViewController.h; sourceTree = "<group>"; };
+		BCEFA1A31DF93ABA00BA93C0 /* TJPTalentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTalentViewController.m; sourceTree = "<group>"; };
+		BCEFA1A81DF9432600BA93C0 /* UIBarButtonItem+TJPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+TJPItem.h"; sourceTree = "<group>"; };
+		BCEFA1A91DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+TJPItem.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,14 +166,34 @@
 			children = (
 				BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */,
 				BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */,
+				BC7CC04E1DFE574400B3D201 /* UIImageView+XMGExtension.h */,
+				BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */,
 				BC758FB41DF7C03B0053D188 /* UIImage+XMGImage.h */,
 				BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */,
 				BC758FB81DF7C03B0053D188 /* UITabBarItem+XHExtension.h */,
 				BC758FB91DF7C03B0053D188 /* UITabBarItem+XHExtension.m */,
 				BC758FBA1DF7C03B0053D188 /* UIView+TJPExtension.h */,
 				BC758FBB1DF7C03B0053D188 /* UIView+TJPExtension.m */,
+				BCEFA1A81DF9432600BA93C0 /* UIBarButtonItem+TJPItem.h */,
+				BCEFA1A91DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		BCBC42A01DFAB6F00028489C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BCBC42A21DFAB7120028489C /* TJPSessionManager.h */,
+				BCBC42A31DFAB7120028489C /* TJPSessionManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BCBC42A11DFAB6F00028489C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		BCE35BE41DF6C28C00D9338E = {
@@ -320,6 +372,8 @@
 		BCE35C301DF6C79600D9338E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BCBC42A01DFAB6F00028489C /* Network */,
+				BCBC42A11DFAB6F00028489C /* Tool */,
 				BC758FB11DF7C03B0053D188 /* Category */,
 				BCE35C311DF6C79600D9338E /* System */,
 			);
@@ -363,6 +417,14 @@
 			children = (
 				BCEFA1941DF91D2700BA93C0 /* TJPHomePageViewController.h */,
 				BCEFA1951DF91D2700BA93C0 /* TJPHomePageViewController.m */,
+				BCEFA1991DF93A7C00BA93C0 /* TJPAttentionViewController.h */,
+				BCEFA19A1DF93A7C00BA93C0 /* TJPAttentionViewController.m */,
+				BCEFA19C1DF93A8900BA93C0 /* TJPHotViewController.h */,
+				BCEFA19D1DF93A8900BA93C0 /* TJPHotViewController.m */,
+				BCEFA19F1DF93A9A00BA93C0 /* TJPNearByViewController.h */,
+				BCEFA1A01DF93A9A00BA93C0 /* TJPNearByViewController.m */,
+				BCEFA1A21DF93ABA00BA93C0 /* TJPTalentViewController.h */,
+				BCEFA1A31DF93ABA00BA93C0 /* TJPTalentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -370,6 +432,10 @@
 		BCEFA1961DF91D2700BA93C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCBC42A51DFABCB60028489C /* TJPHotLiveItem.h */,
+				BCBC42A61DFABCB60028489C /* TJPHotLiveItem.m */,
+				BCBC42A81DFABD900028489C /* TJPCreatorItem.h */,
+				BCBC42A91DFABD900028489C /* TJPCreatorItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +443,9 @@
 		BCEFA1971DF91D2700BA93C0 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				BCBC42AE1DFAC1150028489C /* TJPHotLiveItemCell.h */,
+				BCBC42AF1DFAC1150028489C /* TJPHotLiveItemCell.m */,
+				BCBC42B01DFAC1150028489C /* TJPHotLiveItemCell.xib */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -494,6 +563,7 @@
 				BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */,
 				BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */,
 				BCE35C371DF6C79600D9338E /* Info.plist in Resources */,
+				BCBC42B21DFAC1150028489C /* TJPHotLiveItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,18 +636,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEFA19B1DF93A7C00BA93C0 /* TJPAttentionViewController.m in Sources */,
 				BC758FC61DF7C8570053D188 /* TJPTabBar.m in Sources */,
+				BCEFA1AA1DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m in Sources */,
 				BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */,
+				BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */,
 				BCE35C361DF6C79600D9338E /* AppDelegate.m in Sources */,
+				BCEFA1A11DF93A9A00BA93C0 /* TJPNearByViewController.m in Sources */,
 				BC758FC31DF7C0680053D188 /* TJPNavigationController.m in Sources */,
 				BCE35C381DF6C79600D9338E /* main.m in Sources */,
+				BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */,
 				BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */,
+				BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */,
+				BCBC42A41DFAB7120028489C /* TJPSessionManager.m in Sources */,
 				BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */,
+				BCEFA1A41DF93ABA00BA93C0 /* TJPTalentViewController.m in Sources */,
 				BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */,
 				BC758FBF1DF7C03B0053D188 /* UITabBarItem+XHExtension.m in Sources */,
 				BCEFA1981DF91D2700BA93C0 /* TJPHomePageViewController.m in Sources */,
+				BCEFA19E1DF93A8900BA93C0 /* TJPHotViewController.m in Sources */,
 				BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */,
 				BC758FC01DF7C03B0053D188 /* UIView+TJPExtension.m in Sources */,
+				BCBC42B11DFAC1150028489C /* TJPHotLiveItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,6 @@
+framework module TJPPicScrollView {
+  umbrella header "TJPPicScrollView-umbrella.h"
+
+  export *
+  module * { export * }
+}

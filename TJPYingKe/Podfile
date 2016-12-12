@@ -8,9 +8,12 @@ target 'TJPYingKe' do
   use_frameworks!
 
 pod 'AFNetworking'
-#pod 'SDWebImage'
-#pod 'MJExtension'
+pod 'SVProgressHUD'
+pod 'MJExtension'
+pod 'SDWebImage', '~>3.7.3'
 
 pod 'TJPSengment'
+pod 'TJPPicScrollView'
+
 
 end

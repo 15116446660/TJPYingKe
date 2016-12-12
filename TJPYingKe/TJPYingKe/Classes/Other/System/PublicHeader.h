@@ -15,6 +15,8 @@
 #define kScreenHeight               [UIScreen mainScreen].bounds.size.height
 
 
+#define HOT_LIVE_URL                @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1"
+
 
 
 

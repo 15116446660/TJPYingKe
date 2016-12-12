@@ -12,11 +12,16 @@
 
 #ifdef __OBJC__
 #import "UIView+TJPExtension.h"
+#import "UIBarButtonItem+TJPItem.h"
+#import <MJExtension/MJExtension.h>
+#import "TJPSessionManager.h"
 #import "PublicHeader.h"
 
 
 #ifdef DEBUG
 #define TJPLog(...) NSLog(__VA_ARGS__)
+#define TJPLogFunc TJPLog(@"%s", __func__);
+
 
 
 #else
