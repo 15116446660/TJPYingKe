@@ -31,6 +31,10 @@
 		BC9CD3391E0142CA00F16CCD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */; };
 		BC9CD33B1E0142D600F16CCD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */; };
 		BC9CD33D1E0142DF00F16CCD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */; };
+		BC9CD3421E01484400F16CCD /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3411E01484400F16CCD /* UIImage+ImageEffects.m */; };
+		BC9CD3451E014CFD00F16CCD /* TJPLivingRoomBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3441E014CFD00F16CCD /* TJPLivingRoomBottomView.m */; };
+		BC9CD3471E014D1A00F16CCD /* TJPLivingRoomBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9CD3461E014D1A00F16CCD /* TJPLivingRoomBottomView.xib */; };
+		BC9CD34A1E015A4200F16CCD /* DMHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3491E015A4200F16CCD /* DMHeartFlyView.m */; };
 		BCBC42A41DFAB7120028489C /* TJPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A31DFAB7120028489C /* TJPSessionManager.m */; };
 		BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A61DFABCB60028489C /* TJPHotLiveItem.m */; };
 		BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A91DFABD900028489C /* TJPCreatorItem.m */; };
@@ -110,6 +114,13 @@
 		BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BC9CD3401E01484400F16CCD /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		BC9CD3411E01484400F16CCD /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		BC9CD3431E014CFD00F16CCD /* TJPLivingRoomBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLivingRoomBottomView.h; sourceTree = "<group>"; };
+		BC9CD3441E014CFD00F16CCD /* TJPLivingRoomBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLivingRoomBottomView.m; sourceTree = "<group>"; };
+		BC9CD3461E014D1A00F16CCD /* TJPLivingRoomBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPLivingRoomBottomView.xib; sourceTree = "<group>"; };
+		BC9CD3481E015A4200F16CCD /* DMHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHeartFlyView.h; sourceTree = "<group>"; };
+		BC9CD3491E015A4200F16CCD /* DMHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHeartFlyView.m; sourceTree = "<group>"; };
 		BCBC42A21DFAB7120028489C /* TJPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPSessionManager.h; sourceTree = "<group>"; };
 		BCBC42A31DFAB7120028489C /* TJPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPSessionManager.m; sourceTree = "<group>"; };
 		BCBC42A51DFABCB60028489C /* TJPHotLiveItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHotLiveItem.h; sourceTree = "<group>"; };
@@ -213,6 +224,8 @@
 		BC758FB11DF7C03B0053D188 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				BC9CD3401E01484400F16CCD /* UIImage+ImageEffects.h */,
+				BC9CD3411E01484400F16CCD /* UIImage+ImageEffects.m */,
 				BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */,
 				BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */,
 				BC7CC04E1DFE574400B3D201 /* UIImageView+XMGExtension.h */,
@@ -250,8 +263,13 @@
 			children = (
 				BC9CD3271E01409100F16CCD /* TJPLivingRoomCell.h */,
 				BC9CD3281E01409100F16CCD /* TJPLivingRoomCell.m */,
+				BC9CD3431E014CFD00F16CCD /* TJPLivingRoomBottomView.h */,
+				BC9CD3441E014CFD00F16CCD /* TJPLivingRoomBottomView.m */,
+				BC9CD3461E014D1A00F16CCD /* TJPLivingRoomBottomView.xib */,
 				BC9CD3241E013F0900F16CCD /* TJPLiveRoomFlowLayout.h */,
 				BC9CD3251E013F0900F16CCD /* TJPLiveRoomFlowLayout.m */,
+				BC9CD3481E015A4200F16CCD /* DMHeartFlyView.h */,
+				BC9CD3491E015A4200F16CCD /* DMHeartFlyView.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -616,6 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */,
+				BC9CD3471E014D1A00F16CCD /* TJPLivingRoomBottomView.xib in Resources */,
 				BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */,
 				BCE35C371DF6C79600D9338E /* Info.plist in Resources */,
 				BCBC42B21DFAC1150028489C /* TJPHotLiveItemCell.xib in Resources */,
@@ -705,16 +724,19 @@
 				BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */,
 				BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */,
 				BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */,
+				BC9CD3421E01484400F16CCD /* UIImage+ImageEffects.m in Sources */,
 				BCBC42A41DFAB7120028489C /* TJPSessionManager.m in Sources */,
 				BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */,
 				BCEFA1A41DF93ABA00BA93C0 /* TJPTalentViewController.m in Sources */,
 				BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */,
+				BC9CD3451E014CFD00F16CCD /* TJPLivingRoomBottomView.m in Sources */,
 				BC9CD3231E013B0400F16CCD /* TJPLivingRoomController.m in Sources */,
 				BC758FBF1DF7C03B0053D188 /* UITabBarItem+XHExtension.m in Sources */,
 				BCEFA1981DF91D2700BA93C0 /* TJPHomePageViewController.m in Sources */,
 				BCEFA19E1DF93A8900BA93C0 /* TJPHotViewController.m in Sources */,
 				BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */,
 				BC758FC01DF7C03B0053D188 /* UIView+TJPExtension.m in Sources */,
+				BC9CD34A1E015A4200F16CCD /* DMHeartFlyView.m in Sources */,
 				BCBC42B11DFAC1150028489C /* TJPHotLiveItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +878,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/PrefixHeader.pch";
 				INFOPLIST_FILE = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -870,6 +896,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/PrefixHeader.pch";
 				INFOPLIST_FILE = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

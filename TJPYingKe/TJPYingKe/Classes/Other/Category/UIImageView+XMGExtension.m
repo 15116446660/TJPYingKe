@@ -7,9 +7,13 @@
 //
 
 #import "UIImageView+XMGExtension.h"
+#import "UIImage+ImageEffects.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+XMGImage.h"
 
+
+CGFloat const kTJPBlurredImageDefaultBlurRadius            = 20.0;
+CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
 
 @implementation UIImageView (XMGExtension)
 
@@ -57,8 +61,48 @@
         }];
 
     }
+}
+
+/**
+ 根据模糊程度来处理图片
+ 
+ @param image 要处理的图片
+ @param blurRadius 模糊度
+ @param completion 处理完成的block
+ */
+- (void)setImageToBlur:(UIImage *)image blurRadius:(CGFloat)blurRadius completionBlock:(TJPBlurredImageCompletionBlock)completion {
+    NSParameterAssert(image);
+    blurRadius = (blurRadius <= 0) ? kTJPBlurredImageDefaultBlurRadius : blurRadius;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        UIImage *blurredImage = [image applyBlurWithRadius:blurRadius
+                                                 tintColor:nil
+                                     saturationDeltaFactor:kTJPBlurredImageDefaultSaturationFactor
+                                                 maskImage:nil];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image = blurredImage;
+            if (completion) {
+                completion();
+            }
+        });
+    });
 
 
+}
+
+
+/**
+ 图片模糊效果处理
+ 
+ @param image 要处理的图片
+ @param completion 处理完成的block
+ */
+- (void)setImageToBlur:(UIImage *)image
+       completionBlock:(TJPBlurredImageCompletionBlock)completion {
+    [self setImageToBlur:image
+              blurRadius:kTJPBlurredImageDefaultBlurRadius
+         completionBlock:completion];
 }
 
 @end

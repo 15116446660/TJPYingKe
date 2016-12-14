@@ -21,6 +21,8 @@
 #ifdef DEBUG
 #define TJPLog(...) NSLog(__VA_ARGS__)
 #define TJPLogFunc TJPLog(@"%s", __func__);
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 
 
 
