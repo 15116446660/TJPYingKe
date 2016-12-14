@@ -19,6 +19,18 @@
 		BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FD11DF7F9480053D188 /* TJPMineViewController.m */; };
 		BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */; };
 		BC9CD3231E013B0400F16CCD /* TJPLivingRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3221E013B0400F16CCD /* TJPLivingRoomController.m */; };
+		BC9CD3261E013F0900F16CCD /* TJPLiveRoomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3251E013F0900F16CCD /* TJPLiveRoomFlowLayout.m */; };
+		BC9CD3291E01409100F16CCD /* TJPLivingRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3281E01409100F16CCD /* TJPLivingRoomCell.m */; };
+		BC9CD32B1E01427A00F16CCD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */; };
+		BC9CD32D1E01428900F16CCD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32C1E01428900F16CCD /* AVFoundation.framework */; };
+		BC9CD32F1E01429400F16CCD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32E1E01429400F16CCD /* CoreMedia.framework */; };
+		BC9CD3311E01429F00F16CCD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3301E01429F00F16CCD /* CoreVideo.framework */; };
+		BC9CD3331E0142AA00F16CCD /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3321E0142AA00F16CCD /* libbz2.tbd */; };
+		BC9CD3351E0142B200F16CCD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3341E0142B200F16CCD /* libz.tbd */; };
+		BC9CD3371E0142BC00F16CCD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3361E0142BC00F16CCD /* MediaPlayer.framework */; };
+		BC9CD3391E0142CA00F16CCD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */; };
+		BC9CD33B1E0142D600F16CCD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */; };
+		BC9CD33D1E0142DF00F16CCD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */; };
 		BCBC42A41DFAB7120028489C /* TJPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A31DFAB7120028489C /* TJPSessionManager.m */; };
 		BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A61DFABCB60028489C /* TJPHotLiveItem.m */; };
 		BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A91DFABD900028489C /* TJPCreatorItem.m */; };
@@ -84,6 +96,20 @@
 		BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGExtension.m"; sourceTree = "<group>"; };
 		BC9CD3211E013B0400F16CCD /* TJPLivingRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLivingRoomController.h; sourceTree = "<group>"; };
 		BC9CD3221E013B0400F16CCD /* TJPLivingRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLivingRoomController.m; sourceTree = "<group>"; };
+		BC9CD3241E013F0900F16CCD /* TJPLiveRoomFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLiveRoomFlowLayout.h; sourceTree = "<group>"; };
+		BC9CD3251E013F0900F16CCD /* TJPLiveRoomFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLiveRoomFlowLayout.m; sourceTree = "<group>"; };
+		BC9CD3271E01409100F16CCD /* TJPLivingRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLivingRoomCell.h; sourceTree = "<group>"; };
+		BC9CD3281E01409100F16CCD /* TJPLivingRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLivingRoomCell.m; sourceTree = "<group>"; };
+		BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BC9CD32C1E01428900F16CCD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BC9CD32E1E01429400F16CCD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BC9CD3301E01429F00F16CCD /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BC9CD3321E0142AA00F16CCD /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		BC9CD3341E0142B200F16CCD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BC9CD3361E0142BC00F16CCD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		BCBC42A21DFAB7120028489C /* TJPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPSessionManager.h; sourceTree = "<group>"; };
 		BCBC42A31DFAB7120028489C /* TJPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPSessionManager.m; sourceTree = "<group>"; };
 		BCBC42A51DFABCB60028489C /* TJPHotLiveItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHotLiveItem.h; sourceTree = "<group>"; };
@@ -126,6 +152,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9CD33D1E0142DF00F16CCD /* VideoToolbox.framework in Frameworks */,
+				BC9CD33B1E0142D600F16CCD /* OpenGLES.framework in Frameworks */,
+				BC9CD3391E0142CA00F16CCD /* MobileCoreServices.framework in Frameworks */,
+				BC9CD3371E0142BC00F16CCD /* MediaPlayer.framework in Frameworks */,
+				BC9CD3351E0142B200F16CCD /* libz.tbd in Frameworks */,
+				BC9CD3331E0142AA00F16CCD /* libbz2.tbd in Frameworks */,
+				BC9CD3311E01429F00F16CCD /* CoreVideo.framework in Frameworks */,
+				BC9CD32F1E01429400F16CCD /* CoreMedia.framework in Frameworks */,
+				BC9CD32D1E01428900F16CCD /* AVFoundation.framework in Frameworks */,
+				BC9CD32B1E01427A00F16CCD /* AudioToolbox.framework in Frameworks */,
 				35EF59EB67C08DD9B9436809 /* Pods_TJPYingKe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +195,16 @@
 		8334713A250D8425CEF28F79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */,
+				BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */,
+				BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */,
+				BC9CD3361E0142BC00F16CCD /* MediaPlayer.framework */,
+				BC9CD3341E0142B200F16CCD /* libz.tbd */,
+				BC9CD3321E0142AA00F16CCD /* libbz2.tbd */,
+				BC9CD3301E01429F00F16CCD /* CoreVideo.framework */,
+				BC9CD32E1E01429400F16CCD /* CoreMedia.framework */,
+				BC9CD32C1E01428900F16CCD /* AVFoundation.framework */,
+				BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */,
 				B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */,
 			);
 			name = Frameworks;
@@ -202,6 +248,10 @@
 		BC9CD3201E013AD200F16CCD /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				BC9CD3271E01409100F16CCD /* TJPLivingRoomCell.h */,
+				BC9CD3281E01409100F16CCD /* TJPLivingRoomCell.m */,
+				BC9CD3241E013F0900F16CCD /* TJPLiveRoomFlowLayout.h */,
+				BC9CD3251E013F0900F16CCD /* TJPLiveRoomFlowLayout.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -296,8 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				BC9CD31E1E013AD200F16CCD /* Controller */,
-				BC9CD31F1E013AD200F16CCD /* Model */,
 				BC9CD3201E013AD200F16CCD /* VIew */,
+				BC9CD31F1E013AD200F16CCD /* Model */,
 			);
 			path = Living;
 			sourceTree = "<group>";
@@ -646,10 +696,12 @@
 				BCEFA1AA1DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m in Sources */,
 				BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */,
 				BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */,
+				BC9CD3291E01409100F16CCD /* TJPLivingRoomCell.m in Sources */,
 				BCE35C361DF6C79600D9338E /* AppDelegate.m in Sources */,
 				BCEFA1A11DF93A9A00BA93C0 /* TJPNearByViewController.m in Sources */,
 				BC758FC31DF7C0680053D188 /* TJPNavigationController.m in Sources */,
 				BCE35C381DF6C79600D9338E /* main.m in Sources */,
+				BC9CD3261E013F0900F16CCD /* TJPLiveRoomFlowLayout.m in Sources */,
 				BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */,
 				BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */,
 				BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */,

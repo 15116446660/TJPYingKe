@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJPLivingRoomController : UIViewController
+@interface TJPLivingRoomController : UICollectionViewController
+
+/** 直播数据源*/
+@property (nonatomic, strong) NSArray *liveDatas;
+/** 当前的index*/
+@property (nonatomic, assign) NSUInteger currentIndex;
 
 @end

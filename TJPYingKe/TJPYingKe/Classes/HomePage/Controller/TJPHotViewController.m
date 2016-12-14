@@ -108,6 +108,8 @@ static NSString * const cellID = @"liveListCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TJPLivingRoomController *roomVC = [[TJPLivingRoomController alloc] init];
+    roomVC.liveDatas = [NSArray arrayWithArray:self.liveDatas];
+    roomVC.currentIndex = indexPath.row;
     
     [self.navigationController pushViewController:roomVC animated:YES];
    
