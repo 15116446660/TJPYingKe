@@ -92,15 +92,18 @@
 //设置允许交互的区域     这个方法返回的view为处理事件最合适的view
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    
     UIView *view = [super hitTest:point withEvent:event];
-    //转换坐标到中间按钮
-    CGPoint pointInCenterBtn = [self convertPoint:point toView:self.centerBtn];
-    //判断
-    if ([self.centerBtn pointInside:pointInCenterBtn withEvent:event]) {
-        return self.centerBtn;
+    if (!self.isHidden) {
+        //转换坐标到中间按钮
+        CGPoint pointInCenterBtn = [self convertPoint:point toView:self.centerBtn];
+        //判断
+        if ([self.centerBtn pointInside:pointInCenterBtn withEvent:event]) {
+            return self.centerBtn;
+        }
+        return view;
     }
     return view;
+    
 }
 
 

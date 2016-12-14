@@ -18,6 +18,7 @@
 		BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FCB1DF7EF490053D188 /* TJPNavBar.m */; };
 		BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FD11DF7F9480053D188 /* TJPMineViewController.m */; };
 		BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */; };
+		BC9CD3231E013B0400F16CCD /* TJPLivingRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9CD3221E013B0400F16CCD /* TJPLivingRoomController.m */; };
 		BCBC42A41DFAB7120028489C /* TJPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A31DFAB7120028489C /* TJPSessionManager.m */; };
 		BCBC42A71DFABCB60028489C /* TJPHotLiveItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A61DFABCB60028489C /* TJPHotLiveItem.m */; };
 		BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC42A91DFABD900028489C /* TJPCreatorItem.m */; };
@@ -81,6 +82,8 @@
 		BC758FD11DF7F9480053D188 /* TJPMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPMineViewController.m; sourceTree = "<group>"; };
 		BC7CC04E1DFE574400B3D201 /* UIImageView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XMGExtension.h"; sourceTree = "<group>"; };
 		BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGExtension.m"; sourceTree = "<group>"; };
+		BC9CD3211E013B0400F16CCD /* TJPLivingRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLivingRoomController.h; sourceTree = "<group>"; };
+		BC9CD3221E013B0400F16CCD /* TJPLivingRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLivingRoomController.m; sourceTree = "<group>"; };
 		BCBC42A21DFAB7120028489C /* TJPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPSessionManager.h; sourceTree = "<group>"; };
 		BCBC42A31DFAB7120028489C /* TJPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPSessionManager.m; sourceTree = "<group>"; };
 		BCBC42A51DFABCB60028489C /* TJPHotLiveItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPHotLiveItem.h; sourceTree = "<group>"; };
@@ -180,6 +183,29 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		BC9CD31E1E013AD200F16CCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC9CD3211E013B0400F16CCD /* TJPLivingRoomController.h */,
+				BC9CD3221E013B0400F16CCD /* TJPLivingRoomController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC9CD31F1E013AD200F16CCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC9CD3201E013AD200F16CCD /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
 		BCBC42A01DFAB6F00028489C /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,32 +295,11 @@
 		BCE35C241DF6C79600D9338E /* Living */ = {
 			isa = PBXGroup;
 			children = (
-				BCE35C251DF6C79600D9338E /* Controller */,
-				BCE35C261DF6C79600D9338E /* Model */,
-				BCE35C271DF6C79600D9338E /* VIew */,
+				BC9CD31E1E013AD200F16CCD /* Controller */,
+				BC9CD31F1E013AD200F16CCD /* Model */,
+				BC9CD3201E013AD200F16CCD /* VIew */,
 			);
 			path = Living;
-			sourceTree = "<group>";
-		};
-		BCE35C251DF6C79600D9338E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BCE35C261DF6C79600D9338E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BCE35C271DF6C79600D9338E /* VIew */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIew;
 			sourceTree = "<group>";
 		};
 		BCE35C281DF6C79600D9338E /* Main */ = {
@@ -652,6 +657,7 @@
 				BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */,
 				BCEFA1A41DF93ABA00BA93C0 /* TJPTalentViewController.m in Sources */,
 				BC758FD21DF7F9480053D188 /* TJPMineViewController.m in Sources */,
+				BC9CD3231E013B0400F16CCD /* TJPLivingRoomController.m in Sources */,
 				BC758FBF1DF7C03B0053D188 /* UITabBarItem+XHExtension.m in Sources */,
 				BCEFA1981DF91D2700BA93C0 /* TJPHomePageViewController.m in Sources */,
 				BCEFA19E1DF93A8900BA93C0 /* TJPHotViewController.m in Sources */,

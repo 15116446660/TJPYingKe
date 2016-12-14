@@ -29,14 +29,19 @@
 {
     _liveItem = liveItem;
     
-    NSURL *imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@",liveItem.creator.portrait]];
-
-    [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:nil isCircle:YES];
+    NSURL *imageUrl;
+    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
+        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+    }else {
+        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+    }
+    
+    [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
      
      if (!liveItem.city.length) {
         _addressLabel.text = @"难道在火星?";
     }else{
-        _addressLabel.text = liveItem.city;
+        _addressLabel.text = [NSString stringWithFormat:@"%@>", liveItem.city];
     }
     
     self.nameLabel.text = liveItem.creator.nick;
@@ -44,8 +49,7 @@
     [self.anchorImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_room"] isCircle:NO];
 
     
-    
-    
+
     self.lookCountLabel.text = [self dealWithOnlineNumber:liveItem.online_users];
 }
 

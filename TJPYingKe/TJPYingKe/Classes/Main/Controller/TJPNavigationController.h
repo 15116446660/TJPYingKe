@@ -10,4 +10,6 @@
 
 @interface TJPNavigationController : UINavigationController
 
+- (void)setupBackPanGestureIsForbiddden:(BOOL)isForBidden;
+
 @end

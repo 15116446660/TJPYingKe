@@ -7,6 +7,7 @@
 //
 
 #import "TJPHotViewController.h"
+#import "TJPLivingRoomController.h"
 #import "TJPHotLiveItemCell.h"
 #import "TJPHotLiveItem.h"
 #import "TJPCreatorItem.h"
@@ -95,7 +96,7 @@ static NSString * const cellID = @"liveListCell";
     if (!cell) {
         cell = [[TJPHotLiveItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     TJPHotLiveItem *item = _liveDatas[indexPath.row];
     cell.liveItem = item;
     
@@ -106,12 +107,15 @@ static NSString * const cellID = @"liveListCell";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TJPLivingRoomController *roomVC = [[TJPLivingRoomController alloc] init];
+    
+    [self.navigationController pushViewController:roomVC animated:YES];
    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 430;
+    return kScreenHeight * 0.644;
 }
 
 

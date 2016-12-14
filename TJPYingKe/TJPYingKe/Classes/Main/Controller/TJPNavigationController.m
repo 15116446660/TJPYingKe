@@ -14,6 +14,9 @@
 @end
 
 @implementation TJPNavigationController
+{
+    BOOL _isForbidden;
+}
 
 
 
@@ -29,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupBackPanGesture];
+    [self setupBackPanGestureIsForbiddden:NO];
     
     self.navigationBar.translucent = NO;
     [TJPNavBar setGlobalBackGroundImage:[UIImage imageNamed:@"global_background"]];
@@ -50,7 +53,8 @@
 }
 
 
-- (void)setupBackPanGesture {
+- (void)setupBackPanGestureIsForbiddden:(BOOL)isForBidden {
+    _isForbidden = isForBidden;
     //设置手势代理
     UIGestureRecognizer *gesture = self.interactivePopGestureRecognizer;
     // 自定义手势 手势加在谁身上, 手势执行谁的什么方法
@@ -68,6 +72,9 @@
 {
     //需要过滤根控制器   如果根控制器也要返回手势有效, 就会造成假死状态
     if (self.childViewControllers.count == 1) {
+        return NO;
+    }
+    if (_isForbidden) {
         return NO;
     }
     
