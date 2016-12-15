@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35EF59EB67C08DD9B9436809 /* Pods_TJPYingKe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */; };
+		BC07AE261E0272B000071D75 /* TJPLivingRoomTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC07AE251E0272B000071D75 /* TJPLivingRoomTopView.m */; };
 		BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */; };
 		BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */; };
 		BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */; };
@@ -76,6 +77,8 @@
 		1BEB8D0A6793600FBD65281F /* Pods-TJPYingKe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJPYingKe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe.release.xcconfig"; sourceTree = "<group>"; };
 		7870306BA7C0C7D7E3735CF9 /* Pods-TJPYingKe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJPYingKe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJPYingKe/Pods-TJPYingKe.debug.xcconfig"; sourceTree = "<group>"; };
 		B2399D6919780BBCCE2B4188 /* Pods_TJPYingKe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJPYingKe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC07AE241E0272B000071D75 /* TJPLivingRoomTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLivingRoomTopView.h; sourceTree = "<group>"; };
+		BC07AE251E0272B000071D75 /* TJPLivingRoomTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLivingRoomTopView.m; sourceTree = "<group>"; };
 		BC758FA61DF7B7E20053D188 /* TJPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTabBarController.h; sourceTree = "<group>"; };
 		BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTabBarController.m; sourceTree = "<group>"; };
 		BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+PauseAimate.h"; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 			children = (
 				BC9CD3271E01409100F16CCD /* TJPLivingRoomCell.h */,
 				BC9CD3281E01409100F16CCD /* TJPLivingRoomCell.m */,
+				BC07AE241E0272B000071D75 /* TJPLivingRoomTopView.h */,
+				BC07AE251E0272B000071D75 /* TJPLivingRoomTopView.m */,
 				BC9CD3431E014CFD00F16CCD /* TJPLivingRoomBottomView.h */,
 				BC9CD3441E014CFD00F16CCD /* TJPLivingRoomBottomView.m */,
 				BC9CD3461E014D1A00F16CCD /* TJPLivingRoomBottomView.xib */,
@@ -594,6 +599,7 @@
 				TargetAttributes = {
 					BCE35BEC1DF6C28C00D9338E = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NCWZ4MQF27;
 						ProvisioningStyle = Automatic;
 					};
 					BCE35C051DF6C28C00D9338E = {
@@ -713,6 +719,7 @@
 				BCEFA19B1DF93A7C00BA93C0 /* TJPAttentionViewController.m in Sources */,
 				BC758FC61DF7C8570053D188 /* TJPTabBar.m in Sources */,
 				BCEFA1AA1DF9432700BA93C0 /* UIBarButtonItem+TJPItem.m in Sources */,
+				BC07AE261E0272B000071D75 /* TJPLivingRoomTopView.m in Sources */,
 				BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */,
 				BCBC42AA1DFABD900028489C /* TJPCreatorItem.m in Sources */,
 				BC9CD3291E01409100F16CCD /* TJPLivingRoomCell.m in Sources */,
@@ -878,6 +885,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = NCWZ4MQF27;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -896,6 +904,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = NCWZ4MQF27;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

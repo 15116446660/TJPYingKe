@@ -10,6 +10,7 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import <SDWebImage/SDWebImageDownloader.h>
 #import "UIImageView+XMGExtension.h"
+#import "TJPLivingRoomTopView.h"
 #import "TJPLivingRoomBottomView.h"
 #import "DMHeartFlyView.h"
 #import "TJPCreatorItem.h"
@@ -25,6 +26,8 @@
 
 /** 直播开始前的占位图片*/
 @property(nonatomic, weak) UIImageView *placeHolderView;
+/** 顶部view*/
+@property (nonatomic, weak) TJPLivingRoomTopView *topView;
 /** 底部view*/
 @property(nonatomic, weak) TJPLivingRoomBottomView *bottomView;
 
@@ -134,8 +137,7 @@
 }
 
 
-- (UIImageView *)placeHolderView
-{
+- (UIImageView *)placeHolderView {
     if (!_placeHolderView) {
         UIImageView *imageView = [[UIImageView alloc] init];
         [self.contentView addSubview:imageView];
@@ -153,6 +155,16 @@
     }
     return _bottomView;
     
+}
+
+- (TJPLivingRoomTopView *)topView {
+    if (!_topView) {
+        TJPLivingRoomTopView *topView = [[TJPLivingRoomTopView alloc] initWithFrame:CGRectZero];
+        topView.backgroundColor = [UIColor clearColor];
+        [self.contentView addSubview:topView];
+        _topView = topView;
+    }
+    return _topView;
 }
 
 
@@ -209,10 +221,21 @@
     //添加监听
     [self addObserveForMoviePlayer];
     
+    //创建顶部视图
+    [self setupTopView];
+    
     //创建底部视图
     [self setupBottomView];
 
 }
+
+- (void)setupTopView {
+    
+    self.topView.backgroundColor = [UIColor brownColor];
+
+}
+
+
 
 - (void)setupBottomView {
     WS(weakSelf)
@@ -295,6 +318,7 @@
     
     self.moviePlayer.view.frame = self.contentView.bounds;
     self.placeHolderView.frame = self.contentView.bounds;
+    self.topView.frame = CGRectMake(0, kStatusBarHeight, kScreenWidth, 80);
     self.bottomView.frame = CGRectMake(0, kScreenHeight - 54, kScreenWidth, 44);
     
 }
