@@ -84,6 +84,9 @@ static NSString * const cellID = @"liveListCell";
     
 }
 
+
+
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -119,6 +122,10 @@ static NSString * const cellID = @"liveListCell";
 {
     return kScreenHeight * 0.644;
 }
+
+
+
+
 
 
 

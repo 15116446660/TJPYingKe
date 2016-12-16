@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "TJPHotLiveItem.h"
+#import "TJPLivingRoomTopView.h"
 
 @interface TJPLivingRoomCell : UICollectionViewCell
 
 /** model*/
 @property (nonatomic, strong) TJPHotLiveItem *liveItem;
+
 /** 父控制器*/
 @property (nonatomic, weak) UIViewController *parentVc;
 

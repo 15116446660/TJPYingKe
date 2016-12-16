@@ -13,6 +13,9 @@
 @property (nonatomic, strong) NSString *nick;
 /** 主播头像 */
 @property (nonatomic, strong) NSString *portrait;
+/** 映客号*/
+@property (nonatomic, assign) NSUInteger ID;
+
 
 
 @end

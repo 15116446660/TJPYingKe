@@ -17,6 +17,8 @@
 @property (nonatomic, assign) NSUInteger online_users;
 /** 城市 */
 @property (nonatomic, copy) NSString *city;
+/** ID号*/
+@property (nonatomic, assign) NSUInteger ID;
 
 /** 主播 */
 @property (nonatomic, strong)  TJPCreatorItem *creator;

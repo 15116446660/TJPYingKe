@@ -7,13 +7,20 @@
 //
 
 #import "TJPLivingRoomTopView.h"
+#import "UIImageView+XMGExtension.h"
+#import "TJPLiveRoomTopUserItem.h"
 #import <Masonry/Masonry.h>
+#import "TJPHotLiveItem.h"
+#import "TJPCreatorItem.h"
+
 
 
 static CGFloat BgViewH = 34;
 static CGFloat AttentionBtnH = 23;
 static CGFloat TicketBgViewH = 23;
 static CGFloat ScrollViewMargin = 20;
+static CGFloat HeadImageViewWidth = 32;
+static CGFloat HostBgViewW = 128;
 
 
 
@@ -23,40 +30,47 @@ static CGFloat ScrollViewMargin = 20;
 @interface TJPLivingRoomTopView()
 
 @property (nonatomic, weak) UIView *hostBgView; //256*64
+
+
+
 /** 头像*/
 @property (nonatomic, weak) UIImageView *headImageView;
-/** 直播*/
-@property (nonatomic, weak) UILabel *liveLab;
+/** 映票文字*/
+@property (nonatomic, weak) UILabel *ticketCountLabel;
 /** 直播数量*/
 @property (nonatomic, weak) UILabel *liveCountLab;
+/** 直播*/
+@property (nonatomic, weak) UILabel *liveLab;
 /** 关注按钮*/
 @property (nonatomic, weak) UIButton *attentionBtn;
 
 
-/** */
-@property (nonatomic, weak) UIView *ticketBgView; //240*46
-/** 映票ImageView*/
-@property (nonatomic, weak) UIImageView *ticketImageView;
-/** 映票文字*/
-@property (nonatomic, weak) UILabel *ticketCountLabel;
-@property (nonatomic, weak) UIImageView *rightImageView;
 
+@property (nonatomic, weak) UIView *ticketBgView; //240*46
 /** 头像滚动视图*/
 @property (nonatomic, weak) UIScrollView *headImageScrollView;
+/** 映票ImageView*/
+@property (nonatomic, weak) UIImageView *ticketImageView;
+@property (nonatomic, weak) UIImageView *rightImageView;
+
+
 /** 映客号*/
 @property (nonatomic, weak) UILabel *yingKeNumLab;
 /** 日期*/
 @property (nonatomic, weak) UILabel *dateLabel;
 
-
-
-
+@property (nonatomic, weak) NSTimer *timer;
 
 
 
 @end
 
 @implementation TJPLivingRoomTopView
+
+static int randomNum = 0;
+static int randomPeopleNum = 0;
+
+
 
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -67,20 +81,123 @@ static CGFloat ScrollViewMargin = 20;
 }
 
 
+- (void)setLiveItem:(TJPHotLiveItem *)liveItem {
+    _liveItem = liveItem;
+    //头像
+    NSURL *imageUrl;
+    if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
+        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+    }else {
+        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+    }
+    [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
+    
+    self.liveCountLab.text = [NSString stringWithFormat:@"%lu", (unsigned long)_liveItem.online_users];
+    
+    self.yingKeNumLab.text = [NSString stringWithFormat:@"映客号:%lu", (unsigned long)_liveItem.creator.ID];
+    
+    self.dateLabel.text = [self getDate];
+    //开启定时器
+    [self timer];
+}
+
+- (void)setTopUsers:(NSMutableArray *)topUsers {
+    _topUsers = topUsers;
+    [self dealWithTopUserImageView];
+    
+}
 
 
+
+- (void)updateNumber {
+    randomNum += rand() % 20 + (-1);
+    randomPeopleNum  = rand() % 5 + (-1);
+
+    self.ticketCountLabel.text = [NSString stringWithFormat:@"%ld", [self.ticketCountLabel.text integerValue] + randomNum];
+    self.liveCountLab.text = [NSString stringWithFormat:@"%ld", [self.liveCountLab.text integerValue] + randomPeopleNum];
+    
+    
+    //更新父视图宽度
+    NSDictionary *attrs = @{NSFontAttributeName : [UIFont fontWithName:@"Georgia" size:15.f]};
+    CGSize size=[_ticketCountLabel.text sizeWithAttributes:attrs];
+    CGFloat viewW = _ticketImageView.tjp_width + size.width + _rightImageView.tjp_width + DefaultMargin * 2;
+    [self.ticketBgView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(viewW);
+    }];
+    
+}
+
+
+//处理顶部视图
+- (void)dealWithTopUserImageView {
+    CGFloat width = HeadImageViewWidth;
+    
+    self.headImageScrollView.contentSize = CGSizeMake((width + DefaultMargin) * self.topUsers.count, 0);
+    CGFloat x;
+    for (int i = 0; i < self.topUsers.count; i++) {
+        x = 0 + (DefaultMargin + width) * i;
+        UIImageView *userView = [[UIImageView alloc] initWithFrame:CGRectMake(x, 1, width, width)];
+        userView.layer.cornerRadius = width * 0.5;
+        userView.layer.masksToBounds = YES;
+        TJPLiveRoomTopUserItem *userItem = _topUsers[i];
+        NSURL *imageUrl;
+        if ([userItem.portrait hasPrefix:@"http://"]) {
+            imageUrl = [NSURL URLWithString:userItem.portrait];
+        }else {
+            imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",userItem.portrait]];
+        }
+        [userView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
+        
+        //添加监听
+        userView.userInteractionEnabled = YES;
+        [userView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickHeadImageView:)]];
+        userView.tag = i;
+        [self.headImageScrollView addSubview:userView];
+    }
+}
+
+
+
+- (void)clickHeadImageView:(UITapGestureRecognizer *)gesture {
+    if (gesture.view == self.headImageView) { //点击的是主播头像
+        
+    }else {
+        //点击的是顶部头像
+        NSDictionary * userInfo = @{@"info" : self.topUsers[gesture.view.tag]};
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationClickUser object:nil userInfo:userInfo];
+    }
+}
+
+
+- (void)attentionBtnClick:(UIButton *)button {
+    if (self.followBtnClickBlock) {
+        self.followBtnClickBlock(button);
+    }
+}
+
+
+- (NSString *)getDate {
+    NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy.MM.dd"];
+    NSDate *date = [NSDate date];
+    return [dateFormat stringFromDate:date];
+}
+
+
+
+//布局子控件
 - (void)layoutSubviews {
     
     [super layoutSubviews];
     WS(weakSelf)
     [self.hostBgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(128, BgViewH));
+        make.size.mas_equalTo(CGSizeMake(HostBgViewW, BgViewH));
         make.top.offset(5);
         make.left.offset(10);
     }];
     
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(32, 32));
+        make.size.mas_equalTo(CGSizeMake(HeadImageViewWidth, HeadImageViewWidth));
         make.left.and.top.offset(1);
     }];
     
@@ -105,7 +222,7 @@ static CGFloat ScrollViewMargin = 20;
     [self.ticketBgView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.size.mas_equalTo(CGSizeMake(120, TicketBgViewH));
         make.height.offset(TicketBgViewH);
-        make.width.greaterThanOrEqualTo(@120);//设置最小宽度
+        make.width.greaterThanOrEqualTo(@100);//设置最小宽度
         make.top.equalTo(weakSelf.hostBgView.mas_bottom).offset(7);
         make.left.mas_equalTo(weakSelf.hostBgView);
     }];
@@ -139,10 +256,21 @@ static CGFloat ScrollViewMargin = 20;
         make.size.mas_equalTo(CGSizeMake(kScreenWidth - weakSelf.hostBgView.tjp_width - ScrollViewMargin, BgViewH));
     }];
     
-    
-    
+    [self.yingKeNumLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.headImageScrollView.mas_bottom).offset(5);
+        make.right.offset(-10);
+    }];
+    [self.dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.yingKeNumLab.mas_bottom).offset(3);
+        make.right.mas_equalTo(weakSelf.yingKeNumLab);
+    }];
     
 }
+
+
+
+
+
 
 #pragma mark - lazy
 - (UIView *)hostBgView {
@@ -159,7 +287,7 @@ static CGFloat ScrollViewMargin = 20;
 
 - (UIImageView *)headImageView {
     if (!_headImageView) {
-        UIImageView *headImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"default_head"]];
+        UIImageView *headImageView = [[UIImageView alloc] init];
         [self.hostBgView addSubview:headImageView];
         _headImageView = headImageView;
     }
@@ -199,6 +327,7 @@ static CGFloat ScrollViewMargin = 20;
         [attentionBtn setBackgroundColor:TJPColor(48, 221, 209)];
         attentionBtn.layer.cornerRadius = AttentionBtnH * 0.5;
         attentionBtn.clipsToBounds = YES;
+        [attentionBtn addTarget:self action:@selector(attentionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         //        [attentionBtn setImage:[UIImage imageNamed:@"live_guanzhu_"] forState:UIControlStateNormal];
         [self.hostBgView addSubview:attentionBtn];
         _attentionBtn = attentionBtn;
@@ -232,7 +361,7 @@ static CGFloat ScrollViewMargin = 20;
 - (UILabel *)ticketCountLabel {
     if (!_ticketCountLabel) {
         UILabel *ticketCountLabel = [[UILabel alloc] init];
-        ticketCountLabel.text = @"123456789";
+        ticketCountLabel.text = [NSString stringWithFormat:@"%d", (arc4random() % 80000) + 100000];
         [ticketCountLabel setFont:[UIFont fontWithName:@"Georgia" size:15.f]];
         ticketCountLabel.textColor = [UIColor whiteColor];
         [self.ticketBgView addSubview:ticketCountLabel];
@@ -256,7 +385,7 @@ static CGFloat ScrollViewMargin = 20;
         UIScrollView *headScrollView = [[UIScrollView alloc] init];
         headScrollView.showsVerticalScrollIndicator = NO;
         headScrollView.showsHorizontalScrollIndicator = NO;
-        headScrollView.backgroundColor = [UIColor darkGrayColor];
+//        headScrollView.backgroundColor = [UIColor darkGrayColor];
         [self addSubview:headScrollView];
         _headImageScrollView = headScrollView;
     }
@@ -266,17 +395,35 @@ static CGFloat ScrollViewMargin = 20;
 
 - (UILabel *)yingKeNumLab {
     if (!_yingKeNumLab) {
-//        UILabel *yingKeLab = [[UILabel alloc] init];
-        
+        UILabel *yingKeLab = [[UILabel alloc] init];
+        yingKeLab.text = @"映客号:6666666";
+        yingKeLab.textColor = TJPColor(242, 238, 234);
+        yingKeLab.font = [UIFont systemFontOfSize:14.f];
+        [self addSubview:yingKeLab];
+        _yingKeNumLab = yingKeLab;
     }
     return _yingKeNumLab;
 }
 
 - (UILabel *)dateLabel {
     if (!_dateLabel) {
-        
+        UILabel *dateLabel = [[UILabel alloc] init];
+        dateLabel.text = @"2016.01.01";
+        dateLabel.textColor = TJPColor(242, 238, 234);
+        dateLabel.font = [UIFont systemFontOfSize:14.f];
+        [self addSubview:dateLabel];
+        _dateLabel = dateLabel;
     }
     return _dateLabel;
+}
+
+- (NSTimer *)timer {
+    if (!_timer) {
+        NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateNumber) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
+        _timer = timer;
+    }
+    return _timer;
 }
 
 

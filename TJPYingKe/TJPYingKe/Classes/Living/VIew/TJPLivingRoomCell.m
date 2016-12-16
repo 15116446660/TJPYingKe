@@ -10,8 +10,9 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 #import <SDWebImage/SDWebImageDownloader.h>
 #import "UIImageView+XMGExtension.h"
-#import "TJPLivingRoomTopView.h"
 #import "TJPLivingRoomBottomView.h"
+#import "TJPLiveRoomTopUserItem.h"
+#import "TJPLivingRoomTopView.h"
 #import "DMHeartFlyView.h"
 #import "TJPCreatorItem.h"
 
@@ -26,14 +27,13 @@
 
 /** 直播开始前的占位图片*/
 @property(nonatomic, weak) UIImageView *placeHolderView;
+
 /** 顶部view*/
 @property (nonatomic, weak) TJPLivingRoomTopView *topView;
 /** 底部view*/
 @property(nonatomic, weak) TJPLivingRoomBottomView *bottomView;
 
 @property (nonatomic, weak) DMHeartFlyView *heartView;
-
-
 
 
 /** 直播播放器*/
@@ -43,6 +43,9 @@
 
 /** 粒子动画*/
 @property(nonatomic, weak) CAEmitterLayer *emitterLayer;
+
+@property (nonatomic, strong) TJPSessionManager *sessionManager;
+
 
 
 
@@ -60,6 +63,15 @@
 }
 
 #pragma mark - lazy
+
+- (TJPSessionManager *)sessionManager {
+    if (!_sessionManager) {
+        _sessionManager = [[TJPSessionManager alloc] init];
+    }
+    return _sessionManager;
+}
+
+
 - (IJKFFOptions *)options {
     if (!_options) {
         IJKFFOptions *options = [IJKFFOptions optionsByDefault];
@@ -173,6 +185,8 @@
 - (void)setLiveItem:(TJPHotLiveItem *)liveItem
 {
     _liveItem = liveItem;
+    self.topView.liveItem = liveItem;
+    [self loadDataForTopUser];
     
     NSURL *imageUrl;
     if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
@@ -183,6 +197,22 @@
     
     [self playWithFLV:liveItem.stream_addr placeHolderUrl:imageUrl];
 
+}
+
+
+- (void)loadDataForTopUser {
+    
+    NSString *url = [NSString stringWithFormat:@"%@%lu&s_sg=c2681fa2c3c60a48e6de037e84df86f9&s_sc=100&s_st=1481858627", LiveRoomTopUser_URL, _liveItem.ID];
+    [self.sessionManager request:RequestTypeGet urlStr:url parameter:nil resultBlock:^(id responseObject, NSError *error) {
+        
+        if (error) {
+            TJPLog(@"%@", error.localizedDescription);
+            return;
+        }
+        NSMutableArray *array = [TJPLiveRoomTopUserItem mj_objectArrayWithKeyValuesArray:responseObject[@"users"]];
+        _topView.topUsers = array;
+    }];
+    
 }
 
 
@@ -231,7 +261,8 @@
 
 - (void)setupTopView {
     
-    self.topView.backgroundColor = [UIColor brownColor];
+    self.topView.backgroundColor = [UIColor clearColor];
+    
 
 }
 

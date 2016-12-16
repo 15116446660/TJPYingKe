@@ -10,7 +10,11 @@
 
 @implementation TJPHotLiveItem
 
-
+//解决关键字冲突
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID": @"id"};
+}
 
 
 

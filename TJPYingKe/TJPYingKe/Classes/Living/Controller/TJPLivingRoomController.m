@@ -10,9 +10,18 @@
 #import "TJPLiveRoomFlowLayout.h"
 #import "TJPNavigationController.h"
 #import "TJPLivingRoomCell.h"
+#import <Masonry/Masonry.h>
+#import "TJPUserView.h"
+
 
 
 @interface TJPLivingRoomController ()
+
+@property (nonatomic, weak) TJPUserView *userView;
+
+
+
+
 
 @end
 
@@ -28,7 +37,16 @@ static NSString * const CellID = @"TJPLiveRoomCell";
 
 
 #pragma mark - lazy
-
+- (TJPUserView *)userView {
+    if (!_userView) {
+        TJPUserView *userView = [TJPUserView userView];
+        userView.hidden = YES;
+        userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        [self.view addSubview:userView];
+        _userView = userView;
+    }
+    return _userView;
+}
 
 
 
@@ -59,13 +77,13 @@ static NSString * const CellID = @"TJPLiveRoomCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[TJPLivingRoomCell class] forCellWithReuseIdentifier:CellID];
-
+    //添加通知
+    [self addObserve];
+    
 }
-
 
 
 #pragma mark <UICollectionViewDataSource>
@@ -79,9 +97,61 @@ static NSString * const CellID = @"TJPLiveRoomCell";
     TJPLivingRoomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellID forIndexPath:indexPath];
     cell.parentVc = self;
     cell.liveItem = self.liveDatas[self.currentIndex];
-   
     
     return cell;
 }
+
+
+
+#pragma mark - 通知相关
+- (void)addObserve {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kNotificationClickUser object:nil];
+    
+}
+
+
+- (void)clickUser:(NSNotification *)notification {
+    
+    if (notification.userInfo[@"info"]) {
+//        TJPLiveRoomTopUserItem *userItem = notification.userInfo[@"info"];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.userView.hidden = NO;
+            self.userView.transform = CGAffineTransformIdentity;
+        }];
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+- (void)removeObserve {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+#pragma mark - 布局
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.userView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(@0);
+        make.width.offset(302);
+        make.height.offset(410);
+    }];
+}
+
+
+- (void)dealloc {
+    [self removeObserve];
+}
+
+
+
 
 @end
