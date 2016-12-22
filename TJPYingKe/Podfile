@@ -10,6 +10,7 @@ target 'TJPYingKe' do
 pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'MJExtension'
+pod 'MJRefresh'
 pod 'SDWebImage', '~>3.7.3'
 pod 'Masonry'
 

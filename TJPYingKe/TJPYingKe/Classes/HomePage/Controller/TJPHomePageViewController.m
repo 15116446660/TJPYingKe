@@ -56,7 +56,7 @@
     self.segementBarVC.segementBar.frame = CGRectMake(0, 0, 265, 35);
     self.navigationItem.titleView = self.segementBarVC.segementBar;
 
-    self.segementBarVC.view.frame = self.view.bounds;
+    self.segementBarVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight + 64);
     [self.view addSubview:self.segementBarVC.view];
     
     TJPAttentionViewController *attentionVC = [[TJPAttentionViewController alloc] init];

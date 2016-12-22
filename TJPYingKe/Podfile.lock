@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (0.6.4)
   - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - AFNetworking
   - Masonry
   - MJExtension
+  - MJRefresh
   - SDWebImage (~> 3.7.3)
   - SVProgressHUD
   - TJPPicScrollView
@@ -36,11 +38,12 @@ SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TJPPicScrollView: 25990a944b0fcce7beaadd1ca4a1535f5a412c4a
   TJPSengment: edf40f407f658f915715d80d02f3dda635277840
 
-PODFILE CHECKSUM: 1ca53581351bf4ac8dd087f2b5d7508dc1e1da4c
+PODFILE CHECKSUM: 2b22f23d36bca8d589d39576e630b6c168fc62d0
 
 COCOAPODS: 1.1.1

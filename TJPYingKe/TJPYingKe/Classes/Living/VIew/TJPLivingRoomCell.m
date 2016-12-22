@@ -203,6 +203,7 @@
 - (void)loadDataForTopUser {
     
     NSString *url = [NSString stringWithFormat:@"%@%lu&s_sg=c2681fa2c3c60a48e6de037e84df86f9&s_sc=100&s_st=1481858627", LiveRoomTopUser_URL, _liveItem.ID];
+    TJPLog(@"%@", url);
     [self.sessionManager request:RequestTypeGet urlStr:url parameter:nil resultBlock:^(id responseObject, NSError *error) {
         
         if (error) {

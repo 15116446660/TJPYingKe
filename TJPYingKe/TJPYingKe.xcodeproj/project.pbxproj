@@ -12,6 +12,7 @@
 		BC1053B61E039D8B00E8A564 /* TJPLiveRoomTopUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1053B51E039D8B00E8A564 /* TJPLiveRoomTopUserItem.m */; };
 		BC1053B91E03DB8200E8A564 /* TJPUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1053B81E03DB8200E8A564 /* TJPUserView.m */; };
 		BC1053BB1E03DB9200E8A564 /* TJPUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1053BA1E03DB9200E8A564 /* TJPUserView.xib */; };
+		BC1E91591E09230A00B79DA0 /* TJPRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1E91581E09230A00B79DA0 /* TJPRefreshGifHeader.m */; };
 		BC758FA81DF7B7E20053D188 /* TJPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */; };
 		BC758FBC1DF7C03B0053D188 /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */; };
 		BC758FBD1DF7C03B0053D188 /* UIImage+XMGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */; };
@@ -87,6 +88,8 @@
 		BC1053B71E03DB8200E8A564 /* TJPUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPUserView.h; sourceTree = "<group>"; };
 		BC1053B81E03DB8200E8A564 /* TJPUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPUserView.m; sourceTree = "<group>"; };
 		BC1053BA1E03DB9200E8A564 /* TJPUserView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPUserView.xib; sourceTree = "<group>"; };
+		BC1E91571E09230A00B79DA0 /* TJPRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPRefreshGifHeader.h; sourceTree = "<group>"; };
+		BC1E91581E09230A00B79DA0 /* TJPRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPRefreshGifHeader.m; sourceTree = "<group>"; };
 		BC758FA61DF7B7E20053D188 /* TJPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTabBarController.h; sourceTree = "<group>"; };
 		BC758FA71DF7B7E20053D188 /* TJPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTabBarController.m; sourceTree = "<group>"; };
 		BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+PauseAimate.h"; sourceTree = "<group>"; };
@@ -235,14 +238,14 @@
 		BC758FB11DF7C03B0053D188 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				BC9CD3401E01484400F16CCD /* UIImage+ImageEffects.h */,
-				BC9CD3411E01484400F16CCD /* UIImage+ImageEffects.m */,
-				BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */,
-				BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */,
-				BC7CC04E1DFE574400B3D201 /* UIImageView+XMGExtension.h */,
-				BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */,
 				BC758FB41DF7C03B0053D188 /* UIImage+XMGImage.h */,
 				BC758FB51DF7C03B0053D188 /* UIImage+XMGImage.m */,
+				BC9CD3401E01484400F16CCD /* UIImage+ImageEffects.h */,
+				BC9CD3411E01484400F16CCD /* UIImage+ImageEffects.m */,
+				BC7CC04E1DFE574400B3D201 /* UIImageView+XMGExtension.h */,
+				BC7CC04F1DFE574400B3D201 /* UIImageView+XMGExtension.m */,
+				BC758FB21DF7C03B0053D188 /* CALayer+PauseAimate.h */,
+				BC758FB31DF7C03B0053D188 /* CALayer+PauseAimate.m */,
 				BC758FB81DF7C03B0053D188 /* UITabBarItem+XHExtension.h */,
 				BC758FB91DF7C03B0053D188 /* UITabBarItem+XHExtension.m */,
 				BC758FBA1DF7C03B0053D188 /* UIView+TJPExtension.h */,
@@ -304,6 +307,8 @@
 		BCBC42A11DFAB6F00028489C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BC1E91571E09230A00B79DA0 /* TJPRefreshGifHeader.h */,
+				BC1E91581E09230A00B79DA0 /* TJPRefreshGifHeader.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -742,6 +747,7 @@
 				BC758FC31DF7C0680053D188 /* TJPNavigationController.m in Sources */,
 				BCE35C381DF6C79600D9338E /* main.m in Sources */,
 				BC1053B91E03DB8200E8A564 /* TJPUserView.m in Sources */,
+				BC1E91591E09230A00B79DA0 /* TJPRefreshGifHeader.m in Sources */,
 				BC9CD3261E013F0900F16CCD /* TJPLiveRoomFlowLayout.m in Sources */,
 				BC7CC0501DFE574400B3D201 /* UIImageView+XMGExtension.m in Sources */,
 				BC758FCC1DF7EF490053D188 /* TJPNavBar.m in Sources */,

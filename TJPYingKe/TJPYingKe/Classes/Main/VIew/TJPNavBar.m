@@ -14,7 +14,6 @@
     
     UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:NSClassFromString(@"TJPNavigationController"), nil];
     [navBar setBackgroundImage:globalImg forBarMetrics:UIBarMetricsDefault];
-    
 }
 
 

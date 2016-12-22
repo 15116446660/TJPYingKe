@@ -44,6 +44,14 @@ static NSString * const CellID = @"TJPLiveRoomCell";
         userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
         [self.view addSubview:userView];
         _userView = userView;
+        WS(weakSelf)
+        [userView setCloseViewBlock:^{
+            [UIView animateWithDuration:0.25 animations:^{
+                weakSelf.userView.hidden = YES;
+                weakSelf.userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            } completion:nil];
+        }];
+        
     }
     return _userView;
 }
@@ -113,12 +121,13 @@ static NSString * const CellID = @"TJPLiveRoomCell";
 - (void)clickUser:(NSNotification *)notification {
     
     if (notification.userInfo[@"info"]) {
-//        TJPLiveRoomTopUserItem *userItem = notification.userInfo[@"info"];
+        TJPLiveRoomTopUserItem *userItem = notification.userInfo[@"info"];
+        self.userView.userItem = userItem;
         [UIView animateWithDuration:0.25 animations:^{
             self.userView.hidden = NO;
             self.userView.transform = CGAffineTransformIdentity;
         }];
-
+        
     }
     
 }
@@ -146,6 +155,7 @@ static NSString * const CellID = @"TJPLiveRoomCell";
     }];
 }
 
+ 
 
 - (void)dealloc {
     [self removeObserve];

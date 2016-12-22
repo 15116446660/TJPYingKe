@@ -71,6 +71,9 @@ CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
  @param completion 处理完成的block
  */
 - (void)setImageToBlur:(UIImage *)image blurRadius:(CGFloat)blurRadius completionBlock:(TJPBlurredImageCompletionBlock)completion {
+    if (!image) {
+        return;
+    }
     NSParameterAssert(image);
     blurRadius = (blurRadius <= 0) ? kTJPBlurredImageDefaultBlurRadius : blurRadius;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -103,6 +106,26 @@ CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
     [self setImageToBlur:image
               blurRadius:kTJPBlurredImageDefaultBlurRadius
          completionBlock:completion];
+}
+
+
+/** 播放Image*/
+- (void)playGifAnimationWithImages:(NSArray *)images {
+    
+    if (!images.count) {
+        return;
+    }
+    self.animationImages = images;
+    self.animationDuration = 0.5;
+    self.animationRepeatCount = 0;//无限循环
+    [self startAnimating];
+}
+/** 停止动画*/
+- (void)stopGifAnimation {
+    if (self.isAnimating) {
+        [self stopAnimating];
+    }
+    [self removeFromSuperview];
 }
 
 @end

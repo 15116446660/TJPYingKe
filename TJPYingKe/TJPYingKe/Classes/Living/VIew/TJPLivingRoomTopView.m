@@ -86,9 +86,9 @@ static int randomPeopleNum = 0;
     //头像
     NSURL *imageUrl;
     if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
-        imageUrl = [NSURL URLWithString:liveItem.creator.portrait];
+        imageUrl = [NSURL URLWithString:_liveItem.creator.portrait];
     }else {
-        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
+        imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",_liveItem.creator.portrait]];
     }
     [self.headImageView setURLImageWithURL:imageUrl placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
     
