@@ -41,6 +41,8 @@ CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
     if (isCircle) {
         [self sd_setImageWithURL:url placeholderImage:[placeHoldImage circleImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 
+            NSLog(@"宽:%f, 高:%f",
+                  image.size.width, image.size.height);
             UIImage *resultImage = [image circleImage];
 
             // 6. 处理结果图片

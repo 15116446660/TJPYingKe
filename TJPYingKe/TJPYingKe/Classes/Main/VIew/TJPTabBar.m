@@ -74,7 +74,6 @@
             if (tabBarBtnIndex == count / 2) {
                 tabBarBtnIndex ++;
             }
-            
             CGFloat btnX = tabBarBtnIndex * buttonW;
             subView.frame = CGRectMake(btnX, tabBarBtnY, buttonW, buttonH);
             
@@ -89,14 +88,14 @@
     
 }
 
-//设置允许交互的区域     这个方法返回的view为处理事件最合适的view
+//设置允许交互的区域     方法返回的view为处理事件最合适的view
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
     UIView *view = [super hitTest:point withEvent:event];
     if (!self.isHidden) {
-        //转换坐标到中间按钮
+        //转换坐标到中间按钮,生成一个新的点
         CGPoint pointInCenterBtn = [self convertPoint:point toView:self.centerBtn];
-        //判断
+        //判断  如果该点是在中间按钮,那么处理事件最合适的View,就是这个button
         if ([self.centerBtn pointInside:pointInCenterBtn withEvent:event]) {
             return self.centerBtn;
         }
@@ -105,6 +104,27 @@
     return view;
     
 }
+
+//- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+//{
+//    
+//    //转换坐标到中间按钮,生成一个新的点
+//    CGPoint pointInCenterBtn = [self convertPoint:point toView:self.centerBtn];
+//    
+//    CGPoint middleBtnCenter = CGPointMake(40, 40);
+//    
+//    //pow函数 pow(x,y)  其作用是计算x的y次方
+//    //sqrt函数是C语言中的平方根函数
+//    
+//    //计算出距离
+//    CGFloat distance = sqrt(pow(pointInCenterBtn.x - middleBtnCenter.x, 2) + pow(pointInCenterBtn.y - middleBtnCenter.y, 2));
+//    //判断该触摸事件是否能够响应
+//    if (pointInCenterBtn.y < 3.5 || (distance > 40 && pointInCenterBtn.y < 18)) {
+//        return NO;
+//    }
+//    
+//    return YES;
+//}
 
 
 

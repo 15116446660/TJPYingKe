@@ -166,6 +166,11 @@ static NSString * const cellID = @"liveListCell";
     return kScreenHeight * 0.644;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
