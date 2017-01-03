@@ -913,7 +913,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/PrefixHeader.pch";
-				INFOPLIST_FILE = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/Info.plist";
+				INFOPLIST_FILE = TJPYingKe/Classes/Other/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.www.TJPYingKe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -932,7 +932,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/PrefixHeader.pch";
-				INFOPLIST_FILE = "/Users/walkman/Desktop/仿映客/TJPYingKe/TJPYingKe/TJPYingKe/Classes/Other/System/Info.plist";
+				INFOPLIST_FILE = TJPYingKe/Classes/Other/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.www.TJPYingKe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
