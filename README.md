@@ -9,8 +9,8 @@
 链接:<https://pan.baidu.com/s/1i51Ched> 密码:imjc
 
 #效果图
-![示例](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/topClick.gif)
+![示例1](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/topClick.gif)
 
-![示例](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/TJPYingKe.gif)
+![示例2](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/TJPYingKe.gif)
 
 录制成的Gif略显模糊,更多细节,请下载代码~
