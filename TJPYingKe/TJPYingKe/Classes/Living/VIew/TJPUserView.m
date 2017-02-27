@@ -7,7 +7,6 @@
 //
 
 #import "TJPUserView.h"
-#import "UIImageView+XMGExtension.h"
 #import "TJPLiveRoomTopUserItem.h"
 
 @interface TJPUserView()

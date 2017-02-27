@@ -7,10 +7,9 @@
 //
 
 #import "TJPLivingRoomController.h"
-#import "TJPLiveRoomFlowLayout.h"
 #import "TJPNavigationController.h"
+#import "TJPLiveRoomFlowLayout.h"
 #import "TJPLivingRoomCell.h"
-#import <Masonry/Masonry.h>
 #import "TJPUserView.h"
 
 

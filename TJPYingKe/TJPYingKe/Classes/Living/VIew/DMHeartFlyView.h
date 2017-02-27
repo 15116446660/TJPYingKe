@@ -10,6 +10,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DMHeartFlyView : UIView
--(void)animateInView:(UIView *)view;
+- (void)animateInView:(UIView *)view;
 @end
 

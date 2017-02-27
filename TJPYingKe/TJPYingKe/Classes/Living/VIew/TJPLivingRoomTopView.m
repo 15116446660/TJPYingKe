@@ -7,9 +7,7 @@
 //
 
 #import "TJPLivingRoomTopView.h"
-#import "UIImageView+XMGExtension.h"
 #import "TJPLiveRoomTopUserItem.h"
-#import <Masonry/Masonry.h>
 #import "TJPHotLiveItem.h"
 #import "TJPCreatorItem.h"
 
@@ -120,7 +118,7 @@ static int randomPeopleNum = 0;
     //更新父视图宽度
     NSDictionary *attrs = @{NSFontAttributeName : [UIFont fontWithName:@"Georgia" size:15.f]};
     CGSize size=[_ticketCountLabel.text sizeWithAttributes:attrs];
-    CGFloat viewW = _ticketImageView.tjp_width + size.width + _rightImageView.tjp_width + DefaultMargin * 2;
+    CGFloat viewW = _ticketImageView.tjp_width + size.width + _rightImageView.tjp_width + kDefaultMargin * 2;
     [self.ticketBgView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.offset(viewW);
     }];
@@ -132,10 +130,10 @@ static int randomPeopleNum = 0;
 - (void)dealWithTopUserImageView {
     CGFloat width = HeadImageViewWidth;
     
-    self.headImageScrollView.contentSize = CGSizeMake((width + DefaultMargin) * self.topUsers.count, 0);
+    self.headImageScrollView.contentSize = CGSizeMake((width + kDefaultMargin) * self.topUsers.count, 0);
     CGFloat x;
     for (int i = 0; i < self.topUsers.count; i++) {
-        x = 0 + (DefaultMargin + width) * i;
+        x = 0 + (kDefaultMargin + width) * i;
         UIImageView *userView = [[UIImageView alloc] initWithFrame:CGRectMake(x, 1, width, width)];
         userView.layer.cornerRadius = width * 0.5;
         userView.layer.masksToBounds = YES;
@@ -241,8 +239,8 @@ static int randomPeopleNum = 0;
     
     //更新父视图宽度
     NSDictionary *attrs = @{NSFontAttributeName : [UIFont fontWithName:@"Georgia" size:15.f]};
-    CGSize size=[_ticketCountLabel.text sizeWithAttributes:attrs];
-    CGFloat viewW = _ticketImageView.tjp_width + size.width + _rightImageView.tjp_width + DefaultMargin * 2;
+    CGSize size = [_ticketCountLabel.text sizeWithAttributes:attrs];
+    CGFloat viewW = _ticketImageView.tjp_width + size.width + _rightImageView.tjp_width + kDefaultMargin * 2;
     [self.ticketBgView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.offset(viewW);
     }];

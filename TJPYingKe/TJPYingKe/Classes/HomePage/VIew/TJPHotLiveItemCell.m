@@ -9,7 +9,6 @@
 #import "TJPHotLiveItemCell.h"
 #import "TJPHotLiveItem.h"
 #import "TJPCreatorItem.h"
-#import "UIImageView+XMGExtension.h"
 
 
 @interface TJPHotLiveItemCell()
@@ -67,8 +66,6 @@
     return resultStr;
     
 }
-
-
 
 
 - (void)awakeFromNib {

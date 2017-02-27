@@ -10,6 +10,12 @@
 
 @interface TJPNavigationController : UINavigationController
 
+
+/**
+ 全屏返回手势
+
+ @param isForBidden 是否禁止
+ */
 - (void)setupBackPanGestureIsForbiddden:(BOOL)isForBidden;
 
 @end

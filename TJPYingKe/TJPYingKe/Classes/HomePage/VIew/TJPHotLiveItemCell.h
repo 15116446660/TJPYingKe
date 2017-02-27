@@ -10,7 +10,7 @@
 @class TJPHotLiveItem;
 
 @interface TJPHotLiveItemCell : UITableViewCell
-@property (nonatomic, strong) TJPHotLiveItem *liveItem;;
+@property (nonatomic, strong) TJPHotLiveItem *liveItem;
 
 
 @end

@@ -10,21 +10,20 @@
 #import "TJPLivingRoomController.h"
 #import "TJPRefreshGifHeader.h"
 #import "TJPHotLiveItemCell.h"
-#import "TJPHotLiveItem.h"
 #import "TJPCreatorItem.h"
+#import "TJPRequestDataTool.h"
 
 
 static NSString * const cellID = @"liveListCell";
 
 
 @interface TJPHotViewController ()
-@property (nonatomic, strong) TJPSessionManager *sessionManager;
+
 
 /** 数据源*/
 @property (nonatomic, strong) NSMutableArray *liveDatas;
 
 @property (nonatomic, weak) NSTimer *timer;
-
 
 
 
@@ -34,13 +33,6 @@ static NSString * const cellID = @"liveListCell";
 
 
 #pragma mark - lazy
-- (TJPSessionManager *)sessionManager {
-    if (!_sessionManager) {
-        _sessionManager = [[TJPSessionManager alloc] init];
-    }
-    return _sessionManager;
-}
-
 - (NSMutableArray *)liveDatas
 {
     if (!_liveDatas) {
@@ -91,17 +83,10 @@ static NSString * const cellID = @"liveListCell";
 
 #pragma mark - Data
 - (void)loadData {
-    
-    [self.sessionManager request:RequestTypeGet urlStr:HOT_LIVE_URL parameter:nil resultBlock:^(id responseObject, NSError *error) {
-        [self.tableView.mj_header endRefreshing];
-
-        if (error) {
-            TJPLog(@"%@", error.localizedDescription);
-            return;
-        }
-        _liveDatas = [TJPHotLiveItem mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
-//        TJPLog(@"%@", _liveDatas);
-        [self.tableView reloadData];
+    WS(weakSelf)
+    [[TJPRequestDataTool shareInstance] getHotPageModelsWithTableView:self.tableView result:^(NSMutableArray<TJPHotLiveItem *> *hotModels) {
+        weakSelf.liveDatas = hotModels;
+        [weakSelf.tableView reloadData];
     }];
 }
 

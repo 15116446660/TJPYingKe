@@ -8,7 +8,7 @@
 
 #import "TJPTabBarController.h"
 #import "TJPNavigationController.h"
-#import "UIImage+XMGImage.h"
+#import "UIImage+TJPImage.h"
 #import "TJPTabBar.h"
 
 @interface TJPTabBarController ()

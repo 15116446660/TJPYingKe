@@ -1,31 +1,30 @@
 //
-//  UIImageView+XMGExtension.m
-//  百思不得姐
+//  UIImageView+TJPExtension.m
+//  TJPYingKe
 //
-//  Created by 王顺子 on 16/6/16.
-//  Copyright © 2016年 小码哥. All rights reserved.
+//  Created by Walkman on 2017/2/27.
+//  Copyright © 2017年 AaronTang. All rights reserved.
 //
 
-#import "UIImageView+XMGExtension.h"
+#import "UIImageView+TJPExtension.h"
 #import "UIImage+ImageEffects.h"
 #import "UIImageView+WebCache.h"
-#import "UIImage+XMGImage.h"
-
+#import "UIImage+TJPImage.h"
 
 CGFloat const kTJPBlurredImageDefaultBlurRadius            = 20.0;
 CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
 
-@implementation UIImageView (XMGExtension)
 
+@implementation UIImageView (TJPExtension)
 
 - (void)setURLImageWithURL: (NSURL *)url progress:(void(^)(CGFloat progress))progress complete: (void(^)())complete {
-
+    
     [self sd_setImageWithURL:url placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         if (progress != nil)
         {
             progress(1.0 * receivedSize / expectedSize);
         }
-
+        
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.image = image;
         if (complete != nil)
@@ -33,35 +32,33 @@ CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
             complete();
         }
     }];
-
+    
 }
 
 - (void)setURLImageWithURL: (NSURL *)url placeHoldImage:(UIImage *)placeHoldImage isCircle:(BOOL)isCircle {
-
+    
     if (isCircle) {
         [self sd_setImageWithURL:url placeholderImage:[placeHoldImage circleImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-
-            NSLog(@"宽:%f, 高:%f",
-                  image.size.width, image.size.height);
+            
             UIImage *resultImage = [image circleImage];
-
+            
             // 6. 处理结果图片
             if (resultImage == nil) return;
             self.image = resultImage;
             
             
         }];
-
+        
     }else {
         [self sd_setImageWithURL:url placeholderImage:placeHoldImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-
+            
             // 6. 处理结果图片
             if (image == nil) return;
             self.image = image;
             
             
         }];
-
+        
     }
 }
 
@@ -92,8 +89,8 @@ CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
             }
         });
     });
-
-
+    
+    
 }
 
 
@@ -129,5 +126,7 @@ CGFloat const kTJPBlurredImageDefaultSaturationFactor      = 1.8;
     }
     [self removeFromSuperview];
 }
+
+
 
 @end

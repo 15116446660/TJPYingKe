@@ -14,7 +14,7 @@
 #define kScreenWidth                [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight               [UIScreen mainScreen].bounds.size.height
 #define kStatusBarHeight            20
-#define DefaultMargin               10
+#define kDefaultMargin              10
 
 
 /**    接口     **/
