@@ -35,7 +35,8 @@
     [self setupBackPanGestureIsForbiddden:NO];
     
     self.navigationBar.translucent = NO;
-    [TJPNavBar setGlobalBackGroundImage:[UIImage imageNamed:@"global_background"]];
+//    [TJPNavBar setGlobalBackGroundImage:[UIImage imageNamed:@"global_background"]];
+    [TJPNavBar setGlobalBarTintColor:kGlobalLightBlueColor];
     [TJPNavBar setGlobalTextColor:[UIColor whiteColor] andFontSize:17.0f];
     
     
@@ -90,12 +91,8 @@
     if (self.childViewControllers.count > 0) { //如果push进来的不是第一个控制器
         UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [backButton setImage:[UIImage imageNamed:@"title_button_back"] forState:UIControlStateNormal];
-//        [backButton setImage:[UIImage imageNamed:@"title_button_back"] forState:UIControlStateHighlighted];
         [backButton addTarget:self action:@selector(leftBarButtonItemClicked) forControlEvents:UIControlEventTouchUpInside];
-        [backButton setExclusiveTouch:YES];
         [backButton sizeToFit];
-//        backButton.tjp_width = 16;
-//        backButton.tjp_height = 16;
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
         
         //当push的时候 隐藏tabbar

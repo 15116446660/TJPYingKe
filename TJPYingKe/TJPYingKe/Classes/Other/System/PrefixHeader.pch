@@ -16,6 +16,7 @@
 
 
 #import "TJPSessionManager.h"
+#import "TJPCommonAPIConstant.h"
 #import "PublicHeader.h"
 
 #import "UIView+TJPExtension.h"
@@ -27,8 +28,6 @@
 #define TJPLog(...) NSLog(__VA_ARGS__)
 #define TJPLogFunc TJPLog(@"%s", __func__);
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
-
-
 
 
 #else

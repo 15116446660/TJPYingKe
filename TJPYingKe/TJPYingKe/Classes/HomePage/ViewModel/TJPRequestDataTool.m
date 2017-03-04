@@ -40,9 +40,36 @@ static TJPRequestDataTool *dataTool = nil;
 }
 
 
+/** 导航栏标签数据*/
+- (void)getNavigationTagModels:(void(^)(NSArray <TJPNavigationTagItem *>*tagModels))resultBlock {
+    
+    [self.sessionManager request:RequestTypeGet urlStr:kTJPNavigationTagAPI parameter:nil resultBlock:^(id responseObject, NSError *error) {
+        if (error) {
+            TJPLog(@"%@", error.localizedDescription);
+            return;
+        }
+        NSArray <TJPNavigationTagItem *>*tagModels = [TJPNavigationTagItem mj_objectArrayWithKeyValuesArray:responseObject[@"tabs"]];
+        resultBlock(tagModels);
+    }];
+}
 
+/** 轮播数据*/
+- (void)getTopCarouselModels:(void(^)(NSArray <TJPBannerItem *>*carouselModels))resultBlock {
+    [self.sessionManager request:RequestTypeGet urlStr:kTJPHomeTopCarouselAPI parameter:nil resultBlock:^(id responseObject, NSError *error) {
+        if (error) {
+            TJPLog(@"%@", error.localizedDescription);
+            return;
+        }
+        NSArray <TJPBannerItem *>*carouselModels = [TJPBannerItem mj_objectArrayWithKeyValuesArray:responseObject[@"ticker"]];
+        resultBlock(carouselModels);
+    }];
+}
+
+
+
+/** 获取热门数据*/
 - (void)getHotPageModelsWithTableView:(UITableView *)tableView  result:(void(^)(NSMutableArray <TJPHotLiveItem *>*hotModels))resultBlock {
-    [self.sessionManager request:RequestTypeGet urlStr:HOT_LIVE_URL parameter:nil resultBlock:^(id responseObject, NSError *error) {
+    [self.sessionManager request:RequestTypeGet urlStr:kTJPHotLiveAPI parameter:nil resultBlock:^(id responseObject, NSError *error) {
         [tableView.mj_header endRefreshing];
         if (error) {
             TJPLog(@"%@", error.localizedDescription);
@@ -57,7 +84,7 @@ static TJPRequestDataTool *dataTool = nil;
 /** 获取直播间用户数据*/
 - (void)getLivingRoomTopUserModelsWithLiveID:(NSUInteger)liveID  result:(void(^)(NSMutableArray <TJPLiveRoomTopUserItem *>*topUserModels))resultBlock {
     
-    NSString *url = [NSString stringWithFormat:@"%@%lu&s_sg=c2681fa2c3c60a48e6de037e84df86f9&s_sc=100&s_st=1481858627", LiveRoomTopUser_URL, liveID];
+    NSString *url = [NSString stringWithFormat:@"%@%lu&s_sg=c2681fa2c3c60a48e6de037e84df86f9&s_sc=100&s_st=1481858627", kTJPLivingRoomUserInfoAPI, liveID];
      TJPLog(@"%@", url);
     [self.sessionManager request:RequestTypeGet urlStr:url parameter:nil resultBlock:^(id responseObject, NSError *error) {
         if (error) {

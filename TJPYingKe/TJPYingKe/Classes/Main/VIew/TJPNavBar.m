@@ -16,6 +16,11 @@
     [navBar setBackgroundImage:globalImg forBarMetrics:UIBarMetricsDefault];
 }
 
++ (void)setGlobalBarTintColor:(UIColor *)barColor {
+    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:NSClassFromString(@"TJPNavigationController"), nil];
+    [navBar setBarTintColor:barColor];
+}
+
 
 + (void)setGlobalTextColor: (UIColor *)globalTextColor andFontSize: (CGFloat)fontSize  {
     
@@ -37,6 +42,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.translucent = NO;
     }
     return self;
 }

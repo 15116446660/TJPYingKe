@@ -7,14 +7,17 @@
 //
 
 #import "TJPHotViewController.h"
+#import <SDCycleScrollView/SDCycleScrollView.h>
+
 #import "TJPLivingRoomController.h"
 #import "TJPRefreshGifHeader.h"
 #import "TJPHotLiveItemCell.h"
 #import "TJPCreatorItem.h"
 #import "TJPRequestDataTool.h"
+#import "TJPWebViewController.h"
 
-
-static NSString * const cellID = @"liveListCell";
+static NSString * const cellID              = @"liveListCell";
+static CGFloat const timeInterval           = 90;
 
 
 @interface TJPHotViewController ()
@@ -22,9 +25,10 @@ static NSString * const cellID = @"liveListCell";
 
 /** 数据源*/
 @property (nonatomic, strong) NSMutableArray *liveDatas;
+@property (nonatomic, strong) NSMutableArray <NSString *>*linkArr;
+
 
 @property (nonatomic, weak) NSTimer *timer;
-
 
 
 @end
@@ -40,10 +44,16 @@ static NSString * const cellID = @"liveListCell";
     }
     return _liveDatas;
 }
+- (NSMutableArray<NSString *> *)linkArr {
+    if (!_linkArr) {
+        _linkArr = [NSMutableArray array];
+    }
+    return _linkArr;
+}
 
 - (NSTimer *)timer {
     if (!_timer) {
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:90 target:self selector:@selector(loadNewDataForHotPage) userInfo:nil repeats:YES];
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(loadNewDataForHotPage) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
         _timer = timer;
     }
@@ -66,12 +76,13 @@ static NSString * const cellID = @"liveListCell";
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-    
     //UI
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"TJPHotLiveItemCell" bundle:nil] forCellReuseIdentifier:cellID];
     //数据
-    [self loadData];
+    [self loadDataForBannerView];
+    [self loadDataForHotLive];
+
     //刷新
     [self addRefresh];
     //定时器
@@ -82,7 +93,25 @@ static NSString * const cellID = @"liveListCell";
 
 
 #pragma mark - Data
-- (void)loadData {
+- (void)loadDataForBannerView {
+    WS(weakSelf)
+    NSMutableArray *tmpImageArr = [NSMutableArray array];
+    //顶部轮播图数据
+    [[TJPRequestDataTool shareInstance] getTopCarouselModels:^(NSArray<TJPBannerItem *> *carouselModels) {
+        for (TJPBannerItem *item in carouselModels) {
+            if (![item.image hasPrefix:@"http://"]) {
+                item.image = [NSString stringWithFormat:@"http://img2.inke.cn/%@", item.image];
+            }
+            [tmpImageArr addObject:item.image];
+            [weakSelf.linkArr addObject:item.link];
+        }
+        weakSelf.tableView.tableHeaderView =  [weakSelf setupHeaderView:tmpImageArr];
+    }];
+    
+}
+
+//热门数据
+- (void)loadDataForHotLive {
     WS(weakSelf)
     [[TJPRequestDataTool shareInstance] getHotPageModelsWithTableView:self.tableView result:^(NSMutableArray<TJPHotLiveItem *> *hotModels) {
         weakSelf.liveDatas = hotModels;
@@ -110,7 +139,7 @@ static NSString * const cellID = @"liveListCell";
 //获取新数据
 - (void)loadNewData {
     [self.liveDatas removeAllObjects];
-    [self loadData];
+    [self loadDataForHotLive];
 }
 
 
@@ -179,7 +208,7 @@ static NSString * const cellID = @"liveListCell";
 }
 
 
-
+#pragma mark - privite
 //隐藏显示tabbar
 - (void)setTabBarHidden:(BOOL)hidden
 {
@@ -198,10 +227,10 @@ static NSString * const cellID = @"liveListCell";
     
     if (hidden) {
         view.frame = tab.bounds;
-        tabRect.origin.y = [[UIScreen mainScreen] bounds].size.height+self.tabBarController.tabBar.frame.size.height;
+        tabRect.origin.y = kScreenHeight + self.tabBarController.tabBar.tjp_height;
     } else {
         view.frame = CGRectMake(tab.bounds.origin.x, tab.bounds.origin.y, tab.bounds.size.width, tab.bounds.size.height);
-        tabRect.origin.y = [[UIScreen mainScreen] bounds].size.height-self.tabBarController.tabBar.frame.size.height;
+        tabRect.origin.y = kScreenHeight - self.tabBarController.tabBar.tjp_height;
     }
     
     [UIView animateWithDuration:0.25f animations:^{
@@ -213,10 +242,22 @@ static NSString * const cellID = @"liveListCell";
 }
 
 
-
-
-
-
+- (UIView *)setupHeaderView:(NSArray *)itemImageUrlStrs {
+    WS(weakSelf)
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight * 0.225) imageNamesGroup:itemImageUrlStrs];
+    cycleScrollView.placeholderImage = [UIImage imageNamed:@"default_ticker"];
+    cycleScrollView.autoScrollTimeInterval = 3.f;
+    cycleScrollView.pageDotColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+    cycleScrollView.currentPageDotColor = kGlobalLightBlueColor;
+    [cycleScrollView setClickItemOperationBlock:^(NSInteger index) {
+        NSString *link = _linkArr[index];
+        TJPWebViewController *webVC = [[TJPWebViewController alloc] init];
+        webVC.urlStr = link;
+        [weakSelf.navigationController pushViewController:webVC animated:YES];
+    }];
+    
+    return cycleScrollView;
+}
 
 
 

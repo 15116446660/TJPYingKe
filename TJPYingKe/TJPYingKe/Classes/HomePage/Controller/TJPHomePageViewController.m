@@ -13,9 +13,14 @@
 #import "TJPNearByViewController.h"
 #import "TJPTalentViewController.h"
 
+#import "TJPRequestDataTool.h"
+
 @interface TJPHomePageViewController ()
 
 @property (nonatomic, weak) TJPSegementBarVC *segementBarVC;
+
+@property (nonatomic, strong) NSArray *tagArr;
+
 
 
 @end
@@ -24,6 +29,13 @@
 
 
 #pragma mark - lazy
+- (NSArray *)tagArr {
+    if (!_tagArr) {
+        _tagArr = [NSArray array];
+    }
+    return _tagArr;
+}
+
 - (TJPSegementBarVC *)segementBarVC
 {
     if (!_segementBarVC) {
@@ -34,25 +46,34 @@
     return _segementBarVC;
 }
 
+#pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor clearColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 
-    
-    [self setupNavigationTitleView];
+    [self loadDataForNavTag];
     
     [self setupNavigationItem];
 
-    
-
-    
-
 }
 
-- (void)setupNavigationTitleView {
-    self.automaticallyAdjustsScrollViewInsets = NO;
+- (void)loadDataForNavTag {
+    WS(weakSelf)
+    __block NSMutableArray *tmpArr = [NSMutableArray array];
+    [[TJPRequestDataTool shareInstance] getNavigationTagModels:^(NSArray<TJPNavigationTagItem *> *tagModels) {
+        for (TJPNavigationTagItem *item in tagModels) {
+            [tmpArr addObject:item.tab_title];
+        }
+        weakSelf.tagArr = tmpArr.count ? [NSArray arrayWithArray:tmpArr] : @[@"关注", @"热门", @"附近", @"才艺"];
+        //设置UI
+        [weakSelf setupNavigationTitleViewWithItems:weakSelf.tagArr];
+    }];
+}
 
+
+- (void)setupNavigationTitleViewWithItems:(NSArray *)items {
+    
     self.segementBarVC.segementBar.frame = CGRectMake(0, 0, 265, 35);
     self.navigationItem.titleView = self.segementBarVC.segementBar;
 
@@ -66,13 +87,16 @@
     
     TJPTalentViewController *talentVC = [[TJPTalentViewController alloc] init];
     
-    [self.segementBarVC setUpWithItems:@[@"关注", @"热门", @"附近", @"才艺"] childVCs:@[attentionVC, hotVC, nearbyVC, talentVC]];
+    [self.segementBarVC setUpWithItems:items childVCs:@[attentionVC, hotVC, nearbyVC, talentVC]];
     
     //设置属性相关
     [self.segementBarVC.segementBar updateWithConfig:^(TJPSegementBarConfig *config) {
         config.segementBarBackColor = [UIColor clearColor];
         config.itemNormalColor = [UIColor whiteColor];
         config.itemSelectedColor = [UIColor whiteColor];
+        config.itemNormalFont = [UIFont systemFontOfSize:17.f];
+        config.itemSelectedFont = [UIFont systemFontOfSize:17.f];
+
         
         config.indicatorColor = [UIColor whiteColor];
         config.indicatorExtraW = -10;
@@ -104,21 +128,6 @@
     TJPLogFunc
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "TJPLiveRoomTopUserItem.h"
+#import "TJPNavigationTagItem.h"
 #import "TJPHotLiveItem.h"
+#import "TJPBannerItem.h"
+
+
 
 
 @interface TJPRequestDataTool : NSObject
 
 + (instancetype)shareInstance;
+
+/** 导航栏标签数据*/
+- (void)getNavigationTagModels:(void(^)(NSArray <TJPNavigationTagItem *>*tagModels))resultBlock;
+
+/** 轮播数据*/
+- (void)getTopCarouselModels:(void(^)(NSArray <TJPBannerItem *>*carouselModels))resultBlock;
 
 
 /** 获取热门数据*/

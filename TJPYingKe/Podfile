@@ -11,13 +11,12 @@ pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'MJExtension'
 pod 'MJRefresh'
-pod 'SDWebImage', '~>3.7.3'
+pod 'SDWebImage'
 pod 'Masonry'
+pod 'SDCycleScrollView'
 
 
-
-pod 'TJPSengment'
-pod 'TJPPicScrollView'
+pod 'TJPSengment', '~> 0.1.0'
 
 
 end

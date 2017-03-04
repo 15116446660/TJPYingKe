@@ -12,14 +12,11 @@
 #import "TJPLivingRoomCell.h"
 #import "TJPUserView.h"
 
-
+static CGFloat const kDurationTime = 0.25;
 
 @interface TJPLivingRoomController ()
 
 @property (nonatomic, weak) TJPUserView *userView;
-
-
-
 
 
 @end
@@ -45,7 +42,7 @@ static NSString * const CellID = @"TJPLiveRoomCell";
         _userView = userView;
         WS(weakSelf)
         [userView setCloseViewBlock:^{
-            [UIView animateWithDuration:0.25 animations:^{
+            [UIView animateWithDuration:kDurationTime animations:^{
                 weakSelf.userView.hidden = YES;
                 weakSelf.userView.transform = CGAffineTransformMakeScale(0.01, 0.01);
             } completion:nil];
@@ -59,7 +56,6 @@ static NSString * const CellID = @"TJPLiveRoomCell";
 
 
 #pragma mark - 生命周期
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
@@ -68,7 +64,6 @@ static NSString * const CellID = @"TJPLiveRoomCell";
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-    
     TJPNavigationController *nav = (TJPNavigationController *)self.navigationController;
     [nav setupBackPanGestureIsForbiddden:YES];
 
@@ -94,7 +89,6 @@ static NSString * const CellID = @"TJPLiveRoomCell";
 
 
 #pragma mark <UICollectionViewDataSource>
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     return 1;
@@ -122,21 +116,12 @@ static NSString * const CellID = @"TJPLiveRoomCell";
     if (notification.userInfo[@"info"]) {
         TJPLiveRoomTopUserItem *userItem = notification.userInfo[@"info"];
         self.userView.userItem = userItem;
-        [UIView animateWithDuration:0.25 animations:^{
+        [UIView animateWithDuration:kDurationTime animations:^{
             self.userView.hidden = NO;
             self.userView.transform = CGAffineTransformIdentity;
         }];
-        
     }
-    
 }
-
-
-
-
-
-
-
 
 
 - (void)removeObserve {
@@ -154,7 +139,7 @@ static NSString * const CellID = @"TJPLiveRoomCell";
     }];
 }
 
- 
+
 
 - (void)dealloc {
     [self removeObserve];
