@@ -36,6 +36,8 @@
 
 #效果图
 
+![示例1](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/topClick.gif)
+
 ![示例2](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/TJPYingKe.gif)
 
 ##录制成的Gif略显模糊,更多细节,请下载代码~
