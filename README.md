@@ -1,3 +1,4 @@
+
 #TJPYingKe
 
 ##写在前面: 工作之余写的,如果对你有帮助,请点击下star,在此感谢.接口是通过青花瓷抓取的,项目中的素材取自于映客.ipa,用途仅于学习和交流!
@@ -34,7 +35,6 @@
 
 
 #效果图
-![示例1](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/topClick.gif)
 
 ![示例2](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/TJPYingKe.gif)
 
