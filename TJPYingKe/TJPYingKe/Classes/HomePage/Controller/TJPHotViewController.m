@@ -18,7 +18,7 @@
 #import "TJPBannerItem.h"
 
 static NSString * const cellID              = @"liveListCell";
-static CGFloat const timeInterval           = 90;
+static CGFloat const timeInterval           = 75;
 
 
 @interface TJPHotViewController ()
@@ -155,7 +155,7 @@ static CGFloat const timeInterval           = 90;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TJPHotLiveItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    TJPLog(@"%p", cell);
+//    TJPLog(@"%p", cell);
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;    
     return cell;
