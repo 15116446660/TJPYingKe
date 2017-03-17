@@ -10,7 +10,7 @@
 #import "UIView+XMGSegmentBar.h"
 
 
-#define kMinMargin 30
+#define kMinMargin 20
 #define kIndicatorMargin 2
 
 

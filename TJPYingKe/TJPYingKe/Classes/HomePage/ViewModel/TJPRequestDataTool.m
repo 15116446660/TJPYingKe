@@ -76,6 +76,7 @@ static TJPRequestDataTool *dataTool = nil;
             return;
         }
         NSMutableArray <TJPHotLiveItem *>*hotModels = [TJPHotLiveItem mj_objectArrayWithKeyValuesArray:responseObject[@"lives"]];
+
         resultBlock(hotModels);
     }];
 

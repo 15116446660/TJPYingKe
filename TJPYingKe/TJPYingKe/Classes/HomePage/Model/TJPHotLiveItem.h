@@ -9,19 +9,24 @@
 #import <Foundation/Foundation.h>
 
 @class TJPCreatorItem;
+@class TJPExtraItem;
 @interface TJPHotLiveItem : NSObject
 
 /** 直播流地址 */
 @property (nonatomic, copy) NSString *stream_addr;
-/** 关注人 */
+/** 分享地址*/
+@property (nonatomic, copy) NSString *share_addr;
+/** 观看人数 */
 @property (nonatomic, assign) NSUInteger online_users;
 /** 城市 */
 @property (nonatomic, copy) NSString *city;
 /** ID号*/
 @property (nonatomic, assign) NSUInteger ID;
+/** 主播信息 */
+@property (nonatomic, strong) TJPCreatorItem *creator;
+/** 扩展属性*/
+@property (nonatomic, strong) TJPExtraItem *extra;
 
-/** 主播 */
-@property (nonatomic, strong)  TJPCreatorItem *creator;
 /** 直播间名称*/
 @property (nonatomic, copy) NSString *name;
 
@@ -30,27 +35,73 @@
 
 /*
  {
- "creator": {
- "id": 108366579,
- "level": 19,
- "gender": 0,
- "nick": "今非昔比i ",
- "portrait": "http://img2.inke.cn/MTQ4MTUxNTM1NDk4MyM4NDUjanBn.jpg"
+ "city" : "伦敦",
+ "creator" : {
+ "gender" : 0,
+ "id" : 116569346,
+ "level" : 80,
+ "nick" : "敏儿姐姐💤",
+ "portrait" : "http://img2.inke.cn/MTQ4ODUwNDMxNjc5NiMxMzcjanBn.jpg"
  },
- "id": "1481515357617985",
- "name": "陪伴是最长情的告白 ！",
- "city": "",
- "share_addr": "http://mlive18.inke.cn/share/live.html?uid=108366579&liveid=1481515357617985&ctime=1481515357",
- "stream_addr": "http://pull99.a8.com/live/1481515357617985.flv",
- "version": 0,
- "slot": 4,
- "optimal": 0,
- "online_users": 13784,
- "group": 2,
- "link": 0,
- "multi": 0,
- "rotate": 0
+ "extra" : {
+ "cover" : null,
+ "label" : [
+ {
+ "cl" : [
+ 0,
+ 216,
+ 201,
+ 1
+ ],
+ "tab_key" : "气质",
+ "tab_name" : "气质"
  },
- */
+ {
+ "cl" : [
+ 0,
+ 216,
+ 201,
+ 1
+ ],
+ "tab_key" : "清纯",
+ "tab_name" : "清纯"
+ },
+ {
+ "cl" : [
+ 0,
+ 216,
+ 201,
+ 1
+ ],
+ "tab_key" : "活泼开朗",
+ "tab_name" : "活泼开朗"
+ },
+ {
+ "cl" : [
+ 0,
+ 216,
+ 201,
+ 1
+ ],
+ "tab_key" : "伦敦",
+ "tab_name" : "伦敦"
+ }
+ ]
+ },
+ "group" : 0,
+ "id" : "1488649302699851",
+ "landscape" : 0,
+ "link" : 0,
+ "live_type" : "",
+ "multi" : 0,
+ "name" : "",
+ "online_users" : 11619,
+ "optimal" : 0,
+ "rotate" : 0,
+ "share_addr" : "http://mlive9.inke.cn/share/live.html?uid=116569346&liveid=1488649302699851&ctime=1488649302",
+ "slot" : 3,
+ "stream_addr" : "http://pull99.a8.com/live/1488649302699851.flv",
+ "version" : 0
+ }, */
 
 @end

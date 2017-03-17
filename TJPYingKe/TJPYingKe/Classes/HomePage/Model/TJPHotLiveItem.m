@@ -7,6 +7,8 @@
 //
 
 #import "TJPHotLiveItem.h"
+#import "TJPCreatorItem.h"
+#import "TJPExtraItem.h"
 
 @implementation TJPHotLiveItem
 
@@ -14,6 +16,12 @@
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{@"ID": @"id"};
+}
+
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"creator" : @"TJPCreatorItem",
+             @"extra" : @"TJPExtraItem"};
 }
 
 

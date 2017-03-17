@@ -51,6 +51,7 @@
 		BC24A2CA1E6A9BBF004D2748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC24A29A1E6A9BBF004D2748 /* main.m */; };
 		BC24A2CB1E6A9BBF004D2748 /* TJPRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BC24A29F1E6A9BBF004D2748 /* TJPRefreshGifHeader.m */; };
 		BC24A2CC1E6A9BBF004D2748 /* TJPWebProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC24A2A11E6A9BBF004D2748 /* TJPWebProgressLayer.m */; };
+		BC5FEBF01E6B386C00521534 /* TJPExtraItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5FEBEF1E6B386C00521534 /* TJPExtraItem.m */; };
 		BC9CD32B1E01427A00F16CCD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */; };
 		BC9CD32D1E01428900F16CCD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32C1E01428900F16CCD /* AVFoundation.framework */; };
 		BC9CD32F1E01429400F16CCD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32E1E01429400F16CCD /* CoreMedia.framework */; };
@@ -61,10 +62,12 @@
 		BC9CD3391E0142CA00F16CCD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */; };
 		BC9CD33B1E0142D600F16CCD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */; };
 		BC9CD33D1E0142DF00F16CCD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */; };
+		BCCFD3111E7289FD000E968F /* TJPTagVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCFD3101E7289FD000E968F /* TJPTagVIew.m */; };
 		BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */; };
 		BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */; };
 		BCE35C0B1DF6C28C00D9338E /* TJPYingKeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */; };
 		BCE35C161DF6C28C00D9338E /* TJPYingKeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C151DF6C28C00D9338E /* TJPYingKeUITests.m */; };
+		BCE74B191E6D074100F31699 /* TJPLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE74B181E6D074100F31699 /* TJPLabelItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +174,8 @@
 		BC24A29F1E6A9BBF004D2748 /* TJPRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPRefreshGifHeader.m; sourceTree = "<group>"; };
 		BC24A2A01E6A9BBF004D2748 /* TJPWebProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPWebProgressLayer.h; sourceTree = "<group>"; };
 		BC24A2A11E6A9BBF004D2748 /* TJPWebProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPWebProgressLayer.m; sourceTree = "<group>"; };
+		BC5FEBEE1E6B386C00521534 /* TJPExtraItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPExtraItem.h; sourceTree = "<group>"; };
+		BC5FEBEF1E6B386C00521534 /* TJPExtraItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPExtraItem.m; sourceTree = "<group>"; };
 		BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BC9CD32C1E01428900F16CCD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BC9CD32E1E01429400F16CCD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -181,6 +186,8 @@
 		BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BCCFD30F1E7289FD000E968F /* TJPTagVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTagVIew.h; sourceTree = "<group>"; };
+		BCCFD3101E7289FD000E968F /* TJPTagVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTagVIew.m; sourceTree = "<group>"; };
 		BCE35BED1DF6C28C00D9338E /* TJPYingKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJPYingKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35BF11DF6C28C00D9338E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +198,8 @@
 		BCE35C111DF6C28C00D9338E /* TJPYingKeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TJPYingKeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE35C151DF6C28C00D9338E /* TJPYingKeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJPYingKeUITests.m; sourceTree = "<group>"; };
 		BCE35C171DF6C28C00D9338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE74B171E6D074100F31699 /* TJPLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLabelItem.h; sourceTree = "<group>"; };
+		BCE74B181E6D074100F31699 /* TJPLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLabelItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,7 +280,7 @@
 		BC24A2391E6A9BBF004D2748 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				BC24A2541E6A9BBF004D2748 /* ViewModel */,
+				BC24A2541E6A9BBF004D2748 /* DataTool */,
 				BC24A23A1E6A9BBF004D2748 /* Controller */,
 				BC24A2471E6A9BBF004D2748 /* Model */,
 				BC24A2501E6A9BBF004D2748 /* VIew */,
@@ -307,6 +316,10 @@
 				BC24A24B1E6A9BBF004D2748 /* TJPCreatorItem.m */,
 				BC24A24C1E6A9BBF004D2748 /* TJPHotLiveItem.h */,
 				BC24A24D1E6A9BBF004D2748 /* TJPHotLiveItem.m */,
+				BC5FEBEE1E6B386C00521534 /* TJPExtraItem.h */,
+				BC5FEBEF1E6B386C00521534 /* TJPExtraItem.m */,
+				BCE74B171E6D074100F31699 /* TJPLabelItem.h */,
+				BCE74B181E6D074100F31699 /* TJPLabelItem.m */,
 				BC24A24E1E6A9BBF004D2748 /* TJPNavigationTagItem.h */,
 				BC24A24F1E6A9BBF004D2748 /* TJPNavigationTagItem.m */,
 			);
@@ -319,16 +332,19 @@
 				BC24A2511E6A9BBF004D2748 /* TJPHotLiveItemCell.h */,
 				BC24A2521E6A9BBF004D2748 /* TJPHotLiveItemCell.m */,
 				BC24A2531E6A9BBF004D2748 /* TJPHotLiveItemCell.xib */,
+				BCCFD30F1E7289FD000E968F /* TJPTagVIew.h */,
+				BCCFD3101E7289FD000E968F /* TJPTagVIew.m */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
 		};
-		BC24A2541E6A9BBF004D2748 /* ViewModel */ = {
+		BC24A2541E6A9BBF004D2748 /* DataTool */ = {
 			isa = PBXGroup;
 			children = (
 				BC24A2551E6A9BBF004D2748 /* TJPRequestDataTool.h */,
 				BC24A2561E6A9BBF004D2748 /* TJPRequestDataTool.m */,
 			);
+			name = DataTool;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
@@ -790,10 +806,12 @@
 				BC24A2A91E6A9BBF004D2748 /* TJPCreatorItem.m in Sources */,
 				BC24A2AF1E6A9BBF004D2748 /* TJPLivingRoomController.m in Sources */,
 				BC24A2C71E6A9BBF004D2748 /* TJPSessionManager.m in Sources */,
+				BCCFD3111E7289FD000E968F /* TJPTagVIew.m in Sources */,
 				BC24A2AC1E6A9BBF004D2748 /* TJPHotLiveItemCell.m in Sources */,
 				BC24A2B51E6A9BBF004D2748 /* TJPLivingRoomCell.m in Sources */,
 				BC24A2C31E6A9BBF004D2748 /* UIImageView+TJPExtension.m in Sources */,
 				BC24A2C61E6A9BBF004D2748 /* TJPCommonAPIConstant.m in Sources */,
+				BCE74B191E6D074100F31699 /* TJPLabelItem.m in Sources */,
 				BC24A2BF1E6A9BBF004D2748 /* NSTimer+Addition.m in Sources */,
 				BC24A2CC1E6A9BBF004D2748 /* TJPWebProgressLayer.m in Sources */,
 				BC24A2C51E6A9BBF004D2748 /* UIView+TJPExtension.m in Sources */,
@@ -804,6 +822,7 @@
 				BC24A2BD1E6A9BBF004D2748 /* TJPMineViewController.m in Sources */,
 				BC24A2A81E6A9BBF004D2748 /* TJPBannerItem.m in Sources */,
 				BC24A2A71E6A9BBF004D2748 /* TJPWebViewController.m in Sources */,
+				BC5FEBF01E6B386C00521534 /* TJPExtraItem.m in Sources */,
 				BC24A2BA1E6A9BBF004D2748 /* TJPTabBarController.m in Sources */,
 				BC24A2A41E6A9BBF004D2748 /* TJPHotViewController.m in Sources */,
 				BC24A2C41E6A9BBF004D2748 /* UITabBarItem+XHExtension.m in Sources */,

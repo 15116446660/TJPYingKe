@@ -11,7 +11,7 @@
 @implementation TJPCommonAPIConstant
 
 /** 公共接口*/
-NSString *const kTJPCommonServiceAPI        = @"http://116.211.167.106";
+NSString *const kTJPCommonServiceAPI        = @"http://img2.inke.cn/";
 
 
 /** 热门页接口*/
@@ -37,9 +37,6 @@ NSString *const kTJPNearFlowLiveAPI         = @"http://116.211.167.106/api/live/
 
 /** 礼物列表接口*/
 NSString *const kTJPGiftInfoAPI             = @"http://116.211.167.106/api/resource/gift_info?lc=0000000000000049&cc=TG0001&cv=IK3.8.10_Iphone&proto=7&idfa=2D707AF8-980F-415C-B443-6FED3E9BBE97&idfv=723152C7-9C98-43F8-947F-18331280D72F&devi=135ede19e251cd6512eb6ad4f418fbbde03c9266&osversion=ios_10.100000&ua=iPhone5_2&imei=&imsi=&uid=392716022&sid=20f7ZyQ3C09I3wDcU0i0bM5n3F8osSAui2L04fGf4WTHRgL9J8qi1&conn=wifi&mtid=87edd7144bd658132ae544d7c9a0eba8&mtxid=acbc329027f3&logid=133&type=2&scale=2&s_sg=87508b487226af753ce19ca3a6f9e975&s_sc=100&s_st=1488507776";
-
-
-
 
 
 

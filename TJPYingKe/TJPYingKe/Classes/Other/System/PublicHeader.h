@@ -17,6 +17,8 @@
 #define kDefaultMargin                      10
 #define kNavigationBarHeight                64
 
+#define kTagViewHeight                      20
+
 
 
 /**    颜色     **/

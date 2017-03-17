@@ -15,6 +15,7 @@
 #import "TJPCreatorItem.h"
 #import "TJPRequestDataTool.h"
 #import "TJPWebViewController.h"
+#import "TJPBannerItem.h"
 
 static NSString * const cellID              = @"liveListCell";
 static CGFloat const timeInterval           = 90;
@@ -25,7 +26,7 @@ static CGFloat const timeInterval           = 90;
 
 /** 数据源*/
 @property (nonatomic, strong) NSMutableArray *liveDatas;
-@property (nonatomic, strong) NSMutableArray <NSString *>*linkArr;
+@property (nonatomic, strong) NSArray <TJPBannerItem *>*bannerArr;
 
 
 @property (nonatomic, weak) NSTimer *timer;
@@ -44,11 +45,12 @@ static CGFloat const timeInterval           = 90;
     }
     return _liveDatas;
 }
-- (NSMutableArray<NSString *> *)linkArr {
-    if (!_linkArr) {
-        _linkArr = [NSMutableArray array];
+
+- (NSArray<TJPBannerItem *> *)bannerArr {
+    if (!_bannerArr) {
+        _bannerArr = [NSArray array];
     }
-    return _linkArr;
+    return _bannerArr;
 }
 
 - (NSTimer *)timer {
@@ -100,11 +102,11 @@ static CGFloat const timeInterval           = 90;
     [[TJPRequestDataTool shareInstance] getTopCarouselModels:^(NSArray<TJPBannerItem *> *carouselModels) {
         for (TJPBannerItem *item in carouselModels) {
             if (![item.image hasPrefix:@"http://"]) {
-                item.image = [NSString stringWithFormat:@"http://img2.inke.cn/%@", item.image];
+                item.image = [NSString stringWithFormat:@"%@%@", kTJPCommonServiceAPI, item.image];
             }
             [tmpImageArr addObject:item.image];
-            [weakSelf.linkArr addObject:item.link];
         }
+        weakSelf.bannerArr = carouselModels;
         weakSelf.tableView.tableHeaderView =  [weakSelf setupHeaderView:tmpImageArr];
     }];
     
@@ -152,15 +154,10 @@ static CGFloat const timeInterval           = 90;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TJPHotLiveItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = [[TJPHotLiveItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
-    }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    TJPHotLiveItem *item = _liveDatas[indexPath.row];
-    cell.liveItem = item;
-    
-    
+    TJPHotLiveItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    TJPLog(@"%p", cell);
+
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;    
     return cell;
 }
 
@@ -170,7 +167,6 @@ static CGFloat const timeInterval           = 90;
     TJPLivingRoomController *roomVC = [[TJPLivingRoomController alloc] init];
     roomVC.liveDatas = [NSArray arrayWithArray:self.liveDatas];
     roomVC.currentIndex = indexPath.row;
-    
     [self.navigationController pushViewController:roomVC animated:YES];
    
 }
@@ -182,6 +178,9 @@ static CGFloat const timeInterval           = 90;
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TJPHotLiveItemCell * liveCell = (TJPHotLiveItemCell *)cell;
+    TJPHotLiveItem *item = _liveDatas[indexPath.row];
+    liveCell.liveItem = item;
 }
 
 
@@ -250,9 +249,9 @@ static CGFloat const timeInterval           = 90;
     cycleScrollView.pageDotColor = [UIColor colorWithWhite:1.0 alpha:0.7];
     cycleScrollView.currentPageDotColor = kGlobalLightBlueColor;
     [cycleScrollView setClickItemOperationBlock:^(NSInteger index) {
-        NSString *link = _linkArr[index];
+        TJPBannerItem *item = weakSelf.bannerArr[index];
         TJPWebViewController *webVC = [[TJPWebViewController alloc] init];
-        webVC.urlStr = link;
+        webVC.urlStr = item.link;
         [weakSelf.navigationController pushViewController:webVC animated:YES];
     }];
     
