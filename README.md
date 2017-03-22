@@ -37,7 +37,7 @@ TJPYingKe
 --
 
 效果图
-==
+--
 
 ![示例1](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/Advertise.gif)
 
