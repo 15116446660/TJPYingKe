@@ -14,6 +14,8 @@
 UIKIT_EXTERN NSString *const kTJPCommonServiceAPI;
 /** 热门页接口*/
 UIKIT_EXTERN NSString *const kTJPHotLiveAPI;
+/** 广告接口*/
+UIKIT_EXTERN NSString *const kTJPAdvertiseAPI;
 /** 直播间用户接口*/
 UIKIT_EXTERN NSString *const kTJPLivingRoomUserInfoAPI;
 /** 导航栏标签接口*/

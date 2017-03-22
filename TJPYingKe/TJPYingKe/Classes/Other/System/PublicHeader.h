@@ -33,6 +33,15 @@
 
 
 
+/**    文件操作     **/
+#define UserDefaults                        [NSUserDefaults standardUserDefaults]
+#define User_Login                          @"user_login"
+#define AdImage_Name                        @"AdImage_Name"
+#define AdImage_Link                        @"AdImage_Link"
+
+
+
+
 
 
 

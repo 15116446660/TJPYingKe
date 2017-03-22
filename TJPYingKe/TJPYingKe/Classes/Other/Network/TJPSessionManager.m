@@ -26,6 +26,8 @@
         NSMutableSet *acceptSet = [_sessionManager.responseSerializer.acceptableContentTypes mutableCopy];
         [acceptSet addObject:@"text/plain"];
         [acceptSet addObject:@"text/html"];
+        _sessionManager.requestSerializer.timeoutInterval = 15;
+        _sessionManager.securityPolicy = [AFSecurityPolicy defaultPolicy];
         _sessionManager.responseSerializer.acceptableContentTypes = [acceptSet copy];
     }
     return _sessionManager;

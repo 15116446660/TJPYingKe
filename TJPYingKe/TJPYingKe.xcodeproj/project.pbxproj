@@ -51,7 +51,15 @@
 		BC24A2CA1E6A9BBF004D2748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC24A29A1E6A9BBF004D2748 /* main.m */; };
 		BC24A2CB1E6A9BBF004D2748 /* TJPRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BC24A29F1E6A9BBF004D2748 /* TJPRefreshGifHeader.m */; };
 		BC24A2CC1E6A9BBF004D2748 /* TJPWebProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC24A2A11E6A9BBF004D2748 /* TJPWebProgressLayer.m */; };
+		BC5D73CA1E7F76420057F006 /* TJPUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D73C91E7F76420057F006 /* TJPUserHelper.m */; };
+		BC5D73D21E7F7CBF0057F006 /* TJPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D73D01E7F7CBF0057F006 /* TJPLoginViewController.m */; };
+		BC5D73D31E7F7CBF0057F006 /* TJPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D73D11E7F7CBF0057F006 /* TJPLoginViewController.xib */; };
+		BC5D73D71E7FCB090057F006 /* defaultAd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC5D73D61E7FCB090057F006 /* defaultAd.jpg */; };
+		BC5D73DA1E7FCC420057F006 /* TJPAdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D73D91E7FCC420057F006 /* TJPAdvertiseView.m */; };
+		BC5D73DD1E7FEAEE0057F006 /* TJPCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D73DC1E7FEAEE0057F006 /* TJPCacheHelper.m */; };
 		BC5FEBF01E6B386C00521534 /* TJPExtraItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5FEBEF1E6B386C00521534 /* TJPExtraItem.m */; };
+		BC6530DE1E80D3CF0022DF24 /* TJPAdvertiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6530DD1E80D3CF0022DF24 /* TJPAdvertiseModel.m */; };
+		BC6530E11E8116AF0022DF24 /* UIViewController+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6530E01E8116AF0022DF24 /* UIViewController+Loading.m */; };
 		BC9CD32B1E01427A00F16CCD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */; };
 		BC9CD32D1E01428900F16CCD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32C1E01428900F16CCD /* AVFoundation.framework */; };
 		BC9CD32F1E01429400F16CCD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD32E1E01429400F16CCD /* CoreMedia.framework */; };
@@ -174,8 +182,22 @@
 		BC24A29F1E6A9BBF004D2748 /* TJPRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPRefreshGifHeader.m; sourceTree = "<group>"; };
 		BC24A2A01E6A9BBF004D2748 /* TJPWebProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPWebProgressLayer.h; sourceTree = "<group>"; };
 		BC24A2A11E6A9BBF004D2748 /* TJPWebProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPWebProgressLayer.m; sourceTree = "<group>"; };
+		BC5D73C81E7F76420057F006 /* TJPUserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPUserHelper.h; sourceTree = "<group>"; };
+		BC5D73C91E7F76420057F006 /* TJPUserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPUserHelper.m; sourceTree = "<group>"; };
+		BC5D73CF1E7F7CBF0057F006 /* TJPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLoginViewController.h; sourceTree = "<group>"; };
+		BC5D73D01E7F7CBF0057F006 /* TJPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLoginViewController.m; sourceTree = "<group>"; };
+		BC5D73D11E7F7CBF0057F006 /* TJPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPLoginViewController.xib; sourceTree = "<group>"; };
+		BC5D73D61E7FCB090057F006 /* defaultAd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultAd.jpg; sourceTree = "<group>"; };
+		BC5D73D81E7FCC420057F006 /* TJPAdvertiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPAdvertiseView.h; sourceTree = "<group>"; };
+		BC5D73D91E7FCC420057F006 /* TJPAdvertiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPAdvertiseView.m; sourceTree = "<group>"; };
+		BC5D73DB1E7FEAEE0057F006 /* TJPCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPCacheHelper.h; sourceTree = "<group>"; };
+		BC5D73DC1E7FEAEE0057F006 /* TJPCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPCacheHelper.m; sourceTree = "<group>"; };
 		BC5FEBEE1E6B386C00521534 /* TJPExtraItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPExtraItem.h; sourceTree = "<group>"; };
 		BC5FEBEF1E6B386C00521534 /* TJPExtraItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPExtraItem.m; sourceTree = "<group>"; };
+		BC6530DC1E80D3CF0022DF24 /* TJPAdvertiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPAdvertiseModel.h; sourceTree = "<group>"; };
+		BC6530DD1E80D3CF0022DF24 /* TJPAdvertiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPAdvertiseModel.m; sourceTree = "<group>"; };
+		BC6530DF1E8116AF0022DF24 /* UIViewController+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Loading.h"; sourceTree = "<group>"; };
+		BC6530E01E8116AF0022DF24 /* UIViewController+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Loading.m"; sourceTree = "<group>"; };
 		BC9CD32A1E01427A00F16CCD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BC9CD32C1E01428900F16CCD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BC9CD32E1E01429400F16CCD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -268,10 +290,11 @@
 		BC24A2371E6A9BBF004D2748 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC24A26D1E6A9BBF004D2748 /* Main */,
 				BC24A2391E6A9BBF004D2748 /* HomePage */,
 				BC24A2571E6A9BBF004D2748 /* Living */,
-				BC24A26D1E6A9BBF004D2748 /* Main */,
 				BC24A2791E6A9BBF004D2748 /* Mine */,
+				BC5D73CB1E7F799B0057F006 /* Login */,
 				BC24A27F1E6A9BBF004D2748 /* Other */,
 			);
 			path = Classes;
@@ -291,10 +314,10 @@
 		BC24A23A1E6A9BBF004D2748 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC24A23B1E6A9BBF004D2748 /* TJPAttentionViewController.h */,
-				BC24A23C1E6A9BBF004D2748 /* TJPAttentionViewController.m */,
 				BC24A23D1E6A9BBF004D2748 /* TJPHomePageViewController.h */,
 				BC24A23E1E6A9BBF004D2748 /* TJPHomePageViewController.m */,
+				BC24A23B1E6A9BBF004D2748 /* TJPAttentionViewController.h */,
+				BC24A23C1E6A9BBF004D2748 /* TJPAttentionViewController.m */,
 				BC24A23F1E6A9BBF004D2748 /* TJPHotViewController.h */,
 				BC24A2401E6A9BBF004D2748 /* TJPHotViewController.m */,
 				BC24A2411E6A9BBF004D2748 /* TJPNearByViewController.h */,
@@ -483,6 +506,8 @@
 		BC24A2801E6A9BBF004D2748 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				BC6530DF1E8116AF0022DF24 /* UIViewController+Loading.h */,
+				BC6530E01E8116AF0022DF24 /* UIViewController+Loading.m */,
 				BC24A2811E6A9BBF004D2748 /* CALayer+PauseAimate.h */,
 				BC24A2821E6A9BBF004D2748 /* CALayer+PauseAimate.m */,
 				BC24A2831E6A9BBF004D2748 /* NSTimer+Addition.h */,
@@ -534,8 +559,66 @@
 				BC24A29F1E6A9BBF004D2748 /* TJPRefreshGifHeader.m */,
 				BC24A2A01E6A9BBF004D2748 /* TJPWebProgressLayer.h */,
 				BC24A2A11E6A9BBF004D2748 /* TJPWebProgressLayer.m */,
+				BC5D73C81E7F76420057F006 /* TJPUserHelper.h */,
+				BC5D73C91E7F76420057F006 /* TJPUserHelper.m */,
+				BC5D73DB1E7FEAEE0057F006 /* TJPCacheHelper.h */,
+				BC5D73DC1E7FEAEE0057F006 /* TJPCacheHelper.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		BC5D73CB1E7F799B0057F006 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BC5D73CC1E7F799B0057F006 /* Controller */,
+				BC5D73CD1E7F799B0057F006 /* Model */,
+				BC5D73CE1E7F799B0057F006 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BC5D73CC1E7F799B0057F006 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC5D73CF1E7F7CBF0057F006 /* TJPLoginViewController.h */,
+				BC5D73D01E7F7CBF0057F006 /* TJPLoginViewController.m */,
+				BC5D73D11E7F7CBF0057F006 /* TJPLoginViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC5D73CD1E7F799B0057F006 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC6530DC1E80D3CF0022DF24 /* TJPAdvertiseModel.h */,
+				BC6530DD1E80D3CF0022DF24 /* TJPAdvertiseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC5D73CE1E7F799B0057F006 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC5D73D81E7FCC420057F006 /* TJPAdvertiseView.h */,
+				BC5D73D91E7FCC420057F006 /* TJPAdvertiseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC5D73D41E7FCAE50057F006 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BC5D73D51E7FCAE50057F006 /* Image */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		BC5D73D51E7FCAE50057F006 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BC5D73D61E7FCB090057F006 /* defaultAd.jpg */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		BCE35BE41DF6C28C00D9338E = {
@@ -564,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				BC24A2371E6A9BBF004D2748 /* Classes */,
+				BC5D73D41E7FCAE50057F006 /* BaseClasses */,
 				BCE35C391DF6C81B00D9338E /* Resource */,
 				BCE35BF01DF6C28C00D9338E /* Supporting Files */,
 			);
@@ -718,9 +802,11 @@
 			files = (
 				BC24A2B41E6A9BBF004D2748 /* TJPLivingRoomBottomView.xib in Resources */,
 				BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */,
+				BC5D73D31E7F7CBF0057F006 /* TJPLoginViewController.xib in Resources */,
 				BC24A2C91E6A9BBF004D2748 /* Info.plist in Resources */,
 				BC24A2B81E6A9BBF004D2748 /* TJPUserView.xib in Resources */,
 				BC24A2AD1E6A9BBF004D2748 /* TJPHotLiveItemCell.xib in Resources */,
+				BC5D73D71E7FCB090057F006 /* defaultAd.jpg in Resources */,
 				BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,9 +889,12 @@
 				BC24A2C01E6A9BBF004D2748 /* UIBarButtonItem+TJPItem.m in Sources */,
 				BC24A2B01E6A9BBF004D2748 /* TJPLiveRoomTopUserItem.m in Sources */,
 				BC24A2BB1E6A9BBF004D2748 /* TJPNavBar.m in Sources */,
+				BC5D73DD1E7FEAEE0057F006 /* TJPCacheHelper.m in Sources */,
 				BC24A2A91E6A9BBF004D2748 /* TJPCreatorItem.m in Sources */,
+				BC6530E11E8116AF0022DF24 /* UIViewController+Loading.m in Sources */,
 				BC24A2AF1E6A9BBF004D2748 /* TJPLivingRoomController.m in Sources */,
 				BC24A2C71E6A9BBF004D2748 /* TJPSessionManager.m in Sources */,
+				BC5D73DA1E7FCC420057F006 /* TJPAdvertiseView.m in Sources */,
 				BCCFD3111E7289FD000E968F /* TJPTagVIew.m in Sources */,
 				BC24A2AC1E6A9BBF004D2748 /* TJPHotLiveItemCell.m in Sources */,
 				BC24A2B51E6A9BBF004D2748 /* TJPLivingRoomCell.m in Sources */,
@@ -815,6 +904,7 @@
 				BC24A2BF1E6A9BBF004D2748 /* NSTimer+Addition.m in Sources */,
 				BC24A2CC1E6A9BBF004D2748 /* TJPWebProgressLayer.m in Sources */,
 				BC24A2C51E6A9BBF004D2748 /* UIView+TJPExtension.m in Sources */,
+				BC5D73CA1E7F76420057F006 /* TJPUserHelper.m in Sources */,
 				BC24A2C21E6A9BBF004D2748 /* UIImage+TJPImage.m in Sources */,
 				BC24A2C11E6A9BBF004D2748 /* UIImage+ImageEffects.m in Sources */,
 				BC24A2CA1E6A9BBF004D2748 /* main.m in Sources */,
@@ -822,6 +912,7 @@
 				BC24A2BD1E6A9BBF004D2748 /* TJPMineViewController.m in Sources */,
 				BC24A2A81E6A9BBF004D2748 /* TJPBannerItem.m in Sources */,
 				BC24A2A71E6A9BBF004D2748 /* TJPWebViewController.m in Sources */,
+				BC5D73D21E7F7CBF0057F006 /* TJPLoginViewController.m in Sources */,
 				BC5FEBF01E6B386C00521534 /* TJPExtraItem.m in Sources */,
 				BC24A2BA1E6A9BBF004D2748 /* TJPTabBarController.m in Sources */,
 				BC24A2A41E6A9BBF004D2748 /* TJPHotViewController.m in Sources */,
@@ -831,6 +922,7 @@
 				BC24A2B61E6A9BBF004D2748 /* TJPLivingRoomTopView.m in Sources */,
 				BC24A2A21E6A9BBF004D2748 /* TJPAttentionViewController.m in Sources */,
 				BC24A2A51E6A9BBF004D2748 /* TJPNearByViewController.m in Sources */,
+				BC6530DE1E80D3CF0022DF24 /* TJPAdvertiseModel.m in Sources */,
 				BC24A2A31E6A9BBF004D2748 /* TJPHomePageViewController.m in Sources */,
 				BC24A2A61E6A9BBF004D2748 /* TJPTalentViewController.m in Sources */,
 				BC24A2B11E6A9BBF004D2748 /* DMHeartFlyView.m in Sources */,

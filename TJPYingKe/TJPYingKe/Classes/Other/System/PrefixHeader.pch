@@ -17,6 +17,8 @@
 
 #import "TJPSessionManager.h"
 #import "TJPCommonAPIConstant.h"
+#import "TJPRequestDataTool.h"
+#import "TJPUserHelper.h"
 #import "PublicHeader.h"
 
 #import "UIView+TJPExtension.h"

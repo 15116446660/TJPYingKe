@@ -53,6 +53,25 @@ static TJPRequestDataTool *dataTool = nil;
     }];
 }
 
+/** 广告页数据 */
+- (void)getAdvertiseModel:(void(^)(TJPAdvertiseModel *model))resultBlock {
+    [self.sessionManager request:RequestTypeGet urlStr:kTJPAdvertiseAPI parameter:nil resultBlock:^(id responseObject, NSError *error) {
+        if (error) {
+            TJPLog(@"%@", error.localizedDescription);
+            return;
+        }
+       NSMutableArray *tmpArr = [TJPAdvertiseModel mj_objectArrayWithKeyValuesArray:responseObject[@"resources"]];
+        if (!tmpArr.count) {
+            return;
+        }
+        TJPAdvertiseModel *model = [tmpArr firstObject];
+        resultBlock(model);
+    }];
+}
+
+
+
+
 /** 轮播数据*/
 - (void)getTopCarouselModels:(void(^)(NSArray <TJPBannerItem *>*carouselModels))resultBlock {
     [self.sessionManager request:RequestTypeGet urlStr:kTJPHomeTopCarouselAPI parameter:nil resultBlock:^(id responseObject, NSError *error) {

@@ -17,6 +17,9 @@ NSString *const kTJPCommonServiceAPI        = @"http://img2.inke.cn/";
 /** 热门页接口*/
 NSString *const kTJPHotLiveAPI              = @"http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1";
 
+/** 广告接口*/
+NSString *const kTJPAdvertiseAPI            = @"http:/service.ingkee.com/advertise/get";
+
 
 /** 直播间用户接口*/
 NSString *const kTJPLivingRoomUserInfoAPI   = @"http://116.211.167.106/api/live/users?lc=0000000000000043&cc=TG0001&cv=IK3.8.10_Iphone&proto=7&idfa=2D707AF8-980F-415C-B443-6FED3E9BBE97&idfv=76F26589-EA5D-4D0A-BC1C-A4B6010FFA37&devi=135ede19e251cd6512eb6ad4f418fbbde03c9266&osversion=ios_10.100000&ua=iPhone5_2&imei=&imsi=&uid=310474203&sid=209pU5OK49fA6uhxX3taEXIWAm5lENuCrr6xKL48pqAQ0Y0FqL&conn=wifi&mtid=87edd7144bd658132ae544d7c9a0eba8&mtxid=acbc329027f3&logid=110,30,5&start=0&count=20&id=";

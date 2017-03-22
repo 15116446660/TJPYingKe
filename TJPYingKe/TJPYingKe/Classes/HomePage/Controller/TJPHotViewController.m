@@ -9,13 +9,15 @@
 #import "TJPHotViewController.h"
 #import <SDCycleScrollView/SDCycleScrollView.h>
 
+#import "UIViewController+Loading.h"
+
 #import "TJPLivingRoomController.h"
+#import "TJPWebViewController.h"
 #import "TJPRefreshGifHeader.h"
 #import "TJPHotLiveItemCell.h"
 #import "TJPCreatorItem.h"
-#import "TJPRequestDataTool.h"
-#import "TJPWebViewController.h"
 #import "TJPBannerItem.h"
+
 
 static NSString * const cellID              = @"liveListCell";
 static CGFloat const timeInterval           = 75;
@@ -83,7 +85,6 @@ static CGFloat const timeInterval           = 75;
     [self.tableView registerNib:[UINib nibWithNibName:@"TJPHotLiveItemCell" bundle:nil] forCellReuseIdentifier:cellID];
     //数据
     [self loadDataForBannerView];
-    [self loadDataForHotLive];
 
     //刷新
     [self addRefresh];
@@ -96,6 +97,7 @@ static CGFloat const timeInterval           = 75;
 
 #pragma mark - Data
 - (void)loadDataForBannerView {
+    [self showLoadingView];
     WS(weakSelf)
     NSMutableArray *tmpImageArr = [NSMutableArray array];
     //顶部轮播图数据
@@ -109,13 +111,14 @@ static CGFloat const timeInterval           = 75;
         weakSelf.bannerArr = carouselModels;
         weakSelf.tableView.tableHeaderView =  [weakSelf setupHeaderView:tmpImageArr];
     }];
-    
+    [self loadDataForHotLive];
 }
 
 //热门数据
 - (void)loadDataForHotLive {
     WS(weakSelf)
     [[TJPRequestDataTool shareInstance] getHotPageModelsWithTableView:self.tableView result:^(NSMutableArray<TJPHotLiveItem *> *hotModels) {
+        [self hideLoadingView];
         weakSelf.liveDatas = hotModels;
         [weakSelf.tableView reloadData];
     }];
@@ -155,9 +158,6 @@ static CGFloat const timeInterval           = 75;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TJPHotLiveItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-//    TJPLog(@"%p", cell);
-
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;    
     return cell;
 }
 
@@ -182,7 +182,6 @@ static CGFloat const timeInterval           = 75;
     TJPHotLiveItem *item = _liveDatas[indexPath.row];
     liveCell.liveItem = item;
 }
-
 
 
 

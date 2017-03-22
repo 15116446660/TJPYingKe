@@ -13,7 +13,6 @@
 #import "TJPNearByViewController.h"
 #import "TJPTalentViewController.h"
 
-#import "TJPRequestDataTool.h"
 
 @interface TJPHomePageViewController ()
 
@@ -56,6 +55,10 @@
     
     [self setupNavigationItem];
 
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)loadDataForNavTag {

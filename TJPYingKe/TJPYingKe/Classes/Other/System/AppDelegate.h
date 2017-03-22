@@ -13,5 +13,11 @@
 @property (strong, nonatomic) UIWindow *window;
 
 
+
+
+/** 主页*/
+- (void)homePageViewControllerShow;
+
+
 @end
 

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TJPLiveRoomTopUserItem.h"
 #import "TJPNavigationTagItem.h"
+#import "TJPAdvertiseModel.h"
 #import "TJPHotLiveItem.h"
 #import "TJPBannerItem.h"
 
@@ -21,6 +22,9 @@
 
 /** 导航栏标签数据*/
 - (void)getNavigationTagModels:(void(^)(NSArray <TJPNavigationTagItem *>*tagModels))resultBlock;
+
+/** 广告页数据 */
+- (void)getAdvertiseModel:(void(^)(TJPAdvertiseModel *model))resultBlock;
 
 /** 轮播数据*/
 - (void)getTopCarouselModels:(void(^)(NSArray <TJPBannerItem *>*carouselModels))resultBlock;
