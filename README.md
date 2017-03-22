@@ -36,7 +36,8 @@ TJPYingKe
 链接:<https://pan.baidu.com/s/1i51Ched> 密码:imjc
 --
 
-#效果图
+效果图
+==
 
 ![示例1](https://github.com/CodeAcmen/TJPYingKe/blob/master/TJPYingKe/Advertise.gif)
 
