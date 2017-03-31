@@ -38,7 +38,7 @@
     
     //广告
     TJPAdvertiseView *advertiseView = [TJPAdvertiseView TJPAdvertiseViewWithType:TJPAdvertiseViewTypeLogo];
-    advertiseView.localImageName = @"defaultAd.jpg";
+//    advertiseView.localImageName = @"defaultAd.jpg";
     [self.window addSubview:advertiseView];
     [advertiseView cleanAdvertiseImageCache];
     [advertiseView advertiseShow];

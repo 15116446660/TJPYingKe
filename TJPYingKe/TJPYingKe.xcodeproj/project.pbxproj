@@ -70,6 +70,7 @@
 		BC9CD3391E0142CA00F16CCD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */; };
 		BC9CD33B1E0142D600F16CCD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */; };
 		BC9CD33D1E0142DF00F16CCD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */; };
+		BCB165591E8E24350026CA74 /* TJPCameraLivingController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB165581E8E24350026CA74 /* TJPCameraLivingController.m */; };
 		BCCFD3111E7289FD000E968F /* TJPTagVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCFD3101E7289FD000E968F /* TJPTagVIew.m */; };
 		BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFC1DF6C28C00D9338E /* Assets.xcassets */; };
 		BCE35C001DF6C28C00D9338E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE35BFE1DF6C28C00D9338E /* LaunchScreen.storyboard */; };
@@ -208,6 +209,8 @@
 		BC9CD3381E0142CA00F16CCD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BC9CD33A1E0142D600F16CCD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BC9CD33C1E0142DF00F16CCD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BCB165571E8E24350026CA74 /* TJPCameraLivingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPCameraLivingController.h; sourceTree = "<group>"; };
+		BCB165581E8E24350026CA74 /* TJPCameraLivingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPCameraLivingController.m; sourceTree = "<group>"; };
 		BCCFD30F1E7289FD000E968F /* TJPTagVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPTagVIew.h; sourceTree = "<group>"; };
 		BCCFD3101E7289FD000E968F /* TJPTagVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPTagVIew.m; sourceTree = "<group>"; };
 		BCE35BED1DF6C28C00D9338E /* TJPYingKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJPYingKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,6 +389,8 @@
 			children = (
 				BC24A2591E6A9BBF004D2748 /* TJPLivingRoomController.h */,
 				BC24A25A1E6A9BBF004D2748 /* TJPLivingRoomController.m */,
+				BCB165571E8E24350026CA74 /* TJPCameraLivingController.h */,
+				BCB165581E8E24350026CA74 /* TJPCameraLivingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -920,6 +925,7 @@
 				BC24A2B71E6A9BBF004D2748 /* TJPUserView.m in Sources */,
 				BC24A2BC1E6A9BBF004D2748 /* TJPTabBar.m in Sources */,
 				BC24A2B61E6A9BBF004D2748 /* TJPLivingRoomTopView.m in Sources */,
+				BCB165591E8E24350026CA74 /* TJPCameraLivingController.m in Sources */,
 				BC24A2A21E6A9BBF004D2748 /* TJPAttentionViewController.m in Sources */,
 				BC24A2A51E6A9BBF004D2748 /* TJPNearByViewController.m in Sources */,
 				BC6530DE1E80D3CF0022DF24 /* TJPAdvertiseModel.m in Sources */,

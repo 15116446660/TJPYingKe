@@ -7,7 +7,9 @@
 //
 
 #import "TJPTabBarController.h"
+#import "TJPCameraLivingController.h"
 #import "TJPNavigationController.h"
+
 #import "UIImage+TJPImage.h"
 #import "TJPTabBar.h"
 
@@ -58,13 +60,15 @@
     
     [self setupTabBar];
     
-    
-    
 }
 
 - (void)setupTabBar
 {
-    [self setValue:[TJPTabBar new] forKey:@"tabBar"];
+    TJPTabBar *tabbar = [[TJPTabBar alloc] init];
+    [self setValue:tabbar forKey:@"tabBar"];
+    [tabbar setCenterBtnClickBlock:^{
+        [self presentViewController:[TJPCameraLivingController new] animated:YES completion:nil];
+    }];
     
 }
 

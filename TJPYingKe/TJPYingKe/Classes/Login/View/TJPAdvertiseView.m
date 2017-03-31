@@ -165,7 +165,6 @@ static CFTimeInterval const duration = 0.25f;
                                                           TJPLog(@"广告图片下载成功");
                                                       }];
         
-        
     }];
 }
 

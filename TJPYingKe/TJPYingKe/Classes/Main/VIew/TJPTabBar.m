@@ -46,13 +46,14 @@
     
     self.backgroundImage = [UIImage imageNamed:@"tabbar_bg"];
     
-    
 }
 
 
 - (void)centerButtonClicked {
     TJPLog(@"%s", __func__);
-    
+    if (self.centerBtnClickBlock) {
+        self.centerBtnClickBlock();
+    }
 }
 
 //布局子控件

@@ -10,4 +10,8 @@
 
 @interface TJPTabBar : UITabBar
 
+/** 中间按钮点击回调*/
+@property (nonatomic, copy) void(^centerBtnClickBlock)();
+
+
 @end
