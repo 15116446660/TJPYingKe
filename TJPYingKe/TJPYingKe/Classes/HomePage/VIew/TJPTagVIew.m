@@ -85,7 +85,7 @@
 
 - (void)initSubViews {
 //    NSAssert(_tagInfos.count, @"标签数据源不能为空");
-    CGFloat currentW = 0;
+    CGFloat currentW = 5;
     for (int i = 0; i < _tagInfos.count; i++) {
         UILabel *tagLabel = [[UILabel alloc] init];
         tagLabel.textAlignment = NSTextAlignmentCenter;

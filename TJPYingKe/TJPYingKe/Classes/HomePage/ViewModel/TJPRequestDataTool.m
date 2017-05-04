@@ -117,5 +117,18 @@ static TJPRequestDataTool *dataTool = nil;
 }
 
 
+/** 礼物数据*/
+- (void)getLivingRoomGiftModels:(void(^)(NSMutableArray <TJPGiftItem *>*giftModels))resultBlock {
+    [self.sessionManager request:RequestTypeGet urlStr:kTJPGiftInfoAPI parameter:nil resultBlock:^(id responseObject, NSError *error) {
+        if (error) {
+            TJPLog(@"%@", error.localizedDescription);
+            return;
+        }
+        NSMutableArray *giftModels = [TJPGiftItem mj_objectArrayWithKeyValuesArray:responseObject[@"gifts"]];
+        resultBlock(giftModels);
+    }];
+}
+
+
 
 @end

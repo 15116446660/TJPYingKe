@@ -13,10 +13,9 @@
 #import "TJPLivingRoomTopView.h"
 #import "DMHeartFlyView.h"
 #import "TJPCreatorItem.h"
-
-
-
-
+#import "TJPGiftView.h"
+#import "TJPGiftContainerView.h"
+#import "TJPGiftModel.h"
 
 
 
@@ -46,6 +45,10 @@
 @property(nonatomic, weak) CAEmitterLayer *emitterLayer;
 
 @property (nonatomic, strong) TJPSessionManager *sessionManager;
+/** 礼物*/
+@property (nonatomic, weak) TJPGiftView *giftView;
+@property (nonatomic, strong) NSMutableArray *giftData;
+@property (nonatomic, weak) TJPGiftContainerView *containerView;
 
 
 
@@ -180,6 +183,38 @@
     return _topView;
 }
 
+- (TJPGiftView *)giftView {
+    if (!_giftView) {
+        TJPGiftView *giftView = [TJPGiftView giftViewWithFrame:[UIScreen mainScreen].bounds];
+        [self.contentView addSubview:giftView];
+        _giftView = giftView;
+        WS(weakSelf)
+        _giftView.sendGiftBlock = ^(NSString *username, NSString *giftName, NSString *giftIcon) {
+            TJPGiftModel *model = [[TJPGiftModel alloc] initWithSenderName:username senderIcon:@"" giftIcon:giftIcon giftName:giftName];
+            [weakSelf.containerView addGift:model];
+        };
+    }
+    return _giftView;
+}
+
+
+- (NSMutableArray *)giftData {
+    if (!_giftData) {
+        _giftData = [NSMutableArray array];
+    }
+    return _giftData;
+}
+
+- (TJPGiftContainerView *)containerView {
+    if (!_containerView) {
+        TJPGiftContainerView *containerView = [[TJPGiftContainerView alloc] initWithFrame:CGRectMake(0, 120, 250, 200)];
+//        containerView.backgroundColor = [UIColor redColor];
+        [self.contentView addSubview:containerView];
+        _containerView = containerView;
+    }
+    return _containerView;
+}
+
 
 
 #pragma mark - setter
@@ -187,7 +222,7 @@
 {
     _liveItem = liveItem;
     self.topView.liveItem = liveItem;
-    [self loadDataForTopUser];
+    [self loadDataWithLivingRoomSource];
     
     NSURL *imageUrl;
     if ([liveItem.creator.portrait hasPrefix:@"http://"]) {
@@ -195,17 +230,22 @@
     }else {
         imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.meelive.cn/%@",liveItem.creator.portrait]];
     }
-    
+    //play
     [self playWithFLV:liveItem.stream_addr placeHolderUrl:imageUrl];
 
 }
 
 
-- (void)loadDataForTopUser {
+- (void)loadDataWithLivingRoomSource {
     WS(weakSelf)
+    //top user
     [[TJPRequestDataTool shareInstance] getLivingRoomTopUserModelsWithLiveID:_liveItem.ID result:^(NSMutableArray<TJPLiveRoomTopUserItem *> *topUserModels) {
         weakSelf.topView.topUsers = topUserModels;
-
+    }];
+    
+    //gift
+    [[TJPRequestDataTool shareInstance] getLivingRoomGiftModels:^(NSMutableArray *giftModels) {
+        weakSelf.giftData = giftModels;
     }];
 }
 
@@ -250,6 +290,8 @@
     
     //创建底部视图
     [self setupBottomView];
+    //礼物视图
+    [self containerView];
 
 }
 
@@ -280,6 +322,10 @@
             case LivingRoomBottomViewButtonClickTypeGift:
             {
                 TJPLog(@"gift");
+                [self giftView];
+                _giftView.giftData = _giftData;;
+                [_giftView actionSheetViewShow];
+                
                 
             }
                 break;
@@ -336,6 +382,7 @@
 
 
 
+
 #pragma mark - layoutSubviews
 -(void)layoutSubviews
 {
@@ -380,7 +427,7 @@
     
     if ((loadState & IJKMPMovieLoadStatePlaythroughOK) != 0) { //shouldAutoplay 为yes 在这种状态下会自动开始播放
         if (!self.moviePlayer.isPlaying) {
-            [self.moviePlayer play];
+//            [self.moviePlayer play];
             //粒子动画开始
             [self.emitterLayer setHidden:NO];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

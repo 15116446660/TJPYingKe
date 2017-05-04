@@ -12,7 +12,7 @@
 #import "TJPAdvertiseModel.h"
 #import "TJPHotLiveItem.h"
 #import "TJPBannerItem.h"
-
+#import "TJPGiftItem.h"
 
 
 
@@ -36,5 +36,8 @@
 
 /** 获取直播间用户数据*/
 - (void)getLivingRoomTopUserModelsWithLiveID:(NSUInteger)liveID  result:(void(^)(NSMutableArray <TJPLiveRoomTopUserItem *>*topUserModels))resultBlock;
+
+/** 礼物数据*/
+- (void)getLivingRoomGiftModels:(void(^)(NSMutableArray <TJPGiftItem *>*giftModels))resultBlock;
 
 @end

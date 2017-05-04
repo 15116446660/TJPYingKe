@@ -26,7 +26,7 @@
 #define TJPColor(r, g, b)                   TJPColorA((r), (g), (b), 1.0)
 
 #define kGlobalLightBlueColor               TJPColorA(0, 216, 201, 1)
-
+#define ActionViewBgColor                   [UIColor colorWithWhite:0 alpha:0.8]
 
 /**    通知     **/
 #define kNotificationClickUser              @"kNotificationClickUser"     //点击用户

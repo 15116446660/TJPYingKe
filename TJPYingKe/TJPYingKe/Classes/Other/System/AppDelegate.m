@@ -26,7 +26,7 @@
     
     //设置按钮的排他性
     [[UIButton appearance] setExclusiveTouch:YES];
-
+    
     
     if (![TJPUserHelper isLogin]) {
         [self loginViewControllerShow];
