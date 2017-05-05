@@ -28,4 +28,9 @@ static TJPUserHelper *user = nil;
     [UserDefaults setBool:value forKey:User_Login];
 }
 
+/** 用户头像*/
++ (NSString *)userHeadImage {
+    return @"userHeader.jpg";
+}
+
 @end

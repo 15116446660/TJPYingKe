@@ -78,6 +78,7 @@
 		BCE35C161DF6C28C00D9338E /* TJPYingKeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C151DF6C28C00D9338E /* TJPYingKeUITests.m */; };
 		BCE74B191E6D074100F31699 /* TJPLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE74B181E6D074100F31699 /* TJPLabelItem.m */; };
 		DB4E186F1EBA0E6000E9C953 /* TJPGiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4E186E1EBA0E6000E9C953 /* TJPGiftView.m */; };
+		DB6DCF9D1EBC15C40093D766 /* userHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB6DCF9C1EBC15C40093D766 /* userHeader.jpg */; };
 		DB7C730B1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C730A1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m */; };
 		DB7C730E1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C730D1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m */; };
 		DBB1D2AE1EBB569F00A041B3 /* TJPGiftContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2A31EBB569F00A041B3 /* TJPGiftContainerView.m */; };
@@ -237,6 +238,7 @@
 		BCE74B181E6D074100F31699 /* TJPLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLabelItem.m; sourceTree = "<group>"; };
 		DB4E186D1EBA0E6000E9C953 /* TJPGiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftView.h; sourceTree = "<group>"; };
 		DB4E186E1EBA0E6000E9C953 /* TJPGiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftView.m; sourceTree = "<group>"; };
+		DB6DCF9C1EBC15C40093D766 /* userHeader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = userHeader.jpg; sourceTree = "<group>"; };
 		DB7C73091EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		DB7C730A1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		DB7C730C1EBAFFB000F737AD /* TJPGiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftCollectionViewCell.h; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 		BC5D73D51E7FCAE50057F006 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				DB6DCF9C1EBC15C40093D766 /* userHeader.jpg */,
 				BC5D73D61E7FCB090057F006 /* defaultAd.jpg */,
 			);
 			path = Image;
@@ -867,6 +870,7 @@
 				BC5D73D31E7F7CBF0057F006 /* TJPLoginViewController.xib in Resources */,
 				BC24A2C91E6A9BBF004D2748 /* Info.plist in Resources */,
 				BC24A2B81E6A9BBF004D2748 /* TJPUserView.xib in Resources */,
+				DB6DCF9D1EBC15C40093D766 /* userHeader.jpg in Resources */,
 				BC24A2AD1E6A9BBF004D2748 /* TJPHotLiveItemCell.xib in Resources */,
 				DBB1D2B01EBB569F00A041B3 /* TJPGiftComboView.xib in Resources */,
 				BC5D73D71E7FCB090057F006 /* defaultAd.jpg in Resources */,

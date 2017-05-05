@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum  {
+
+typedef NS_ENUM(NSInteger, TJPAdvertiseViewType) {
     TJPAdvertiseViewTypeUnknow = 0,
-    TJPAdvertiseViewTypeFullScreen,
-    TJPAdvertiseViewTypeLogo
-}TJPAdvertiseViewType;
+    TJPAdvertiseViewTypeFullScreen,             //全屏
+    TJPAdvertiseViewTypeLogo                    //带Logo
+};
 
 typedef void(^TJPAdvertiseViewClick)(NSString *link);
 

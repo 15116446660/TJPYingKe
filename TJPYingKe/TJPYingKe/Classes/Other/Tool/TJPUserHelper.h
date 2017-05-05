@@ -16,5 +16,7 @@
 + (BOOL)isLogin;
 /** 存储登录信息*/
 + (void)saveLoginMark:(BOOL)value;
+/** 用户头像*/
++ (NSString *)userHeadImage;
 
 @end

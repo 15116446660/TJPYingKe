@@ -192,7 +192,6 @@ static CFTimeInterval const duration = 0.25f;
     opacityAnimation.removedOnCompletion = NO;
     opacityAnimation.fillMode = kCAFillModeForwards;
     [_showTimeBtn.layer addAnimation:opacityAnimation forKey:@"timeBtnHidden"];
-    
 }
 
 

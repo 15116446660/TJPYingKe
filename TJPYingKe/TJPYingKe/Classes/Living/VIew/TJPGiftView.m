@@ -159,7 +159,7 @@ static NSString * const giftCollectionViewCell = @"giftCollectionViewCell";
     }
 
     if (self.sendGiftBlock) {
-        self.sendGiftBlock(@"User Model", giftItem.name, urlStr);
+        self.sendGiftBlock(@"Adobe", giftItem.name, urlStr);
     }
 }
 

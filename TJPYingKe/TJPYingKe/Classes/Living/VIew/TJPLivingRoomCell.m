@@ -11,11 +11,12 @@
 #import <SDWebImage/SDWebImageDownloader.h>
 #import "TJPLivingRoomBottomView.h"
 #import "TJPLivingRoomTopView.h"
+#import "TJPGiftContainerView.h"
 #import "DMHeartFlyView.h"
 #import "TJPCreatorItem.h"
 #import "TJPGiftView.h"
-#import "TJPGiftContainerView.h"
 #import "TJPGiftModel.h"
+#import "TJPUserHelper.h"
 
 
 
@@ -33,7 +34,7 @@
 /** 底部view*/
 @property(nonatomic, weak) TJPLivingRoomBottomView *bottomView;
 
-@property (nonatomic, weak) DMHeartFlyView *heartView;
+//@property (nonatomic, weak) DMHeartFlyView *heartView;
 
 
 /** 直播播放器*/
@@ -190,7 +191,7 @@
         _giftView = giftView;
         WS(weakSelf)
         _giftView.sendGiftBlock = ^(NSString *username, NSString *giftName, NSString *giftIcon) {
-            TJPGiftModel *model = [[TJPGiftModel alloc] initWithSenderName:username senderIcon:@"" giftIcon:giftIcon giftName:giftName];
+            TJPGiftModel *model = [[TJPGiftModel alloc] initWithSenderName:username senderIcon:[TJPUserHelper userHeadImage] giftIcon:giftIcon giftName:giftName];
             [weakSelf.containerView addGift:model];
         };
     }
@@ -260,24 +261,20 @@
         if (_moviePlayer) {
             [self.contentView insertSubview:self.placeHolderView aboveSubview:_moviePlayer.view];
         }
-                [_moviePlayer shutdown];
+        [_moviePlayer shutdown];
         [_moviePlayer.view removeFromSuperview];
         _moviePlayer = nil;
         [self removeMovieNotificationObservers];
     }
     
-    // 如果有粒子动画,先移除
-    if (_emitterLayer) {
-        [_emitterLayer removeFromSuperlayer];
-        _emitterLayer = nil;
-    }
-    
+    //如果有粒子动画,先移除
+    [self removeEmitter];
+    WS(weakSelf)
     [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:placeHolderUrl options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.placeHolderView setImageToBlur:image completionBlock:nil];
+            [weakSelf.placeHolderView setImageToBlur:image completionBlock:nil];
         });
     }];
-    
     
     [self.contentView insertSubview:self.moviePlayer.view atIndex:0];
     
@@ -286,19 +283,12 @@
     [self addObserveForMoviePlayer];
     
     //创建顶部视图
-    [self setupTopView];
+    self.topView.backgroundColor = [UIColor clearColor];
     
     //创建底部视图
     [self setupBottomView];
     //礼物视图
     [self containerView];
-
-}
-
-- (void)setupTopView {
-    
-    self.topView.backgroundColor = [UIColor clearColor];
-    
 
 }
 
@@ -322,24 +312,17 @@
             case LivingRoomBottomViewButtonClickTypeGift:
             {
                 TJPLog(@"gift");
-                [self giftView];
-                _giftView.giftData = _giftData;;
-                [_giftView actionSheetViewShow];
-                
-                
+                [weakSelf giftView];
+                weakSelf.giftView.giftData = weakSelf.giftData;;
+                [weakSelf.giftView actionSheetViewShow];
             }
                 break;
             case LivingRoomBottomViewButtonClickTypeShare:
             {
                 TJPLog(@"share");
+                [weakSelf removeEmitter];
                 //点击出心
-//                CGFloat _heartSize = 36;
-//                DMHeartFlyView *heart = [[DMHeartFlyView alloc] initWithFrame:CGRectMake(button.frame.origin.x, kScreenHeight - self.bottomView.tjp_height, _heartSize, _heartSize)];
-//                [self.contentView addSubview:heart];
-//                _heartView = heart;
-//                [heart animateInView:self.contentView];
-                
-                
+                [weakSelf beginAnimation:button];
             }
                 break;
             case LivingRoomBottomViewButtonClickTypeBack:
@@ -355,6 +338,31 @@
         }
     }];
     
+}
+
+/** 移除粒子动画*/
+- (void)removeEmitter {
+    if (_emitterLayer) {
+        [_emitterLayer removeFromSuperlayer];
+        _emitterLayer = nil;
+    }
+}
+
+/** 按钮的动画*/
+- (void)beginAnimation:(UIButton *)button {
+    CGFloat _heartSize = 36;
+    DMHeartFlyView *heart = [[DMHeartFlyView alloc] initWithFrame:CGRectMake(button.frame.origin.x, kScreenHeight - self.bottomView.tjp_height, _heartSize, _heartSize)];
+    [self.contentView addSubview:heart];
+    [heart animateInView:self.contentView];
+    
+    
+    CAKeyframeAnimation *btnAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    btnAnimation.values = @[@(1.0),@(0.7),@(0.5),@(0.3),@(0.5),@(0.7),@(1.0), @(1.2), @(1.4), @(1.2), @(1.0)];
+    btnAnimation.keyTimes = @[@(0.0),@(0.1),@(0.2),@(0.3),@(0.4),@(0.5),@(0.6),@(0.7),@(0.8),@(0.9),@(1.0)];
+    btnAnimation.calculationMode = kCAAnimationLinear;
+    btnAnimation.duration = 0.3;
+    [button.layer addAnimation:btnAnimation forKey:nil];
+
 }
 
 
@@ -373,10 +381,7 @@
         [_emitterLayer removeFromSuperlayer];
         _emitterLayer = nil;
     }
-    //移除心形动画
-    if (_heartView) {
-        [_heartView removeFromSuperview];
-    }
+    
     [self.parentVc.navigationController popViewControllerAnimated:YES];
 }
 
@@ -427,7 +432,7 @@
     
     if ((loadState & IJKMPMovieLoadStatePlaythroughOK) != 0) { //shouldAutoplay 为yes 在这种状态下会自动开始播放
         if (!self.moviePlayer.isPlaying) {
-//            [self.moviePlayer play];
+            [self.moviePlayer play];
             //粒子动画开始
             [self.emitterLayer setHidden:NO];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

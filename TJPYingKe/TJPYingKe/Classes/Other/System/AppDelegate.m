@@ -37,10 +37,10 @@
     [self.window makeKeyAndVisible];
     
     //广告
-    TJPAdvertiseView *advertiseView = [TJPAdvertiseView TJPAdvertiseViewWithType:TJPAdvertiseViewTypeLogo];
-//    advertiseView.localImageName = @"defaultAd.jpg";
+    TJPAdvertiseView *advertiseView = [TJPAdvertiseView TJPAdvertiseViewWithType:TJPAdvertiseViewTypeFullScreen];
+//    advertiseView.localImageName = @"defaultAd.jpg";   //本地图片
     [self.window addSubview:advertiseView];
-    [advertiseView cleanAdvertiseImageCache];
+//    [advertiseView cleanAdvertiseImageCache];
     [advertiseView advertiseShow];
     advertiseView.clickBlock = ^(NSString *link) {
         TJPLog(@"广告链接:%@", link);
