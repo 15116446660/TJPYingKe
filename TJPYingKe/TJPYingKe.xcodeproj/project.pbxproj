@@ -77,16 +77,16 @@
 		BCE35C0B1DF6C28C00D9338E /* TJPYingKeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C0A1DF6C28C00D9338E /* TJPYingKeTests.m */; };
 		BCE35C161DF6C28C00D9338E /* TJPYingKeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE35C151DF6C28C00D9338E /* TJPYingKeUITests.m */; };
 		BCE74B191E6D074100F31699 /* TJPLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE74B181E6D074100F31699 /* TJPLabelItem.m */; };
+		DB15638A1EC05A9F00857FC3 /* TJPCountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1563801EC05A9F00857FC3 /* TJPCountLabel.m */; };
+		DB15638B1EC05A9F00857FC3 /* TJPGiftComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1563821EC05A9F00857FC3 /* TJPGiftComboView.m */; };
+		DB15638C1EC05A9F00857FC3 /* TJPGiftComboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1563831EC05A9F00857FC3 /* TJPGiftComboView.xib */; };
+		DB15638D1EC05A9F00857FC3 /* TJPGiftContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1563851EC05A9F00857FC3 /* TJPGiftContainerView.m */; };
+		DB15638E1EC05A9F00857FC3 /* TJPGiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1563871EC05A9F00857FC3 /* TJPGiftModel.m */; };
+		DB15638F1EC05A9F00857FC3 /* UIView+GiftExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1563891EC05A9F00857FC3 /* UIView+GiftExtension.m */; };
 		DB4E186F1EBA0E6000E9C953 /* TJPGiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4E186E1EBA0E6000E9C953 /* TJPGiftView.m */; };
 		DB6DCF9D1EBC15C40093D766 /* userHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB6DCF9C1EBC15C40093D766 /* userHeader.jpg */; };
 		DB7C730B1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C730A1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m */; };
 		DB7C730E1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C730D1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m */; };
-		DBB1D2AE1EBB569F00A041B3 /* TJPGiftContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2A31EBB569F00A041B3 /* TJPGiftContainerView.m */; };
-		DBB1D2AF1EBB569F00A041B3 /* TJPGiftComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2A51EBB569F00A041B3 /* TJPGiftComboView.m */; };
-		DBB1D2B01EBB569F00A041B3 /* TJPGiftComboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB1D2A61EBB569F00A041B3 /* TJPGiftComboView.xib */; };
-		DBB1D2B11EBB569F00A041B3 /* TJPCountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2A81EBB569F00A041B3 /* TJPCountLabel.m */; };
-		DBB1D2B21EBB569F00A041B3 /* TJPGiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2AA1EBB569F00A041B3 /* TJPGiftModel.m */; };
-		DBB1D2B31EBB569F00A041B3 /* UIView+GiftExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2AC1EBB569F00A041B3 /* UIView+GiftExtension.m */; };
 		DBB1D2B61EBB581000A041B3 /* TJPGiftItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2B51EBB581000A041B3 /* TJPGiftItem.m */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +236,17 @@
 		BCE35C171DF6C28C00D9338E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE74B171E6D074100F31699 /* TJPLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPLabelItem.h; sourceTree = "<group>"; };
 		BCE74B181E6D074100F31699 /* TJPLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPLabelItem.m; sourceTree = "<group>"; };
+		DB15637F1EC05A9F00857FC3 /* TJPCountLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPCountLabel.h; sourceTree = "<group>"; };
+		DB1563801EC05A9F00857FC3 /* TJPCountLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPCountLabel.m; sourceTree = "<group>"; };
+		DB1563811EC05A9F00857FC3 /* TJPGiftComboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftComboView.h; sourceTree = "<group>"; };
+		DB1563821EC05A9F00857FC3 /* TJPGiftComboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftComboView.m; sourceTree = "<group>"; };
+		DB1563831EC05A9F00857FC3 /* TJPGiftComboView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPGiftComboView.xib; sourceTree = "<group>"; };
+		DB1563841EC05A9F00857FC3 /* TJPGiftContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftContainerView.h; sourceTree = "<group>"; };
+		DB1563851EC05A9F00857FC3 /* TJPGiftContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftContainerView.m; sourceTree = "<group>"; };
+		DB1563861EC05A9F00857FC3 /* TJPGiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftModel.h; sourceTree = "<group>"; };
+		DB1563871EC05A9F00857FC3 /* TJPGiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftModel.m; sourceTree = "<group>"; };
+		DB1563881EC05A9F00857FC3 /* UIView+GiftExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GiftExtension.h"; sourceTree = "<group>"; };
+		DB1563891EC05A9F00857FC3 /* UIView+GiftExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GiftExtension.m"; sourceTree = "<group>"; };
 		DB4E186D1EBA0E6000E9C953 /* TJPGiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftView.h; sourceTree = "<group>"; };
 		DB4E186E1EBA0E6000E9C953 /* TJPGiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftView.m; sourceTree = "<group>"; };
 		DB6DCF9C1EBC15C40093D766 /* userHeader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = userHeader.jpg; sourceTree = "<group>"; };
@@ -243,17 +254,6 @@
 		DB7C730A1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		DB7C730C1EBAFFB000F737AD /* TJPGiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftCollectionViewCell.h; sourceTree = "<group>"; };
 		DB7C730D1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftCollectionViewCell.m; sourceTree = "<group>"; };
-		DBB1D2A21EBB569F00A041B3 /* TJPGiftContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftContainerView.h; sourceTree = "<group>"; };
-		DBB1D2A31EBB569F00A041B3 /* TJPGiftContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftContainerView.m; sourceTree = "<group>"; };
-		DBB1D2A41EBB569F00A041B3 /* TJPGiftComboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftComboView.h; sourceTree = "<group>"; };
-		DBB1D2A51EBB569F00A041B3 /* TJPGiftComboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftComboView.m; sourceTree = "<group>"; };
-		DBB1D2A61EBB569F00A041B3 /* TJPGiftComboView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJPGiftComboView.xib; sourceTree = "<group>"; };
-		DBB1D2A71EBB569F00A041B3 /* TJPCountLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPCountLabel.h; sourceTree = "<group>"; };
-		DBB1D2A81EBB569F00A041B3 /* TJPCountLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPCountLabel.m; sourceTree = "<group>"; };
-		DBB1D2A91EBB569F00A041B3 /* TJPGiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftModel.h; sourceTree = "<group>"; };
-		DBB1D2AA1EBB569F00A041B3 /* TJPGiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftModel.m; sourceTree = "<group>"; };
-		DBB1D2AB1EBB569F00A041B3 /* UIView+GiftExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GiftExtension.h"; sourceTree = "<group>"; };
-		DBB1D2AC1EBB569F00A041B3 /* UIView+GiftExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GiftExtension.m"; sourceTree = "<group>"; };
 		DBB1D2B41EBB581000A041B3 /* TJPGiftItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftItem.h; sourceTree = "<group>"; };
 		DBB1D2B51EBB581000A041B3 /* TJPGiftItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -440,7 +440,7 @@
 		BC24A25E1E6A9BBF004D2748 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				DBB1D2AD1EBB569F00A041B3 /* TJPGiftAnimation */,
+				DB15637E1EC05A9F00857FC3 /* TJPGiftAnimation */,
 				BC24A25F1E6A9BBF004D2748 /* DMHeartFlyView.h */,
 				BC24A2601E6A9BBF004D2748 /* DMHeartFlyView.m */,
 				BC24A2611E6A9BBF004D2748 /* TJPLiveRoomFlowLayout.h */,
@@ -735,23 +735,22 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
-		DBB1D2AD1EBB569F00A041B3 /* TJPGiftAnimation */ = {
+		DB15637E1EC05A9F00857FC3 /* TJPGiftAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				DBB1D2A21EBB569F00A041B3 /* TJPGiftContainerView.h */,
-				DBB1D2A31EBB569F00A041B3 /* TJPGiftContainerView.m */,
-				DBB1D2A41EBB569F00A041B3 /* TJPGiftComboView.h */,
-				DBB1D2A51EBB569F00A041B3 /* TJPGiftComboView.m */,
-				DBB1D2A61EBB569F00A041B3 /* TJPGiftComboView.xib */,
-				DBB1D2A71EBB569F00A041B3 /* TJPCountLabel.h */,
-				DBB1D2A81EBB569F00A041B3 /* TJPCountLabel.m */,
-				DBB1D2A91EBB569F00A041B3 /* TJPGiftModel.h */,
-				DBB1D2AA1EBB569F00A041B3 /* TJPGiftModel.m */,
-				DBB1D2AB1EBB569F00A041B3 /* UIView+GiftExtension.h */,
-				DBB1D2AC1EBB569F00A041B3 /* UIView+GiftExtension.m */,
+				DB15637F1EC05A9F00857FC3 /* TJPCountLabel.h */,
+				DB1563801EC05A9F00857FC3 /* TJPCountLabel.m */,
+				DB1563811EC05A9F00857FC3 /* TJPGiftComboView.h */,
+				DB1563821EC05A9F00857FC3 /* TJPGiftComboView.m */,
+				DB1563831EC05A9F00857FC3 /* TJPGiftComboView.xib */,
+				DB1563841EC05A9F00857FC3 /* TJPGiftContainerView.h */,
+				DB1563851EC05A9F00857FC3 /* TJPGiftContainerView.m */,
+				DB1563861EC05A9F00857FC3 /* TJPGiftModel.h */,
+				DB1563871EC05A9F00857FC3 /* TJPGiftModel.m */,
+				DB1563881EC05A9F00857FC3 /* UIView+GiftExtension.h */,
+				DB1563891EC05A9F00857FC3 /* UIView+GiftExtension.m */,
 			);
-			name = TJPGiftAnimation;
-			path = "../../../../../../../小项目&swift练习/编程练习/TestAnimation/TestAnimation/TJPGiftAnimation";
+			path = TJPGiftAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -871,8 +870,8 @@
 				BC24A2C91E6A9BBF004D2748 /* Info.plist in Resources */,
 				BC24A2B81E6A9BBF004D2748 /* TJPUserView.xib in Resources */,
 				DB6DCF9D1EBC15C40093D766 /* userHeader.jpg in Resources */,
+				DB15638C1EC05A9F00857FC3 /* TJPGiftComboView.xib in Resources */,
 				BC24A2AD1E6A9BBF004D2748 /* TJPHotLiveItemCell.xib in Resources */,
-				DBB1D2B01EBB569F00A041B3 /* TJPGiftComboView.xib in Resources */,
 				BC5D73D71E7FCB090057F006 /* defaultAd.jpg in Resources */,
 				BCE35BFD1DF6C28C00D9338E /* Assets.xcassets in Resources */,
 			);
@@ -949,39 +948,39 @@
 			files = (
 				DB4E186F1EBA0E6000E9C953 /* TJPGiftView.m in Sources */,
 				BC24A2AB1E6A9BBF004D2748 /* TJPNavigationTagItem.m in Sources */,
-				DBB1D2B21EBB569F00A041B3 /* TJPGiftModel.m in Sources */,
+				DB15638F1EC05A9F00857FC3 /* UIView+GiftExtension.m in Sources */,
 				BC24A2AA1E6A9BBF004D2748 /* TJPHotLiveItem.m in Sources */,
 				BC24A2AE1E6A9BBF004D2748 /* TJPRequestDataTool.m in Sources */,
 				BC24A2B91E6A9BBF004D2748 /* TJPNavigationController.m in Sources */,
 				BC24A2B21E6A9BBF004D2748 /* TJPLiveRoomFlowLayout.m in Sources */,
 				DB7C730B1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m in Sources */,
+				DB15638A1EC05A9F00857FC3 /* TJPCountLabel.m in Sources */,
 				BC24A2BE1E6A9BBF004D2748 /* CALayer+PauseAimate.m in Sources */,
 				BC24A2C01E6A9BBF004D2748 /* UIBarButtonItem+TJPItem.m in Sources */,
 				BC24A2B01E6A9BBF004D2748 /* TJPLiveRoomTopUserItem.m in Sources */,
 				BC24A2BB1E6A9BBF004D2748 /* TJPNavBar.m in Sources */,
 				BC5D73DD1E7FEAEE0057F006 /* TJPCacheHelper.m in Sources */,
-				DBB1D2AE1EBB569F00A041B3 /* TJPGiftContainerView.m in Sources */,
 				BC24A2A91E6A9BBF004D2748 /* TJPCreatorItem.m in Sources */,
 				BC6530E11E8116AF0022DF24 /* UIViewController+Loading.m in Sources */,
+				DB15638D1EC05A9F00857FC3 /* TJPGiftContainerView.m in Sources */,
 				BC24A2AF1E6A9BBF004D2748 /* TJPLivingRoomController.m in Sources */,
 				BC24A2C71E6A9BBF004D2748 /* TJPSessionManager.m in Sources */,
-				DBB1D2B31EBB569F00A041B3 /* UIView+GiftExtension.m in Sources */,
 				BC5D73DA1E7FCC420057F006 /* TJPAdvertiseView.m in Sources */,
 				DB7C730E1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m in Sources */,
 				BCCFD3111E7289FD000E968F /* TJPTagVIew.m in Sources */,
+				DB15638E1EC05A9F00857FC3 /* TJPGiftModel.m in Sources */,
 				BC24A2AC1E6A9BBF004D2748 /* TJPHotLiveItemCell.m in Sources */,
 				BC24A2B51E6A9BBF004D2748 /* TJPLivingRoomCell.m in Sources */,
-				DBB1D2AF1EBB569F00A041B3 /* TJPGiftComboView.m in Sources */,
 				BC24A2C31E6A9BBF004D2748 /* UIImageView+TJPExtension.m in Sources */,
 				BC24A2C61E6A9BBF004D2748 /* TJPCommonAPIConstant.m in Sources */,
 				BCE74B191E6D074100F31699 /* TJPLabelItem.m in Sources */,
 				BC24A2BF1E6A9BBF004D2748 /* NSTimer+Addition.m in Sources */,
 				BC24A2CC1E6A9BBF004D2748 /* TJPWebProgressLayer.m in Sources */,
+				DB15638B1EC05A9F00857FC3 /* TJPGiftComboView.m in Sources */,
 				BC24A2C51E6A9BBF004D2748 /* UIView+TJPExtension.m in Sources */,
 				BC5D73CA1E7F76420057F006 /* TJPUserHelper.m in Sources */,
 				BC24A2C21E6A9BBF004D2748 /* UIImage+TJPImage.m in Sources */,
 				BC24A2C11E6A9BBF004D2748 /* UIImage+ImageEffects.m in Sources */,
-				DBB1D2B11EBB569F00A041B3 /* TJPCountLabel.m in Sources */,
 				BC24A2CA1E6A9BBF004D2748 /* main.m in Sources */,
 				BC24A2C81E6A9BBF004D2748 /* AppDelegate.m in Sources */,
 				BC24A2BD1E6A9BBF004D2748 /* TJPMineViewController.m in Sources */,
