@@ -48,8 +48,8 @@
     _userItem = userItem;
     [_headImageView setURLImageWithURL:[NSURL URLWithString:_userItem.portrait] placeHoldImage:[UIImage imageNamed:@"default_head"] isCircle:YES];
     _nickLabel.text = _userItem.nick;
-    _yingKeNumLab.text = [NSString stringWithFormat:@"映客号:%lu", _userItem.ID];
-    _leavelLabel.text = [NSString stringWithFormat:@"等级:%lu", _userItem.level];
+    _yingKeNumLab.text = [NSString stringWithFormat:@"映客号:%lu", (unsigned long)_userItem.ID];
+    _leavelLabel.text = [NSString stringWithFormat:@"等级:%lu", (unsigned long)_userItem.level];
     if (_userItem.location.length) {
         _locationLabel.text = _userItem.location;
     }else {

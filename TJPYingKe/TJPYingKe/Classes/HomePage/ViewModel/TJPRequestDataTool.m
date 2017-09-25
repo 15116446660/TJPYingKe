@@ -104,7 +104,7 @@ static TJPRequestDataTool *dataTool = nil;
 /** 获取直播间用户数据*/
 - (void)getLivingRoomTopUserModelsWithLiveID:(NSUInteger)liveID  result:(void(^)(NSMutableArray <TJPLiveRoomTopUserItem *>*topUserModels))resultBlock {
     
-    NSString *url = [NSString stringWithFormat:@"%@%lu&s_sg=c2681fa2c3c60a48e6de037e84df86f9&s_sc=100&s_st=1481858627", kTJPLivingRoomUserInfoAPI, liveID];
+    NSString *url = [NSString stringWithFormat:@"%@%lu&s_sg=c2681fa2c3c60a48e6de037e84df86f9&s_sc=100&s_st=1481858627", kTJPLivingRoomUserInfoAPI, (unsigned long)liveID];
      TJPLog(@"%@", url);
     [self.sessionManager request:RequestTypeGet urlStr:url parameter:nil resultBlock:^(id responseObject, NSError *error) {
         if (error) {

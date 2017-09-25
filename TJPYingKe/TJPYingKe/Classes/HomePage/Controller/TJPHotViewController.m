@@ -11,6 +11,7 @@
 
 #import "UIViewController+Loading.h"
 
+
 #import "TJPLivingRoomController.h"
 #import "TJPWebViewController.h"
 #import "TJPRefreshGifHeader.h"
@@ -20,7 +21,7 @@
 
 
 static NSString * const cellID              = @"liveListCell";
-static CGFloat const timeInterval           = 75;
+static CGFloat const timeInterval           = 80;
 
 
 @interface TJPHotViewController ()
@@ -29,7 +30,6 @@ static CGFloat const timeInterval           = 75;
 /** 数据源*/
 @property (nonatomic, strong) NSMutableArray *liveDatas;
 @property (nonatomic, strong) NSArray <TJPBannerItem *>*bannerArr;
-
 
 @property (nonatomic, weak) NSTimer *timer;
 
@@ -85,7 +85,6 @@ static CGFloat const timeInterval           = 75;
     [self.tableView registerNib:[UINib nibWithNibName:@"TJPHotLiveItemCell" bundle:nil] forCellReuseIdentifier:cellID];
     //数据
     [self loadDataForBannerView];
-
     //刷新
     [self addRefresh];
     //定时器
@@ -143,7 +142,6 @@ static CGFloat const timeInterval           = 75;
 
 //获取新数据
 - (void)loadNewData {
-    [self.liveDatas removeAllObjects];
     [self loadDataForHotLive];
 }
 
@@ -158,6 +156,7 @@ static CGFloat const timeInterval           = 75;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TJPHotLiveItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    
     return cell;
 }
 
@@ -179,10 +178,9 @@ static CGFloat const timeInterval           = 75;
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TJPHotLiveItemCell * liveCell = (TJPHotLiveItemCell *)cell;
-    TJPHotLiveItem *item = _liveDatas[indexPath.row];
+    TJPHotLiveItem *item = [_liveDatas objectAtIndexChecked:indexPath.row];
     liveCell.liveItem = item;
 }
-
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -200,14 +198,11 @@ static CGFloat const timeInterval           = 75;
         //向下拖动，显示导航栏
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         [self setTabBarHidden:NO];
-    }else if(velocity == 0){
-        //停止拖拽
     }
 }
 
 
 #pragma mark - privite
-//隐藏显示tabbar
 - (void)setTabBarHidden:(BOOL)hidden
 {
     UIView *tab = self.tabBarController.view;
@@ -236,7 +231,6 @@ static CGFloat const timeInterval           = 75;
     }completion:^(BOOL finished) {
         
     }];
-    
 }
 
 

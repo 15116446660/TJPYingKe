@@ -87,6 +87,7 @@
 		DB6DCF9D1EBC15C40093D766 /* userHeader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB6DCF9C1EBC15C40093D766 /* userHeader.jpg */; };
 		DB7C730B1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C730A1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m */; };
 		DB7C730E1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C730D1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m */; };
+		DB90BCA01F7907B50071FFB8 /* NSArray+TJPArrayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DB90BC9F1F7907B50071FFB8 /* NSArray+TJPArrayUtil.m */; };
 		DBB1D2B61EBB581000A041B3 /* TJPGiftItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB1D2B51EBB581000A041B3 /* TJPGiftItem.m */; };
 /* End PBXBuildFile section */
 
@@ -254,6 +255,8 @@
 		DB7C730A1EBAFF0000F737AD /* TJPGiftCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		DB7C730C1EBAFFB000F737AD /* TJPGiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftCollectionViewCell.h; sourceTree = "<group>"; };
 		DB7C730D1EBAFFB000F737AD /* TJPGiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftCollectionViewCell.m; sourceTree = "<group>"; };
+		DB90BC9E1F7907B50071FFB8 /* NSArray+TJPArrayUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TJPArrayUtil.h"; sourceTree = "<group>"; };
+		DB90BC9F1F7907B50071FFB8 /* NSArray+TJPArrayUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TJPArrayUtil.m"; sourceTree = "<group>"; };
 		DBB1D2B41EBB581000A041B3 /* TJPGiftItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPGiftItem.h; sourceTree = "<group>"; };
 		DBB1D2B51EBB581000A041B3 /* TJPGiftItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPGiftItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -569,6 +572,8 @@
 				BC24A28E1E6A9BBF004D2748 /* UITabBarItem+XHExtension.m */,
 				BC24A28F1E6A9BBF004D2748 /* UIView+TJPExtension.h */,
 				BC24A2901E6A9BBF004D2748 /* UIView+TJPExtension.m */,
+				DB90BC9E1F7907B50071FFB8 /* NSArray+TJPArrayUtil.h */,
+				DB90BC9F1F7907B50071FFB8 /* NSArray+TJPArrayUtil.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -824,7 +829,7 @@
 				TargetAttributes = {
 					BCE35BEC1DF6C28C00D9338E = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = NCWZ4MQF27;
+						DevelopmentTeam = HL66L6NSXR;
 						ProvisioningStyle = Automatic;
 					};
 					BCE35C051DF6C28C00D9338E = {
@@ -936,7 +941,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -971,6 +976,7 @@
 				DB15638E1EC05A9F00857FC3 /* TJPGiftModel.m in Sources */,
 				BC24A2AC1E6A9BBF004D2748 /* TJPHotLiveItemCell.m in Sources */,
 				BC24A2B51E6A9BBF004D2748 /* TJPLivingRoomCell.m in Sources */,
+				DB90BCA01F7907B50071FFB8 /* NSArray+TJPArrayUtil.m in Sources */,
 				BC24A2C31E6A9BBF004D2748 /* UIImageView+TJPExtension.m in Sources */,
 				BC24A2C61E6A9BBF004D2748 /* TJPCommonAPIConstant.m in Sources */,
 				BCE74B191E6D074100F31699 /* TJPLabelItem.m in Sources */,
@@ -1144,7 +1150,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = NCWZ4MQF27;
+				DEVELOPMENT_TEAM = HL66L6NSXR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1152,7 +1158,7 @@
 				GCC_PREFIX_HEADER = TJPYingKe/Classes/Other/System/PrefixHeader.pch;
 				INFOPLIST_FILE = TJPYingKe/Classes/Other/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.www.TJPYingKe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.TJPYingKe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1163,7 +1169,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = NCWZ4MQF27;
+				DEVELOPMENT_TEAM = HL66L6NSXR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1171,7 +1177,7 @@
 				GCC_PREFIX_HEADER = TJPYingKe/Classes/Other/System/PrefixHeader.pch;
 				INFOPLIST_FILE = TJPYingKe/Classes/Other/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.www.TJPYingKe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walkman.TJPYingKe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

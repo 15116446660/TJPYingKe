@@ -145,7 +145,7 @@ static NSString * const giftCollectionViewCell = @"giftCollectionViewCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TJPGiftCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:giftCollectionViewCell forIndexPath:indexPath];
-    cell.giftItem = _giftData[indexPath.row];
+    cell.giftItem = [_giftData objectAtIndexChecked:indexPath.row];
     return cell;
 }
 

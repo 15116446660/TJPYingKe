@@ -22,6 +22,7 @@
 #import "PublicHeader.h"
 
 #import "UIView+TJPExtension.h"
+#import "NSArray+TJPArrayUtil.h"
 #import "UIBarButtonItem+TJPItem.h"
 #import "UIImageView+TJPExtension.h"
 
